@@ -1,0 +1,1095 @@
+shared_utils.py yüklendi. [Q1 | Sensitivity-First | TTA | ClinicalFocalLoss]
+================================================================================
+SwinUNETR Linear Probe — 24 external test hasta
+Backbone: DONDURULMUŞ | Head: ~50K param | LR: 0.001
+================================================================================
+
+======================================================================
+FOLD 1/5
+======================================================================
+  [Fold 1] class_counts=[18 78] | backbone dondurulmuş (~50K param)
+  Pretrained: 126 katman yüklendi, 33 atlandı.
+  Eğitilebilir: 74,402 / 62,261,698 param (0.1%)
+    [Prob] min=0.460 max=0.489 | TP=20 FP=4 FN=0 TN=0
+[lp | fold 1 | epoch 001] train=1.0804 val=0.9968 auc=0.6250 thr=0.460
+  [Metrics] AUC:0.625 F1:0.909 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7335
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.000 | comp=0.7335)
+    [Prob] min=0.765 max=0.799 | TP=16 FP=3 FN=4 TN=1
+[lp | fold 1 | epoch 002] train=0.6418 val=0.3439 auc=0.6125 thr=0.775
+  [Metrics] AUC:0.613 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6758
+    [Prob] min=0.860 max=0.886 | TP=20 FP=4 FN=0 TN=0
+[lp | fold 1 | epoch 003] train=0.3767 val=0.3346 auc=0.7125 thr=0.850
+  [Metrics] AUC:0.713 F1:0.909 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7554
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.000 | comp=0.7554)
+    [Prob] min=0.791 max=0.866 | TP=16 FP=2 FN=4 TN=2
+[lp | fold 1 | epoch 004] train=0.3531 val=0.3173 auc=0.7750 thr=0.802
+  [Metrics] AUC:0.775 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7593
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.500≥0.5 | F1=0.842 | comp=0.7593)
+    [Prob] min=0.792 max=0.897 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 1 | epoch 005] train=0.3618 val=0.3052 auc=0.7750 thr=0.810
+  [Metrics] AUC:0.775 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7842
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.500≥0.5 | F1=0.872 | comp=0.7842)
+    [Prob] min=0.769 max=0.918 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 1 | epoch 006] train=0.3631 val=0.2952 auc=0.7750 thr=0.800
+  [Metrics] AUC:0.775 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7842
+    [Prob] min=0.714 max=0.913 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 1 | epoch 007] train=0.3432 val=0.3002 auc=0.8125 thr=0.742
+  [Metrics] AUC:0.812 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7936
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.500≥0.5 | F1=0.872 | comp=0.7936)
+    [Prob] min=0.788 max=0.941 | TP=16 FP=2 FN=4 TN=2
+[lp | fold 1 | epoch 008] train=0.3465 val=0.2929 auc=0.8125 thr=0.821
+  [Metrics] AUC:0.812 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7687
+    [Prob] min=0.747 max=0.946 | TP=16 FP=2 FN=4 TN=2
+[lp | fold 1 | epoch 009] train=0.3312 val=0.2867 auc=0.8250 thr=0.782
+  [Metrics] AUC:0.825 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7718
+    [Prob] min=0.690 max=0.945 | TP=16 FP=2 FN=4 TN=2
+[lp | fold 1 | epoch 010] train=0.3288 val=0.2990 auc=0.8250 thr=0.727
+  [Metrics] AUC:0.825 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7718
+    [Prob] min=0.752 max=0.958 | TP=16 FP=2 FN=4 TN=2
+[lp | fold 1 | epoch 011] train=0.3229 val=0.2826 auc=0.8000 thr=0.787
+  [Metrics] AUC:0.800 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7655
+    [Prob] min=0.750 max=0.956 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 1 | epoch 012] train=0.3259 val=0.2827 auc=0.8125 thr=0.781
+  [Metrics] AUC:0.812 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7936
+    [Prob] min=0.645 max=0.946 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 1 | epoch 013] train=0.3408 val=0.3144 auc=0.8125 thr=0.687
+  [Metrics] AUC:0.812 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7936
+    [Prob] min=0.733 max=0.971 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 1 | epoch 014] train=0.3243 val=0.2726 auc=0.8250 thr=0.780
+  [Metrics] AUC:0.825 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7967
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.500≥0.5 | F1=0.872 | comp=0.7967)
+    [Prob] min=0.674 max=0.955 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 015] train=0.3428 val=0.3053 auc=0.8375 thr=0.699
+  [Metrics] AUC:0.837 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8486
+    ★ SAVED DUAL-PASS (SENS=0.950≥0.8 SPEC=0.500≥0.5 | F1=0.927 | comp=0.8486)
+    [Prob] min=0.781 max=0.985 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 1 | epoch 016] train=0.2899 val=0.2806 auc=0.8500 thr=0.795
+  [Metrics] AUC:0.850 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8756
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.500≥0.5 | F1=0.952 | comp=0.8756)
+    [Prob] min=0.713 max=0.979 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 017] train=0.3159 val=0.2837 auc=0.8250 thr=0.733
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455
+    [Prob] min=0.707 max=0.970 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 018] train=0.3291 val=0.2945 auc=0.8000 thr=0.729
+  [Metrics] AUC:0.800 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8392
+    [Prob] min=0.812 max=0.981 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 019] train=0.3589 val=0.2977 auc=0.8250 thr=0.845
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455
+    [Prob] min=0.654 max=0.952 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 020] train=0.2853 val=0.3161 auc=0.8250 thr=0.694
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455
+    [Prob] min=0.738 max=0.974 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 021] train=0.3233 val=0.2839 auc=0.8125 thr=0.794
+  [Metrics] AUC:0.812 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8181
+    [Prob] min=0.802 max=0.983 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 022] train=0.3508 val=0.2943 auc=0.8375 thr=0.847
+  [Metrics] AUC:0.838 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8244
+    [Prob] min=0.697 max=0.960 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 023] train=0.3170 val=0.2979 auc=0.8250 thr=0.732
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455
+    [Prob] min=0.730 max=0.976 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 024] train=0.2947 val=0.2822 auc=0.8500 thr=0.767
+  [Metrics] AUC:0.850 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8517
+    [Prob] min=0.759 max=0.988 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 025] train=0.3186 val=0.2744 auc=0.8375 thr=0.793
+  [Metrics] AUC:0.837 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8486
+    [Prob] min=0.609 max=0.969 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 026] train=0.3152 val=0.3395 auc=0.8250 thr=0.631
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455
+    [Prob] min=0.712 max=0.986 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 027] train=0.2936 val=0.2879 auc=0.8000 thr=0.761
+  [Metrics] AUC:0.800 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8150
+    [Prob] min=0.811 max=0.992 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 028] train=0.3081 val=0.3140 auc=0.7875 thr=0.850
+  [Metrics] AUC:0.787 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8119
+    [Prob] min=0.641 max=0.979 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 029] train=0.2937 val=0.3279 auc=0.7625 thr=0.669
+  [Metrics] AUC:0.762 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8298
+    [Prob] min=0.692 max=0.987 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 030] train=0.3117 val=0.2939 auc=0.7750 thr=0.722
+  [Metrics] AUC:0.775 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8330
+    [Prob] min=0.774 max=0.992 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 031] train=0.3114 val=0.2959 auc=0.7750 thr=0.805
+  [Metrics] AUC:0.775 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8330
+    [Prob] min=0.683 max=0.985 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 032] train=0.3014 val=0.3092 auc=0.7500 thr=0.720
+  [Metrics] AUC:0.750 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8267
+    [Prob] min=0.733 max=0.986 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 033] train=0.3141 val=0.3031 auc=0.7500 thr=0.769
+  [Metrics] AUC:0.750 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8025
+    [Prob] min=0.724 max=0.989 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 034] train=0.2942 val=0.2981 auc=0.7500 thr=0.765
+  [Metrics] AUC:0.750 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8025
+    [Prob] min=0.738 max=0.991 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 035] train=0.3109 val=0.2917 auc=0.7750 thr=0.785
+  [Metrics] AUC:0.775 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8087
+    [Prob] min=0.716 max=0.988 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 036] train=0.3056 val=0.2905 auc=0.7750 thr=0.763
+  [Metrics] AUC:0.775 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8087
+    [Prob] min=0.683 max=0.986 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 037] train=0.2875 val=0.3007 auc=0.7625 thr=0.730
+  [Metrics] AUC:0.762 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8056
+    [Prob] min=0.738 max=0.992 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 038] train=0.2924 val=0.2909 auc=0.7750 thr=0.794
+  [Metrics] AUC:0.775 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8087
+    [Prob] min=0.664 max=0.990 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 039] train=0.2808 val=0.3085 auc=0.7500 thr=0.722
+  [Metrics] AUC:0.750 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8025
+    [Prob] min=0.721 max=0.995 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 040] train=0.3196 val=0.2933 auc=0.7375 thr=0.792
+  [Metrics] AUC:0.738 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.7994
+    [Prob] min=0.672 max=0.993 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 041] train=0.3187 val=0.2973 auc=0.7750 thr=0.698
+  [Metrics] AUC:0.775 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8330
+    [Prob] min=0.692 max=0.993 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 042] train=0.2854 val=0.2958 auc=0.7750 thr=0.721
+  [Metrics] AUC:0.775 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8330
+    [Prob] min=0.708 max=0.992 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 043] train=0.3032 val=0.2956 auc=0.7750 thr=0.755
+  [Metrics] AUC:0.775 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8330
+    [Prob] min=0.707 max=0.992 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 044] train=0.2994 val=0.3007 auc=0.7500 thr=0.753
+  [Metrics] AUC:0.750 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8267
+    [Prob] min=0.765 max=0.995 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 045] train=0.2833 val=0.3073 auc=0.7375 thr=0.807
+  [Metrics] AUC:0.738 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.7994
+    [Prob] min=0.724 max=0.994 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 046] train=0.2929 val=0.2965 auc=0.7500 thr=0.776
+  [Metrics] AUC:0.750 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8025
+    [Prob] min=0.767 max=0.997 | TP=18 FP=2 FN=2 TN=2
+[lp | fold 1 | epoch 047] train=0.2683 val=0.3096 auc=0.7500 thr=0.821
+  [Metrics] AUC:0.750 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8025
+    [Prob] min=0.760 max=0.997 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 048] train=0.3038 val=0.3082 auc=0.7375 thr=0.800
+  [Metrics] AUC:0.737 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8236
+    [Prob] min=0.686 max=0.997 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 049] train=0.3031 val=0.2993 auc=0.7625 thr=0.747
+  [Metrics] AUC:0.763 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8298
+    [Prob] min=0.644 max=0.997 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 1 | epoch 050] train=0.2862 val=0.3028 auc=0.7875 thr=0.710
+  [Metrics] AUC:0.787 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8361
+  Early stopping @ epoch 50 | best_score=0.8756
+  SWA finalize ediliyor...
+  SWA composite: 0.8361 | Best regular: 0.8756
+
+=================================================================
+  SwinLP Fold 1  |  Threshold: Youden 0.850
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.850          [0.609 - 1.000]
+  AUC-PR                0.969                        -
+  Sensitivity           0.700          [0.500 - 0.895]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.400          [0.111 - 0.740]
+  Accuracy              0.750          [0.583 - 0.917]
+  F1-Score              0.824          [0.667 - 0.944]
+  Composite             0.813                        -
+
+  CM: TP=14 FP=0 FN=6 TN=4
+  Toplam Hata: 6/24
+=================================================================
+
+======================================================================
+FOLD 2/5
+======================================================================
+  [Fold 2] class_counts=[18 78] | backbone dondurulmuş (~50K param)
+  Pretrained: 126 katman yüklendi, 33 atlandı.
+  Eğitilebilir: 74,402 / 62,261,698 param (0.1%)
+    [Prob] min=0.535 max=0.576 | TP=20 FP=4 FN=0 TN=0
+[lp | fold 2 | epoch 001] train=0.7643 val=0.7242 auc=0.4250 thr=0.535
+  [Metrics] AUC:0.425 F1:0.909 SENS:1.000 SPEC:0.000 | COMPOSITE:0.6835
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.000 | comp=0.6835)
+    [Prob] min=0.767 max=0.849 | TP=18 FP=3 FN=2 TN=1
+[lp | fold 2 | epoch 002] train=0.4982 val=0.3372 auc=0.5750 thr=0.834
+  [Metrics] AUC:0.575 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7158
+    ☆ SAVED FALLBACK (SENS=0.900 SPEC=0.250 | comp=0.7158)
+    [Prob] min=0.838 max=0.894 | TP=20 FP=3 FN=0 TN=1
+[lp | fold 2 | epoch 003] train=0.3617 val=0.3250 auc=0.7125 thr=0.842
+  [Metrics] AUC:0.713 F1:0.930 SENS:1.000 SPEC:0.250 | COMPOSITE:0.7982
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.250 | comp=0.7982)
+    [Prob] min=0.794 max=0.897 | TP=20 FP=3 FN=0 TN=1
+[lp | fold 2 | epoch 004] train=0.3546 val=0.3089 auc=0.7625 thr=0.799
+  [Metrics] AUC:0.762 F1:0.930 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8107
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.250 | comp=0.8107)
+    [Prob] min=0.712 max=0.881 | TP=16 FP=2 FN=4 TN=2
+[lp | fold 2 | epoch 005] train=0.3667 val=0.3217 auc=0.7875 thr=0.730
+  [Metrics] AUC:0.787 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7624
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.500≥0.5 | F1=0.842 | comp=0.7624)
+    [Prob] min=0.841 max=0.952 | TP=19 FP=3 FN=1 TN=1
+[lp | fold 2 | epoch 006] train=0.3337 val=0.3226 auc=0.7875 thr=0.850
+  [Metrics] AUC:0.787 F1:0.905 SENS:0.950 SPEC:0.250 | COMPOSITE:0.7931
+    [Prob] min=0.761 max=0.942 | TP=16 FP=2 FN=4 TN=2
+[lp | fold 2 | epoch 007] train=0.3543 val=0.2906 auc=0.7875 thr=0.792
+  [Metrics] AUC:0.787 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7624
+    [Prob] min=0.741 max=0.956 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 2 | epoch 008] train=0.3298 val=0.2852 auc=0.8000 thr=0.776
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7904
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.500≥0.5 | F1=0.872 | comp=0.7904)
+    [Prob] min=0.746 max=0.964 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 2 | epoch 009] train=0.3400 val=0.2820 auc=0.8000 thr=0.785
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7904
+    [Prob] min=0.675 max=0.941 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 2 | epoch 010] train=0.3618 val=0.2998 auc=0.8000 thr=0.708
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7904
+    [Prob] min=0.769 max=0.965 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 2 | epoch 011] train=0.3322 val=0.2887 auc=0.8000 thr=0.810
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7904
+    [Prob] min=0.754 max=0.963 | TP=17 FP=2 FN=3 TN=2
+[lp | fold 2 | epoch 012] train=0.3503 val=0.2841 auc=0.8000 thr=0.792
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7904
+    [Prob] min=0.739 max=0.964 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 2 | epoch 013] train=0.3295 val=0.2843 auc=0.8375 thr=0.771
+  [Metrics] AUC:0.837 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8486
+    ★ SAVED DUAL-PASS (SENS=0.950≥0.8 SPEC=0.500≥0.5 | F1=0.927 | comp=0.8486)
+    [Prob] min=0.763 max=0.974 | TP=19 FP=2 FN=1 TN=2
+[lp | fold 2 | epoch 014] train=0.3348 val=0.2809 auc=0.8375 thr=0.796
+  [Metrics] AUC:0.838 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8486
+    [Prob] min=0.726 max=0.975 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 2 | epoch 015] train=0.3358 val=0.2737 auc=0.9000 thr=0.747
+  [Metrics] AUC:0.900 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8881
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.500≥0.5 | F1=0.952 | comp=0.8881)
+    [Prob] min=0.729 max=0.982 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 2 | epoch 016] train=0.3145 val=0.2655 auc=0.9000 thr=0.753
+  [Metrics] AUC:0.900 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8881
+    [Prob] min=0.762 max=0.988 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 2 | epoch 017] train=0.3088 val=0.2676 auc=0.9000 thr=0.789
+  [Metrics] AUC:0.900 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8881
+    [Prob] min=0.761 max=0.987 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 018] train=0.3272 val=0.2627 auc=0.9625 thr=0.788
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.750≥0.5 | F1=0.976 | comp=0.9470)
+    [Prob] min=0.754 max=0.988 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 2 | epoch 019] train=0.3212 val=0.2597 auc=0.9500 thr=0.773
+  [Metrics] AUC:0.950 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.9006
+    [Prob] min=0.711 max=0.985 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 020] train=0.3445 val=0.2625 auc=0.9500 thr=0.743
+  [Metrics] AUC:0.950 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9200
+    [Prob] min=0.756 max=0.990 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 021] train=0.2909 val=0.2550 auc=0.9500 thr=0.789
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439
+    [Prob] min=0.699 max=0.991 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 022] train=0.3081 val=0.2399 auc=0.9500 thr=0.741
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439
+    [Prob] min=0.697 max=0.992 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 023] train=0.3168 val=0.2383 auc=0.9625 thr=0.744
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.765 max=0.994 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 024] train=0.3546 val=0.2518 auc=0.9500 thr=0.812
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439
+    [Prob] min=0.710 max=0.992 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 2 | epoch 025] train=0.3308 val=0.2502 auc=0.9625 thr=0.733
+  [Metrics] AUC:0.963 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.9037
+    [Prob] min=0.744 max=0.992 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 026] train=0.3426 val=0.2580 auc=0.9250 thr=0.789
+  [Metrics] AUC:0.925 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9137
+    [Prob] min=0.738 max=0.993 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 027] train=0.3229 val=0.2518 auc=0.9375 thr=0.786
+  [Metrics] AUC:0.938 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9169
+    [Prob] min=0.711 max=0.994 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 028] train=0.3004 val=0.2389 auc=0.9625 thr=0.770
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.705 max=0.995 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 029] train=0.3227 val=0.2318 auc=0.9375 thr=0.773
+  [Metrics] AUC:0.938 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9408
+    [Prob] min=0.731 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 030] train=0.3381 val=0.2381 auc=0.9375 thr=0.798
+  [Metrics] AUC:0.938 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9408
+    [Prob] min=0.639 max=0.995 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 031] train=0.3112 val=0.2405 auc=0.9750 thr=0.692
+  [Metrics] AUC:0.975 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9502
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.750≥0.5 | F1=0.976 | comp=0.9502)
+    [Prob] min=0.731 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 032] train=0.3225 val=0.2379 auc=0.9625 thr=0.791
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.715 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 033] train=0.3247 val=0.2345 auc=0.9625 thr=0.774
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.661 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 034] train=0.2973 val=0.2319 auc=0.9750 thr=0.717
+  [Metrics] AUC:0.975 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9502
+    [Prob] min=0.711 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 035] train=0.3006 val=0.2308 auc=0.9625 thr=0.774
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.704 max=0.997 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 036] train=0.3113 val=0.2278 auc=0.9625 thr=0.774
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.654 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 037] train=0.3047 val=0.2264 auc=0.9625 thr=0.722
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.767 max=0.997 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 038] train=0.3343 val=0.2528 auc=0.9375 thr=0.832
+  [Metrics] AUC:0.938 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9408
+    [Prob] min=0.716 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 039] train=0.3253 val=0.2318 auc=0.9625 thr=0.780
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.675 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 040] train=0.2751 val=0.2260 auc=0.9625 thr=0.740
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.673 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 041] train=0.3099 val=0.2247 auc=0.9625 thr=0.744
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.710 max=0.996 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 042] train=0.3044 val=0.2300 auc=0.9625 thr=0.784
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.715 max=0.997 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 043] train=0.3143 val=0.2322 auc=0.9625 thr=0.790
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.661 max=0.996 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 044] train=0.3161 val=0.2370 auc=0.9500 thr=0.734
+  [Metrics] AUC:0.950 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9200
+    [Prob] min=0.707 max=0.997 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 2 | epoch 045] train=0.2901 val=0.2338 auc=0.9625 thr=0.747
+  [Metrics] AUC:0.963 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.9037
+    [Prob] min=0.687 max=0.997 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 046] train=0.3197 val=0.2329 auc=0.9500 thr=0.768
+  [Metrics] AUC:0.950 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9200
+    [Prob] min=0.662 max=0.997 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 047] train=0.3178 val=0.2373 auc=0.9500 thr=0.736
+  [Metrics] AUC:0.950 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9200
+    [Prob] min=0.752 max=0.998 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 048] train=0.3010 val=0.2506 auc=0.9375 thr=0.823
+  [Metrics] AUC:0.938 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9169
+    [Prob] min=0.766 max=0.998 | TP=19 FP=1 FN=1 TN=3
+[lp | fold 2 | epoch 049] train=0.3397 val=0.2580 auc=0.9250 thr=0.834
+  [Metrics] AUC:0.925 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9137
+    [Prob] min=0.697 max=0.997 | TP=20 FP=2 FN=0 TN=2
+[lp | fold 2 | epoch 050] train=0.2916 val=0.2374 auc=0.9500 thr=0.744
+  [Metrics] AUC:0.950 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.9006
+    [Prob] min=0.620 max=0.997 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 051] train=0.2923 val=0.2472 auc=0.9625 thr=0.673
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.654 max=0.997 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 052] train=0.3142 val=0.2343 auc=0.9500 thr=0.722
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439
+    [Prob] min=0.687 max=0.998 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 053] train=0.3169 val=0.2310 auc=0.9500 thr=0.756
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439
+    [Prob] min=0.710 max=0.998 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 054] train=0.3023 val=0.2345 auc=0.9500 thr=0.779
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439
+    [Prob] min=0.705 max=0.998 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 055] train=0.2977 val=0.2336 auc=0.9625 thr=0.764
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+    [Prob] min=0.684 max=0.998 | TP=20 FP=1 FN=0 TN=3
+[lp | fold 2 | epoch 056] train=0.2965 val=0.2312 auc=0.9625 thr=0.739
+  [Metrics] AUC:0.963 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9470
+  Early stopping @ epoch 56 | best_score=0.9502
+  SWA finalize ediliyor...
+  SWA composite: 0.9470 | Best regular: 0.9502
+
+=================================================================
+  SwinLP Fold 2  |  Threshold: Youden 0.735
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.975          [0.875 - 1.000]
+  AUC-PR                0.995                        -
+  Sensitivity           0.900          [0.750 - 1.000]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.667          [0.250 - 1.000]
+  Accuracy              0.917          [0.792 - 1.000]
+  F1-Score              0.947          [0.857 - 1.000]
+  Composite             0.946                        -
+
+  CM: TP=18 FP=0 FN=2 TN=4
+  Toplam Hata: 2/24
+=================================================================
+
+======================================================================
+FOLD 3/5
+======================================================================
+  [Fold 3] class_counts=[18 79] | backbone dondurulmuş (~50K param)
+  Pretrained: 126 katman yüklendi, 33 atlandı.
+  Eğitilebilir: 74,402 / 62,261,698 param (0.1%)
+    [Prob] min=0.524 max=0.562 | TP=19 FP=4 FN=0 TN=0
+[lp | fold 3 | epoch 001] train=0.7745 val=0.7416 auc=0.3026 thr=0.524
+  [Metrics] AUC:0.303 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.6518
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.000 | comp=0.6518)
+    [Prob] min=0.797 max=0.811 | TP=16 FP=3 FN=3 TN=1
+[lp | fold 3 | epoch 002] train=0.5112 val=0.3821 auc=0.4868 thr=0.802
+  [Metrics] AUC:0.487 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.6645
+    ☆ SAVED FALLBACK (SENS=0.842 SPEC=0.250 | comp=0.6645)
+    [Prob] min=0.805 max=0.854 | TP=19 FP=4 FN=0 TN=0
+[lp | fold 3 | epoch 003] train=0.3678 val=0.3672 auc=0.6974 thr=0.805
+  [Metrics] AUC:0.697 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7505
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.000 | comp=0.7505)
+    [Prob] min=0.755 max=0.853 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 004] train=0.3880 val=0.3546 auc=0.7237 thr=0.789
+  [Metrics] AUC:0.724 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7669
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.500≥0.5 | F1=0.865 | comp=0.7669)
+    [Prob] min=0.837 max=0.901 | TP=16 FP=4 FN=3 TN=0
+[lp | fold 3 | epoch 005] train=0.3454 val=0.3821 auc=0.7237 thr=0.850
+  [Metrics] AUC:0.724 F1:0.821 SENS:0.842 SPEC:0.000 | COMPOSITE:0.6808
+    [Prob] min=0.778 max=0.886 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 006] train=0.3333 val=0.3507 auc=0.7105 thr=0.808
+  [Metrics] AUC:0.711 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7636
+    [Prob] min=0.749 max=0.921 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 007] train=0.3312 val=0.3392 auc=0.7105 thr=0.802
+  [Metrics] AUC:0.711 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7636
+    [Prob] min=0.752 max=0.944 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 008] train=0.3351 val=0.3405 auc=0.7105 thr=0.811
+  [Metrics] AUC:0.711 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7636
+    [Prob] min=0.749 max=0.946 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 009] train=0.3108 val=0.3307 auc=0.7237 thr=0.796
+  [Metrics] AUC:0.724 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7669
+    [Prob] min=0.791 max=0.960 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 010] train=0.3315 val=0.3506 auc=0.7237 thr=0.834
+  [Metrics] AUC:0.724 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7669
+    [Prob] min=0.701 max=0.951 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 011] train=0.3087 val=0.3128 auc=0.7105 thr=0.751
+  [Metrics] AUC:0.711 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7636
+    [Prob] min=0.714 max=0.962 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 012] train=0.3176 val=0.3136 auc=0.7500 thr=0.769
+  [Metrics] AUC:0.750 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7735
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.500≥0.5 | F1=0.865 | comp=0.7735)
+    [Prob] min=0.742 max=0.968 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 013] train=0.3114 val=0.3188 auc=0.7500 thr=0.793
+  [Metrics] AUC:0.750 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7735
+    [Prob] min=0.780 max=0.968 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 014] train=0.3381 val=0.3297 auc=0.7895 thr=0.820
+  [Metrics] AUC:0.789 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8092
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.500≥0.5 | F1=0.895 | comp=0.8092)
+    [Prob] min=0.801 max=0.970 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 015] train=0.3386 val=0.3438 auc=0.8026 thr=0.840
+  [Metrics] AUC:0.803 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8125
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.500≥0.5 | F1=0.895 | comp=0.8125)
+    [Prob] min=0.686 max=0.948 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 016] train=0.3060 val=0.3124 auc=0.8421 thr=0.731
+  [Metrics] AUC:0.842 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8224
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.500≥0.5 | F1=0.895 | comp=0.8224)
+    [Prob] min=0.776 max=0.971 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 017] train=0.3351 val=0.3292 auc=0.8026 thr=0.826
+  [Metrics] AUC:0.803 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8125
+    [Prob] min=0.718 max=0.973 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 018] train=0.3283 val=0.3097 auc=0.7763 thr=0.784
+  [Metrics] AUC:0.776 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8059
+    [Prob] min=0.720 max=0.970 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 019] train=0.3098 val=0.3125 auc=0.8158 thr=0.787
+  [Metrics] AUC:0.816 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8158
+    [Prob] min=0.697 max=0.966 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 020] train=0.3156 val=0.3127 auc=0.8158 thr=0.790
+  [Metrics] AUC:0.816 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7899
+    [Prob] min=0.730 max=0.971 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 021] train=0.3083 val=0.3269 auc=0.8158 thr=0.826
+  [Metrics] AUC:0.816 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7899
+    [Prob] min=0.697 max=0.971 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 022] train=0.3137 val=0.3117 auc=0.7895 thr=0.794
+  [Metrics] AUC:0.789 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7833
+    [Prob] min=0.724 max=0.964 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 023] train=0.3142 val=0.3106 auc=0.8158 thr=0.791
+  [Metrics] AUC:0.816 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7899
+    [Prob] min=0.737 max=0.969 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 024] train=0.2979 val=0.3118 auc=0.8158 thr=0.801
+  [Metrics] AUC:0.816 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7899
+    [Prob] min=0.655 max=0.973 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 025] train=0.3403 val=0.2956 auc=0.7763 thr=0.735
+  [Metrics] AUC:0.776 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7800
+    [Prob] min=0.793 max=0.984 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 026] train=0.3584 val=0.3430 auc=0.7895 thr=0.844
+  [Metrics] AUC:0.789 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8092
+    [Prob] min=0.638 max=0.970 | TP=17 FP=2 FN=2 TN=2
+[lp | fold 3 | epoch 027] train=0.3220 val=0.2948 auc=0.8026 thr=0.697
+  [Metrics] AUC:0.803 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8125
+    [Prob] min=0.758 max=0.979 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 028] train=0.3237 val=0.3208 auc=0.8026 thr=0.825
+  [Metrics] AUC:0.803 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7866
+    [Prob] min=0.710 max=0.969 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 029] train=0.3289 val=0.3043 auc=0.8026 thr=0.779
+  [Metrics] AUC:0.803 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7866
+    [Prob] min=0.752 max=0.977 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 030] train=0.3099 val=0.3280 auc=0.8026 thr=0.787
+  [Metrics] AUC:0.803 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7947
+    [Prob] min=0.672 max=0.978 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 031] train=0.2813 val=0.3037 auc=0.7895 thr=0.706
+  [Metrics] AUC:0.789 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7914
+    [Prob] min=0.674 max=0.982 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 032] train=0.2897 val=0.3009 auc=0.7895 thr=0.707
+  [Metrics] AUC:0.789 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7914
+    [Prob] min=0.723 max=0.988 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 033] train=0.2866 val=0.3136 auc=0.8026 thr=0.763
+  [Metrics] AUC:0.803 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7947
+    [Prob] min=0.652 max=0.984 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 034] train=0.2997 val=0.2878 auc=0.7895 thr=0.698
+  [Metrics] AUC:0.789 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7914
+    [Prob] min=0.660 max=0.987 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 035] train=0.2883 val=0.2874 auc=0.7895 thr=0.710
+  [Metrics] AUC:0.789 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7914
+    [Prob] min=0.686 max=0.989 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 036] train=0.2883 val=0.2961 auc=0.7895 thr=0.737
+  [Metrics] AUC:0.789 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7914
+    [Prob] min=0.720 max=0.990 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 037] train=0.2993 val=0.3093 auc=0.7763 thr=0.755
+  [Metrics] AUC:0.776 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7882
+    [Prob] min=0.693 max=0.990 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 038] train=0.2500 val=0.2968 auc=0.7895 thr=0.697
+  [Metrics] AUC:0.789 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8166
+    [Prob] min=0.711 max=0.991 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 039] train=0.3249 val=0.3029 auc=0.8026 thr=0.796
+  [Metrics] AUC:0.803 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7866
+    [Prob] min=0.691 max=0.988 | TP=16 FP=2 FN=3 TN=2
+[lp | fold 3 | epoch 040] train=0.3012 val=0.2924 auc=0.8026 thr=0.771
+  [Metrics] AUC:0.803 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7866
+    [Prob] min=0.692 max=0.984 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 041] train=0.3012 val=0.2937 auc=0.7763 thr=0.702
+  [Metrics] AUC:0.776 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8133
+    [Prob] min=0.703 max=0.984 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 042] train=0.3149 val=0.2992 auc=0.7895 thr=0.706
+  [Metrics] AUC:0.789 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8166
+    [Prob] min=0.767 max=0.989 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 043] train=0.3111 val=0.3264 auc=0.7895 thr=0.768
+  [Metrics] AUC:0.789 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8166
+    [Prob] min=0.696 max=0.985 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 044] train=0.2930 val=0.2975 auc=0.8026 thr=0.699
+  [Metrics] AUC:0.803 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8199
+    [Prob] min=0.677 max=0.987 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 045] train=0.2987 val=0.2962 auc=0.7895 thr=0.700
+  [Metrics] AUC:0.789 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7914
+    [Prob] min=0.746 max=0.991 | TP=18 FP=3 FN=1 TN=1
+[lp | fold 3 | epoch 046] train=0.2923 val=0.3254 auc=0.7632 thr=0.785
+  [Metrics] AUC:0.763 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7849
+    [Prob] min=0.659 max=0.988 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 047] train=0.2884 val=0.2884 auc=0.7895 thr=0.664
+  [Metrics] AUC:0.789 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8166
+    [Prob] min=0.667 max=0.990 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 048] train=0.3051 val=0.2865 auc=0.7763 thr=0.685
+  [Metrics] AUC:0.776 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8133
+    [Prob] min=0.707 max=0.993 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 049] train=0.2729 val=0.2991 auc=0.7763 thr=0.731
+  [Metrics] AUC:0.776 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8133
+    [Prob] min=0.698 max=0.994 | TP=19 FP=3 FN=0 TN=1
+[lp | fold 3 | epoch 050] train=0.2998 val=0.3012 auc=0.7763 thr=0.715
+  [Metrics] AUC:0.776 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8133
+  Early stopping @ epoch 50 | best_score=0.8224
+  SWA finalize ediliyor...
+  SWA composite: 0.8133 | Best regular: 0.8224
+
+=================================================================
+  SwinLP Fold 3  |  Threshold: Youden 0.768
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.842          [0.650 - 0.987]
+  AUC-PR                0.970                        -
+  Sensitivity           0.789          [0.589 - 0.950]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.500          [0.167 - 0.857]
+  Accuracy              0.826          [0.652 - 0.957]
+  F1-Score              0.882          [0.741 - 0.974]
+  Composite             0.857                        -
+
+  CM: TP=15 FP=0 FN=4 TN=4
+  Toplam Hata: 4/23
+=================================================================
+
+======================================================================
+FOLD 4/5
+======================================================================
+  [Fold 4] class_counts=[17 78] | backbone dondurulmuş (~50K param)
+  Pretrained: 126 katman yüklendi, 33 atlandı.
+  Eğitilebilir: 74,402 / 62,261,698 param (0.1%)
+    [Prob] min=0.517 max=0.588 | TP=20 FP=5 FN=0 TN=0
+[lp | fold 4 | epoch 001] train=0.7647 val=0.7079 auc=0.5600 thr=0.517
+  [Metrics] AUC:0.560 F1:0.889 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7122
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.000 | comp=0.7122)
+    [Prob] min=0.800 max=0.849 | TP=20 FP=5 FN=0 TN=0
+[lp | fold 4 | epoch 002] train=0.4835 val=0.4041 auc=0.5200 thr=0.800
+  [Metrics] AUC:0.520 F1:0.889 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7022
+    [Prob] min=0.792 max=0.891 | TP=16 FP=3 FN=4 TN=2
+[lp | fold 4 | epoch 003] train=0.3432 val=0.4044 auc=0.6000 thr=0.808
+  [Metrics] AUC:0.600 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.6951
+    [Prob] min=0.710 max=0.905 | TP=16 FP=3 FN=4 TN=2
+[lp | fold 4 | epoch 004] train=0.3362 val=0.3961 auc=0.5900 thr=0.731
+  [Metrics] AUC:0.590 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.6926
+    [Prob] min=0.797 max=0.959 | TP=17 FP=4 FN=3 TN=1
+[lp | fold 4 | epoch 005] train=0.3419 val=0.4480 auc=0.5700 thr=0.811
+  [Metrics] AUC:0.570 F1:0.829 SENS:0.850 SPEC:0.200 | COMPOSITE:0.6773
+    [Prob] min=0.682 max=0.958 | TP=16 FP=3 FN=4 TN=2
+[lp | fold 4 | epoch 006] train=0.3331 val=0.4155 auc=0.6000 thr=0.713
+  [Metrics] AUC:0.600 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.6951
+    [Prob] min=0.757 max=0.977 | TP=16 FP=3 FN=4 TN=2
+[lp | fold 4 | epoch 007] train=0.3265 val=0.4575 auc=0.6000 thr=0.789
+  [Metrics] AUC:0.600 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.6951
+    [Prob] min=0.681 max=0.972 | TP=18 FP=3 FN=2 TN=2
+[lp | fold 4 | epoch 008] train=0.3464 val=0.4106 auc=0.6200 thr=0.700
+  [Metrics] AUC:0.620 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7495
+    ☆ SAVED FALLBACK (SENS=0.900 SPEC=0.400 | comp=0.7495)
+    [Prob] min=0.784 max=0.982 | TP=18 FP=3 FN=2 TN=2
+[lp | fold 4 | epoch 009] train=0.3178 val=0.4512 auc=0.6200 thr=0.805
+  [Metrics] AUC:0.620 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7495
+    [Prob] min=0.700 max=0.978 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 010] train=0.3085 val=0.4019 auc=0.6500 thr=0.701
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.400 | comp=0.8051)
+    [Prob] min=0.696 max=0.981 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 011] train=0.3197 val=0.4042 auc=0.6500 thr=0.699
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.751 max=0.988 | TP=19 FP=3 FN=1 TN=2
+[lp | fold 4 | epoch 012] train=0.2994 val=0.4468 auc=0.6300 thr=0.756
+  [Metrics] AUC:0.630 F1:0.905 SENS:0.950 SPEC:0.400 | COMPOSITE:0.7762
+    [Prob] min=0.692 max=0.988 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 013] train=0.3081 val=0.4091 auc=0.6500 thr=0.704
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.692 max=0.990 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 014] train=0.2876 val=0.3992 auc=0.6500 thr=0.718
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.699 max=0.992 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 015] train=0.3110 val=0.3867 auc=0.6600 thr=0.738
+  [Metrics] AUC:0.660 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8076
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.400 | comp=0.8076)
+    [Prob] min=0.650 max=0.994 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 016] train=0.2842 val=0.3936 auc=0.6400 thr=0.703
+  [Metrics] AUC:0.640 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8026
+    [Prob] min=0.659 max=0.995 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 017] train=0.3213 val=0.4172 auc=0.6300 thr=0.711
+  [Metrics] AUC:0.630 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8001
+    [Prob] min=0.641 max=0.994 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 018] train=0.2932 val=0.3831 auc=0.6900 thr=0.710
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.400 | comp=0.8151)
+    [Prob] min=0.631 max=0.994 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 019] train=0.2931 val=0.3769 auc=0.7100 thr=0.708
+  [Metrics] AUC:0.710 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8201
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.400 | comp=0.8201)
+    [Prob] min=0.619 max=0.995 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 020] train=0.2676 val=0.3640 auc=0.7200 thr=0.706
+  [Metrics] AUC:0.720 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8226
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.400 | comp=0.8226)
+    [Prob] min=0.732 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 021] train=0.2791 val=0.4030 auc=0.7200 thr=0.817
+  [Metrics] AUC:0.720 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8226
+    [Prob] min=0.647 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 022] train=0.2628 val=0.3575 auc=0.7300 thr=0.729
+  [Metrics] AUC:0.730 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8251
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.400 | comp=0.8251)
+    [Prob] min=0.637 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 023] train=0.2744 val=0.3947 auc=0.6800 thr=0.720
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.608 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 024] train=0.2696 val=0.4507 auc=0.6500 thr=0.676
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.549 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 025] train=0.2972 val=0.4278 auc=0.6800 thr=0.619
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.712 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 026] train=0.3013 val=0.4024 auc=0.7000 thr=0.776
+  [Metrics] AUC:0.700 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8176
+    [Prob] min=0.771 max=0.996 | TP=17 FP=2 FN=3 TN=3
+[lp | fold 4 | epoch 027] train=0.2843 val=0.4161 auc=0.7400 thr=0.842
+  [Metrics] AUC:0.740 F1:0.872 SENS:0.850 SPEC:0.600 | COMPOSITE:0.7904
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.600≥0.5 | F1=0.872 | comp=0.7904)
+    [Prob] min=0.661 max=0.995 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 028] train=0.2732 val=0.3733 auc=0.7200 thr=0.717
+  [Metrics] AUC:0.720 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8226
+    [Prob] min=0.640 max=0.995 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 029] train=0.2830 val=0.3827 auc=0.7100 thr=0.692
+  [Metrics] AUC:0.710 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8201
+    [Prob] min=0.661 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 030] train=0.2975 val=0.4550 auc=0.6300 thr=0.707
+  [Metrics] AUC:0.630 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8001
+    [Prob] min=0.688 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 031] train=0.3558 val=0.4734 auc=0.6300 thr=0.734
+  [Metrics] AUC:0.630 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8001
+    [Prob] min=0.607 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 032] train=0.2619 val=0.4146 auc=0.6500 thr=0.662
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.644 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 033] train=0.2731 val=0.4441 auc=0.6300 thr=0.702
+  [Metrics] AUC:0.630 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8001
+    [Prob] min=0.634 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 034] train=0.3075 val=0.4376 auc=0.6400 thr=0.699
+  [Metrics] AUC:0.640 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8026
+    [Prob] min=0.582 max=0.995 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 035] train=0.2799 val=0.4142 auc=0.6600 thr=0.639
+  [Metrics] AUC:0.660 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8076
+    [Prob] min=0.663 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 036] train=0.2948 val=0.4275 auc=0.6500 thr=0.720
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.669 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 037] train=0.2777 val=0.4145 auc=0.6600 thr=0.725
+  [Metrics] AUC:0.660 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8076
+    [Prob] min=0.707 max=0.996 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 038] train=0.2920 val=0.4531 auc=0.6500 thr=0.762
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.642 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 039] train=0.2570 val=0.4431 auc=0.6500 thr=0.700
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.563 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 040] train=0.2845 val=0.4554 auc=0.6500 thr=0.618
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.638 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 041] train=0.2624 val=0.4947 auc=0.6300 thr=0.699
+  [Metrics] AUC:0.630 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8001
+    [Prob] min=0.694 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 042] train=0.3076 val=0.4846 auc=0.6500 thr=0.759
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.614 max=0.997 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 043] train=0.2858 val=0.3739 auc=0.7200 thr=0.675
+  [Metrics] AUC:0.720 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8226
+    [Prob] min=0.653 max=0.998 | TP=16 FP=2 FN=4 TN=3
+[lp | fold 4 | epoch 044] train=0.2292 val=0.3874 auc=0.7300 thr=0.802
+  [Metrics] AUC:0.730 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7630
+    [Prob] min=0.667 max=0.998 | TP=16 FP=1 FN=4 TN=4
+[lp | fold 4 | epoch 045] train=0.2970 val=0.3971 auc=0.7500 thr=0.828
+  [Metrics] AUC:0.750 F1:0.865 SENS:0.800 SPEC:0.800 | COMPOSITE:0.8037
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.800≥0.5 | F1=0.865 | comp=0.8037)
+    [Prob] min=0.647 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 046] train=0.2832 val=0.3944 auc=0.7200 thr=0.740
+  [Metrics] AUC:0.720 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8226
+    [Prob] min=0.556 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 047] train=0.2742 val=0.4177 auc=0.6800 thr=0.644
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.586 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 048] train=0.2821 val=0.4512 auc=0.6500 thr=0.666
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.610 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 049] train=0.2458 val=0.4693 auc=0.6500 thr=0.689
+  [Metrics] AUC:0.650 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8051
+    [Prob] min=0.579 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 050] train=0.2650 val=0.4398 auc=0.6700 thr=0.670
+  [Metrics] AUC:0.670 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8101
+    [Prob] min=0.521 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 051] train=0.3079 val=0.4254 auc=0.6900 thr=0.602
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.639 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 052] train=0.2803 val=0.4278 auc=0.6900 thr=0.724
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.667 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 053] train=0.2922 val=0.4408 auc=0.6900 thr=0.751
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.624 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 054] train=0.2697 val=0.4102 auc=0.6900 thr=0.704
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.622 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 055] train=0.2657 val=0.4127 auc=0.6900 thr=0.704
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.615 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 056] train=0.2691 val=0.4127 auc=0.6900 thr=0.700
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.595 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 057] train=0.2618 val=0.4103 auc=0.6800 thr=0.679
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.595 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 058] train=0.2819 val=0.4102 auc=0.6800 thr=0.678
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.602 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 059] train=0.2490 val=0.4130 auc=0.6800 thr=0.686
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.604 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 060] train=0.2733 val=0.4145 auc=0.6800 thr=0.689
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.610 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 061] train=0.2616 val=0.4165 auc=0.6800 thr=0.695
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.613 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 062] train=0.2677 val=0.4172 auc=0.6800 thr=0.698
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.614 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 063] train=0.2654 val=0.4170 auc=0.6800 thr=0.699
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.616 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 064] train=0.2738 val=0.4179 auc=0.6800 thr=0.702
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.614 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 065] train=0.2593 val=0.4172 auc=0.6800 thr=0.699
+  [Metrics] AUC:0.680 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8126
+    [Prob] min=0.610 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 066] train=0.2574 val=0.4169 auc=0.6900 thr=0.695
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.606 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 067] train=0.2760 val=0.4181 auc=0.6900 thr=0.691
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.604 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 068] train=0.2696 val=0.4173 auc=0.6900 thr=0.689
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.600 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 069] train=0.2955 val=0.4139 auc=0.6900 thr=0.684
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+    [Prob] min=0.603 max=0.998 | TP=20 FP=3 FN=0 TN=2
+[lp | fold 4 | epoch 070] train=0.2652 val=0.4138 auc=0.6900 thr=0.686
+  [Metrics] AUC:0.690 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8151
+  Early stopping @ epoch 70 | best_score=0.8037
+  SWA finalize ediliyor...
+  SWA composite: 0.8151 | Best regular: 0.8037
+  SWA modeli seçildi!
+
+=================================================================
+  SwinLP Fold 4  |  Threshold: Youden 0.692
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.690          [0.333 - 1.000]
+  AUC-PR                0.887                        -
+  Sensitivity           1.000          [1.000 - 1.000]
+  Specificity           0.400          [0.000 - 1.000]
+  PPV                   0.870          [0.720 - 1.000]
+  NPV                   1.000          [0.000 - 1.000]
+  Accuracy              0.880          [0.760 - 1.000]
+  F1-Score              0.930          [0.837 - 1.000]
+  Composite             0.815                        -
+
+  CM: TP=20 FP=3 FN=0 TN=2
+  Toplam Hata: 3/25
+=================================================================
+
+======================================================================
+FOLD 5/5
+======================================================================
+  [Fold 5] class_counts=[17 79] | backbone dondurulmuş (~50K param)
+  Pretrained: 126 katman yüklendi, 33 atlandı.
+  Eğitilebilir: 74,402 / 62,261,698 param (0.1%)
+    [Prob] min=0.513 max=0.595 | TP=16 FP=4 FN=3 TN=1
+[lp | fold 5 | epoch 001] train=0.7222 val=0.6788 auc=0.6632 thr=0.556
+  [Metrics] AUC:0.663 F1:0.821 SENS:0.842 SPEC:0.200 | COMPOSITE:0.6957
+    ☆ SAVED FALLBACK (SENS=0.842 SPEC=0.200 | comp=0.6957)
+    [Prob] min=0.774 max=0.842 | TP=19 FP=5 FN=0 TN=0
+[lp | fold 5 | epoch 002] train=0.4672 val=0.3917 auc=0.4526 thr=0.774
+  [Metrics] AUC:0.453 F1:0.884 SENS:1.000 SPEC:0.000 | COMPOSITE:0.6841
+    [Prob] min=0.849 max=0.878 | TP=18 FP=5 FN=1 TN=0
+[lp | fold 5 | epoch 003] train=0.3900 val=0.3960 auc=0.8526 thr=0.850
+  [Metrics] AUC:0.853 F1:0.857 SENS:0.947 SPEC:0.000 | COMPOSITE:0.7590
+    ☆ SAVED FALLBACK (SENS=0.947 SPEC=0.000 | comp=0.7590)
+    [Prob] min=0.761 max=0.863 | TP=16 FP=0 FN=3 TN=5
+[lp | fold 5 | epoch 004] train=0.3393 val=0.3562 auc=0.9053 thr=0.777
+  [Metrics] AUC:0.905 F1:0.914 SENS:0.842 SPEC:1.000 | COMPOSITE:0.8996
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=1.000≥0.5 | F1=0.914 | comp=0.8996)
+    [Prob] min=0.787 max=0.902 | TP=16 FP=0 FN=3 TN=5
+[lp | fold 5 | epoch 005] train=0.3576 val=0.3475 auc=0.9053 thr=0.806
+  [Metrics] AUC:0.905 F1:0.914 SENS:0.842 SPEC:1.000 | COMPOSITE:0.8996
+    [Prob] min=0.824 max=0.935 | TP=16 FP=0 FN=3 TN=5
+[lp | fold 5 | epoch 006] train=0.3402 val=0.3546 auc=0.9158 thr=0.844
+  [Metrics] AUC:0.916 F1:0.914 SENS:0.842 SPEC:1.000 | COMPOSITE:0.9023
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=1.000≥0.5 | F1=0.914 | comp=0.9023)
+    [Prob] min=0.749 max=0.934 | TP=16 FP=0 FN=3 TN=5
+[lp | fold 5 | epoch 007] train=0.3277 val=0.3299 auc=0.9053 thr=0.777
+  [Metrics] AUC:0.905 F1:0.914 SENS:0.842 SPEC:1.000 | COMPOSITE:0.8996
+    [Prob] min=0.740 max=0.940 | TP=17 FP=2 FN=2 TN=3
+[lp | fold 5 | epoch 008] train=0.3382 val=0.3326 auc=0.8737 thr=0.757
+  [Metrics] AUC:0.874 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8453
+    [Prob] min=0.779 max=0.960 | TP=17 FP=2 FN=2 TN=3
+[lp | fold 5 | epoch 009] train=0.3283 val=0.3276 auc=0.8737 thr=0.798
+  [Metrics] AUC:0.874 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8453
+    [Prob] min=0.670 max=0.944 | TP=17 FP=2 FN=2 TN=3
+[lp | fold 5 | epoch 010] train=0.3553 val=0.3554 auc=0.8632 thr=0.690
+  [Metrics] AUC:0.863 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8426
+    [Prob] min=0.814 max=0.968 | TP=18 FP=3 FN=1 TN=2
+[lp | fold 5 | epoch 011] train=0.3222 val=0.3442 auc=0.8421 thr=0.825
+  [Metrics] AUC:0.842 F1:0.900 SENS:0.947 SPEC:0.400 | COMPOSITE:0.8271
+    [Prob] min=0.760 max=0.965 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 012] train=0.3326 val=0.3284 auc=0.8421 thr=0.784
+  [Metrics] AUC:0.842 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8115
+    [Prob] min=0.694 max=0.965 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 013] train=0.3181 val=0.3356 auc=0.8632 thr=0.720
+  [Metrics] AUC:0.863 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8167
+    [Prob] min=0.793 max=0.976 | TP=17 FP=2 FN=2 TN=3
+[lp | fold 5 | epoch 014] train=0.3256 val=0.3358 auc=0.8737 thr=0.813
+  [Metrics] AUC:0.874 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8453
+    [Prob] min=0.755 max=0.976 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 015] train=0.3353 val=0.3280 auc=0.8211 thr=0.781
+  [Metrics] AUC:0.821 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8062
+    [Prob] min=0.772 max=0.981 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 016] train=0.3223 val=0.3296 auc=0.8211 thr=0.800
+  [Metrics] AUC:0.821 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8062
+    [Prob] min=0.703 max=0.976 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 017] train=0.3029 val=0.3376 auc=0.8000 thr=0.737
+  [Metrics] AUC:0.800 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8010
+    [Prob] min=0.702 max=0.982 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 018] train=0.3022 val=0.3324 auc=0.8000 thr=0.744
+  [Metrics] AUC:0.800 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8010
+    [Prob] min=0.728 max=0.989 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 019] train=0.3126 val=0.3090 auc=0.8632 thr=0.772
+  [Metrics] AUC:0.863 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8167
+    [Prob] min=0.710 max=0.990 | TP=16 FP=1 FN=3 TN=4
+[lp | fold 5 | epoch 020] train=0.3376 val=0.3007 auc=0.8632 thr=0.773
+  [Metrics] AUC:0.863 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8527
+    [Prob] min=0.696 max=0.987 | TP=16 FP=2 FN=3 TN=3
+[lp | fold 5 | epoch 021] train=0.3192 val=0.3190 auc=0.7789 thr=0.739
+  [Metrics] AUC:0.779 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.7957
+    [Prob] min=0.715 max=0.989 | TP=16 FP=4 FN=3 TN=1
+[lp | fold 5 | epoch 022] train=0.2786 val=0.3249 auc=0.7579 thr=0.755
+  [Metrics] AUC:0.758 F1:0.821 SENS:0.842 SPEC:0.200 | COMPOSITE:0.7193
+    [Prob] min=0.668 max=0.991 | TP=17 FP=4 FN=2 TN=1
+[lp | fold 5 | epoch 023] train=0.2688 val=0.3292 auc=0.7474 thr=0.686
+  [Metrics] AUC:0.747 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7425
+    [Prob] min=0.686 max=0.993 | TP=17 FP=4 FN=2 TN=1
+[lp | fold 5 | epoch 024] train=0.3052 val=0.3196 auc=0.7579 thr=0.703
+  [Metrics] AUC:0.758 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7451
+    [Prob] min=0.741 max=0.994 | TP=17 FP=4 FN=2 TN=1
+[lp | fold 5 | epoch 025] train=0.3459 val=0.3258 auc=0.7474 thr=0.762
+  [Metrics] AUC:0.747 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7425
+    [Prob] min=0.649 max=0.993 | TP=18 FP=4 FN=1 TN=1
+[lp | fold 5 | epoch 026] train=0.2714 val=0.3353 auc=0.7368 thr=0.666
+  [Metrics] AUC:0.737 F1:0.878 SENS:0.947 SPEC:0.200 | COMPOSITE:0.7653
+    [Prob] min=0.705 max=0.994 | TP=18 FP=4 FN=1 TN=1
+[lp | fold 5 | epoch 027] train=0.3130 val=0.3344 auc=0.7368 thr=0.715
+  [Metrics] AUC:0.737 F1:0.878 SENS:0.947 SPEC:0.200 | COMPOSITE:0.7653
+    [Prob] min=0.690 max=0.994 | TP=18 FP=4 FN=1 TN=1
+[lp | fold 5 | epoch 028] train=0.3017 val=0.3353 auc=0.7263 thr=0.698
+  [Metrics] AUC:0.726 F1:0.878 SENS:0.947 SPEC:0.200 | COMPOSITE:0.7627
+    [Prob] min=0.744 max=0.995 | TP=17 FP=4 FN=2 TN=1
+[lp | fold 5 | epoch 029] train=0.3054 val=0.3310 auc=0.7158 thr=0.760
+  [Metrics] AUC:0.716 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7346
+    [Prob] min=0.710 max=0.995 | TP=18 FP=4 FN=1 TN=1
+[lp | fold 5 | epoch 030] train=0.2666 val=0.3243 auc=0.7368 thr=0.723
+  [Metrics] AUC:0.737 F1:0.878 SENS:0.947 SPEC:0.200 | COMPOSITE:0.7653
+    [Prob] min=0.698 max=0.996 | TP=18 FP=4 FN=1 TN=1
+[lp | fold 5 | epoch 031] train=0.2958 val=0.3124 auc=0.7474 thr=0.712
+  [Metrics] AUC:0.747 F1:0.878 SENS:0.947 SPEC:0.200 | COMPOSITE:0.7679
+    [Prob] min=0.570 max=0.995 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 032] train=0.3275 val=0.3667 auc=0.7263 thr=0.572
+  [Metrics] AUC:0.726 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7878
+    [Prob] min=0.663 max=0.995 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 033] train=0.2826 val=0.3236 auc=0.7474 thr=0.671
+  [Metrics] AUC:0.747 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7930
+    [Prob] min=0.719 max=0.996 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 034] train=0.2873 val=0.3376 auc=0.7368 thr=0.726
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7904
+    [Prob] min=0.679 max=0.996 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 035] train=0.2922 val=0.3319 auc=0.7368 thr=0.691
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7904
+    [Prob] min=0.620 max=0.996 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 036] train=0.2543 val=0.3370 auc=0.7158 thr=0.633
+  [Metrics] AUC:0.716 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7851
+    [Prob] min=0.647 max=0.997 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 037] train=0.2871 val=0.3303 auc=0.7263 thr=0.663
+  [Metrics] AUC:0.726 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7878
+    [Prob] min=0.664 max=0.997 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 038] train=0.2606 val=0.3312 auc=0.7158 thr=0.670
+  [Metrics] AUC:0.716 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7851
+    [Prob] min=0.664 max=0.997 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 039] train=0.2994 val=0.3324 auc=0.7053 thr=0.673
+  [Metrics] AUC:0.705 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7825
+    [Prob] min=0.630 max=0.997 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 040] train=0.2640 val=0.3437 auc=0.7053 thr=0.641
+  [Metrics] AUC:0.705 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7825
+    [Prob] min=0.659 max=0.998 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 041] train=0.2391 val=0.3429 auc=0.7263 thr=0.673
+  [Metrics] AUC:0.726 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7878
+    [Prob] min=0.626 max=0.998 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 042] train=0.2828 val=0.3399 auc=0.7263 thr=0.636
+  [Metrics] AUC:0.726 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7878
+    [Prob] min=0.681 max=0.998 | TP=19 FP=4 FN=0 TN=1
+[lp | fold 5 | epoch 043] train=0.2874 val=0.3406 auc=0.7368 thr=0.685
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7904
+    [Prob] min=0.633 max=0.997 | TP=18 FP=4 FN=1 TN=1
+[lp | fold 5 | epoch 044] train=0.3024 val=0.3378 auc=0.6947 thr=0.641
+  [Metrics] AUC:0.695 F1:0.878 SENS:0.947 SPEC:0.200 | COMPOSITE:0.7548
+    [Prob] min=0.712 max=0.998 | TP=17 FP=4 FN=2 TN=1
+[lp | fold 5 | epoch 045] train=0.2747 val=0.3314 auc=0.6947 thr=0.730
+  [Metrics] AUC:0.695 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7293
+    [Prob] min=0.682 max=0.997 | TP=17 FP=4 FN=2 TN=1
+[lp | fold 5 | epoch 046] train=0.2899 val=0.3228 auc=0.6947 thr=0.706
+  [Metrics] AUC:0.695 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7293
+    [Prob] min=0.639 max=0.997 | TP=17 FP=4 FN=2 TN=1
+[lp | fold 5 | epoch 047] train=0.2825 val=0.3341 auc=0.6842 thr=0.650
+  [Metrics] AUC:0.684 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7267
+    [Prob] min=0.638 max=0.998 | TP=16 FP=4 FN=3 TN=1
+[lp | fold 5 | epoch 048] train=0.2863 val=0.3352 auc=0.6737 thr=0.696
+  [Metrics] AUC:0.674 F1:0.821 SENS:0.842 SPEC:0.200 | COMPOSITE:0.6983
+    [Prob] min=0.628 max=0.998 | TP=16 FP=4 FN=3 TN=1
+[lp | fold 5 | epoch 049] train=0.2925 val=0.3419 auc=0.6737 thr=0.691
+  [Metrics] AUC:0.674 F1:0.821 SENS:0.842 SPEC:0.200 | COMPOSITE:0.6983
+    [Prob] min=0.670 max=0.998 | TP=16 FP=4 FN=3 TN=1
+[lp | fold 5 | epoch 050] train=0.2703 val=0.3462 auc=0.6737 thr=0.741
+  [Metrics] AUC:0.674 F1:0.821 SENS:0.842 SPEC:0.200 | COMPOSITE:0.6983
+  Early stopping @ epoch 50 | best_score=0.9023
+  SWA finalize ediliyor...
+  SWA composite: 0.6983 | Best regular: 0.9023
+
+=================================================================
+  SwinLP Fold 5  |  Threshold: Youden 0.844
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.916          [0.773 - 1.000]
+  AUC-PR                0.980                        -
+  Sensitivity           0.842          [0.667 - 1.000]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.625          [0.282 - 1.000]
+  Accuracy              0.875          [0.750 - 1.000]
+  F1-Score              0.914          [0.800 - 1.000]
+  Composite             0.902                        -
+
+  CM: TP=16 FP=0 FN=3 TN=5
+  Toplam Hata: 3/24
+=================================================================
+
+AGGREGATE OOF (5-Fold Cross-Validation):
+
+=================================================================
+  SwinUNETR LinearProbe OOF  |  Threshold: Youden 0.849
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.763          [0.642 - 0.864]
+  AUC-PR                0.924                        -
+  Sensitivity           0.582          [0.485 - 0.674]
+  Specificity           0.909          [0.762 - 1.000]
+  PPV                   0.966          [0.909 - 1.000]
+  NPV                   0.328          [0.211 - 0.455]
+  Accuracy              0.642          [0.558 - 0.725]
+  F1-Score              0.726          [0.643 - 0.796]
+  Composite             0.712                        -
+
+  CM: TP=57 FP=2 FN=41 TN=20
+  Toplam Hata: 43/120
+=================================================================
+
+SwinUNETR-LinearProbe — Kalibrasyon: Brier=0.1377 | ECE=0.1736
+
+SwinUNETR-LinearProbe — EXTERNAL TEST (ALL FOLDS + ENSEMBLE):
+               fold  auc_roc  sensitivity  specificity  accuracy    f1   ppv   npv  tp  fp  fn  tn
+             Fold 1    0.832        0.684          1.0     0.750 0.812 1.000 0.455  13   0   6   5
+             Fold 2    0.884        0.789          1.0     0.833 0.882 1.000 0.556  15   0   4   5
+             Fold 3    0.842        0.789          1.0     0.833 0.882 1.000 0.556  15   0   4   5
+             Fold 4    0.895        0.789          1.0     0.833 0.882 1.000 0.556  15   0   4   5
+             Fold 5    0.674        0.579          1.0     0.667 0.733 1.000 0.385  11   0   8   5
+    Ensemble (@0.5)    0.853        1.000          0.0     0.792 0.884 0.792 0.000  19   5   0   0
+ Ensemble (@Youden)    0.853        0.789          1.0     0.833 0.882 1.000 0.556  15   0   4   5
+Ensemble (90+ Sens)    0.853        0.947          0.2     0.792 0.878 0.818 0.500  18   4   1   1
+
+SwinUNETR-LinearProbe — ENSEMBLE @Youden (0.809) — %95 Bootstrap CI:
+
+=================================================================
+  SwinUNETR-LinearProbe  |  Threshold: Youden 0.809
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.853          [0.674 - 0.979]
+  AUC-PR                0.966                        -
+  Sensitivity           0.789          [0.579 - 0.950]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.556          [0.250 - 0.875]
+  Accuracy              0.833          [0.667 - 0.958]
+  F1-Score              0.882          [0.733 - 0.974]
+  Composite             0.860                        -
+
+  CM: TP=15 FP=0 FN=4 TN=5
+  Toplam Hata: 4/24
+=================================================================
+
+SwinUNETR-LinearProbe — ENSEMBLE @90%+ Sensitivity (0.726) — %95 Bootstrap CI:
+
+=================================================================
+  SwinUNETR-LinearProbe  |  Threshold: 90+Sens 0.726
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.853          [0.674 - 0.979]
+  AUC-PR                0.966                        -
+  Sensitivity           0.947          [0.824 - 1.000]
+  Specificity           0.200          [0.000 - 0.667]
+  PPV                   0.818          [0.636 - 0.957]
+  NPV                   0.500          [0.000 - 1.000]
+  Accuracy              0.792          [0.625 - 0.917]
+  F1-Score              0.878          [0.743 - 0.957]
+  Composite             0.794                        -
+
+  CM: TP=18 FP=4 FN=1 TN=1
+  Toplam Hata: 5/24
+=================================================================

@@ -1,0 +1,1004 @@
+shared_utils.py yüklendi. [Q1 | Sensitivity-First | TTA | ClinicalFocalLoss]
+MAE pretraining manifest: 143 benzersiz hasta
+MAE Pretraining başlıyor...
+[MAE | epoch 010] loss=0.6076
+[MAE | epoch 020] loss=0.5273
+[MAE | epoch 030] loss=0.4075
+[MAE | epoch 040] loss=0.3509
+[MAE | epoch 050] loss=0.2965
+[MAE | epoch 060] loss=0.2650
+[MAE | epoch 070] loss=0.2629
+[MAE | epoch 080] loss=0.2436
+MAE pretrained encoder kaydedildi: /home/zera/Downloads/Appendiks varyasyon3 DS-20260713T105239Z-2-001/Appendiks varyasyon3 DS/segformer/experiments_q1_128/mae_tinytransformer/mae_pretrained_encoder.pt
+================================================================================
+MAE-TinyTransformer3D — External Test: 24 hasta
+================================================================================
+
+======================================================================
+FOLD 1/5
+======================================================================
+  Fold 1: MAE pretrained encoder yüklendi.
+[mae-tiny | fold 1 | epoch 001] train=0.3258 val_loss=0.3023 auc=0.3250 thr=0.518
+  [Metrics] AUC:0.325 F1:0.909 SENS:1.000 SPEC:0.000 | COMPOSITE:0.6585 EMA:-1.3415
+[mae-tiny | fold 1 | epoch 002] train=0.2219 val_loss=0.1734 auc=0.6500 thr=0.720
+  [Metrics] AUC:0.650 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7345 EMA:-1.3187
+[mae-tiny | fold 1 | epoch 003] train=0.1944 val_loss=0.1665 auc=0.7625 thr=0.768
+  [Metrics] AUC:0.762 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7562 EMA:-0.6962
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.500≥0.5 | comp=0.7562)
+[mae-tiny | fold 1 | epoch 004] train=0.1777 val_loss=0.1774 auc=0.7750 thr=0.632
+  [Metrics] AUC:0.775 F1:0.905 SENS:0.950 SPEC:0.250 | COMPOSITE:0.7899 EMA:-0.8504
+[mae-tiny | fold 1 | epoch 005] train=0.1605 val_loss=0.1687 auc=0.7875 thr=0.651
+  [Metrics] AUC:0.788 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7873 EMA:-0.3591
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.500≥0.5 | comp=0.7873)
+[mae-tiny | fold 1 | epoch 006] train=0.1447 val_loss=0.1589 auc=0.7750 thr=0.677
+  [Metrics] AUC:0.775 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7593 EMA:-0.0236
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.500≥0.5 | comp=0.7593)
+[mae-tiny | fold 1 | epoch 007] train=0.1498 val_loss=0.1755 auc=0.7625 thr=0.566
+  [Metrics] AUC:0.762 F1:0.930 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8107 EMA:-0.3733
+[mae-tiny | fold 1 | epoch 008] train=0.1363 val_loss=0.1873 auc=0.7500 thr=0.592
+  [Metrics] AUC:0.750 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7530 EMA:-0.0354
+[mae-tiny | fold 1 | epoch 009] train=0.1414 val_loss=0.1561 auc=0.7750 thr=0.649
+  [Metrics] AUC:0.775 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7842 EMA:0.2105
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.500≥0.5 | comp=0.7842)
+[mae-tiny | fold 1 | epoch 010] train=0.1428 val_loss=0.2087 auc=0.7125 thr=0.548
+  [Metrics] AUC:0.713 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7501 EMA:-0.2276
+[mae-tiny | fold 1 | epoch 011] train=0.1739 val_loss=0.1634 auc=0.7000 thr=0.661
+  [Metrics] AUC:0.700 F1:0.905 SENS:0.950 SPEC:0.250 | COMPOSITE:0.7712 EMA:-0.5280
+[mae-tiny | fold 1 | epoch 012] train=0.1339 val_loss=0.2046 auc=0.7125 thr=0.554
+  [Metrics] AUC:0.713 F1:0.930 SENS:1.000 SPEC:0.250 | COMPOSITE:0.7982 EMA:-0.7301
+[mae-tiny | fold 1 | epoch 013] train=0.1496 val_loss=0.1885 auc=0.7375 thr=0.601
+  [Metrics] AUC:0.738 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7748 EMA:-0.2786
+[mae-tiny | fold 1 | epoch 014] train=0.1420 val_loss=0.1565 auc=0.7875 thr=0.695
+  [Metrics] AUC:0.787 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8361 EMA:0.0558
+[mae-tiny | fold 1 | epoch 015] train=0.1455 val_loss=0.3632 auc=0.7625 thr=0.455
+  [Metrics] AUC:0.762 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8056 EMA:0.2807
+    ★ SAVED DUAL-PASS (SENS=0.900≥0.8 SPEC=0.500≥0.5 | comp=0.8056)
+[mae-tiny | fold 1 | epoch 016] train=0.1831 val_loss=0.1621 auc=0.7250 thr=0.684
+  [Metrics] AUC:0.725 F1:0.895 SENS:0.850 SPEC:0.750 | COMPOSITE:0.8149 EMA:0.4410
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.750≥0.5 | comp=0.8149)
+[mae-tiny | fold 1 | epoch 017] train=0.1487 val_loss=0.1805 auc=0.7125 thr=0.637
+  [Metrics] AUC:0.713 F1:0.865 SENS:0.800 SPEC:0.750 | COMPOSITE:0.7868 EMA:0.5447
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.750≥0.5 | comp=0.7868)
+[mae-tiny | fold 1 | epoch 018] train=0.1501 val_loss=0.1463 auc=0.8125 thr=0.650
+  [Metrics] AUC:0.812 F1:0.923 SENS:0.900 SPEC:0.750 | COMPOSITE:0.8614 EMA:0.6397
+    ★ SAVED DUAL-PASS (SENS=0.900≥0.8 SPEC=0.750≥0.5 | comp=0.8614)
+[mae-tiny | fold 1 | epoch 019] train=0.1364 val_loss=0.1898 auc=0.8000 thr=0.569
+  [Metrics] AUC:0.800 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8392 EMA:0.6996
+    ★ SAVED DUAL-PASS (SENS=0.950≥0.8 SPEC=0.500≥0.5 | comp=0.8392)
+[mae-tiny | fold 1 | epoch 020] train=0.1383 val_loss=0.1819 auc=0.6500 thr=0.726
+  [Metrics] AUC:0.650 F1:0.850 SENS:0.850 SPEC:0.250 | COMPOSITE:0.7100 EMA:0.1027
+[mae-tiny | fold 1 | epoch 021] train=0.1754 val_loss=0.1725 auc=0.6875 thr=0.684
+  [Metrics] AUC:0.688 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7439 EMA:-0.3049
+[mae-tiny | fold 1 | epoch 022] train=0.1542 val_loss=0.2200 auc=0.6625 thr=0.579
+  [Metrics] AUC:0.663 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7312 EMA:0.0059
+[mae-tiny | fold 1 | epoch 023] train=0.1559 val_loss=0.1426 auc=0.7750 thr=0.698
+  [Metrics] AUC:0.775 F1:0.850 SENS:0.850 SPEC:0.250 | COMPOSITE:0.7412 EMA:-0.3735
+[mae-tiny | fold 1 | epoch 024] train=0.1509 val_loss=0.1777 auc=0.7000 thr=0.638
+  [Metrics] AUC:0.700 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7654 EMA:-0.0318
+[mae-tiny | fold 1 | epoch 025] train=0.1390 val_loss=0.1791 auc=0.6500 thr=0.637
+  [Metrics] AUC:0.650 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6851 EMA:-0.4167
+[mae-tiny | fold 1 | epoch 026] train=0.1510 val_loss=0.1762 auc=0.6750 thr=0.641
+  [Metrics] AUC:0.675 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7343 EMA:-0.0714
+[mae-tiny | fold 1 | epoch 027] train=0.1312 val_loss=0.1488 auc=0.8250 thr=0.645
+  [Metrics] AUC:0.825 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.8887 EMA:0.2166
+[mae-tiny | fold 1 | epoch 028] train=0.1375 val_loss=0.2043 auc=0.6625 thr=0.595
+  [Metrics] AUC:0.662 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6883 EMA:-0.2419
+[mae-tiny | fold 1 | epoch 029] train=0.1295 val_loss=0.1456 auc=0.8125 thr=0.647
+  [Metrics] AUC:0.812 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8423 EMA:0.0834
+[mae-tiny | fold 1 | epoch 030] train=0.1479 val_loss=0.2085 auc=0.6000 thr=0.606
+  [Metrics] AUC:0.600 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6726 EMA:-0.3398
+[mae-tiny | fold 1 | epoch 031] train=0.1457 val_loss=0.2118 auc=0.6875 thr=0.559
+  [Metrics] AUC:0.688 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7439 EMA:-0.6147
+[mae-tiny | fold 1 | epoch 032] train=0.1469 val_loss=0.1486 auc=0.8625 thr=0.620
+  [Metrics] AUC:0.863 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.8981 EMA:-0.1609
+[mae-tiny | fold 1 | epoch 033] train=0.1240 val_loss=0.1828 auc=0.7500 thr=0.577
+  [Metrics] AUC:0.750 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8025 EMA:0.1281
+[mae-tiny | fold 1 | epoch 034] train=0.1191 val_loss=0.1625 auc=0.7875 thr=0.562
+  [Metrics] AUC:0.787 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8361 EMA:0.3405
+[mae-tiny | fold 1 | epoch 035] train=0.2131 val_loss=0.1480 auc=0.8250 thr=0.677
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455 EMA:0.4920
+[mae-tiny | fold 1 | epoch 036] train=0.1504 val_loss=0.1979 auc=0.6625 thr=0.552
+  [Metrics] AUC:0.662 F1:0.930 SENS:1.000 SPEC:0.250 | COMPOSITE:0.7857 EMA:-0.0199
+[mae-tiny | fold 1 | epoch 037] train=0.1418 val_loss=0.1729 auc=0.7125 thr=0.646
+  [Metrics] AUC:0.713 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7437 EMA:0.2092
+[mae-tiny | fold 1 | epoch 038] train=0.1240 val_loss=0.1461 auc=0.7875 thr=0.671
+  [Metrics] AUC:0.788 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7873 EMA:0.3826
+[mae-tiny | fold 1 | epoch 039] train=0.1253 val_loss=0.1722 auc=0.6625 thr=0.642
+  [Metrics] AUC:0.662 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7312 EMA:0.4872
+[mae-tiny | fold 1 | epoch 040] train=0.1320 val_loss=0.1709 auc=0.7625 thr=0.595
+  [Metrics] AUC:0.762 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8056 EMA:0.5827
+[mae-tiny | fold 1 | epoch 041] train=0.1389 val_loss=0.1527 auc=0.8375 thr=0.593
+  [Metrics] AUC:0.837 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.8919 EMA:0.6755
+[mae-tiny | fold 1 | epoch 042] train=0.1264 val_loss=0.1533 auc=0.8250 thr=0.621
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455 EMA:0.7265
+    ★ SAVED DUAL-PASS (SENS=0.950≥0.8 SPEC=0.500≥0.5 | comp=0.8455)
+[mae-tiny | fold 1 | epoch 043] train=0.1291 val_loss=0.1953 auc=0.6250 thr=0.587
+  [Metrics] AUC:0.625 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6789 EMA:0.1122
+[mae-tiny | fold 1 | epoch 044] train=0.1435 val_loss=0.1660 auc=0.6625 thr=0.638
+  [Metrics] AUC:0.663 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7376 EMA:-0.3002
+[mae-tiny | fold 1 | epoch 045] train=0.1261 val_loss=0.1728 auc=0.7000 thr=0.628
+  [Metrics] AUC:0.700 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7405 EMA:0.0120
+[mae-tiny | fold 1 | epoch 046] train=0.1195 val_loss=0.1818 auc=0.7375 thr=0.596
+  [Metrics] AUC:0.738 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.7994 EMA:0.2482
+[mae-tiny | fold 1 | epoch 047] train=0.1201 val_loss=0.1838 auc=0.7375 thr=0.600
+  [Metrics] AUC:0.737 F1:0.865 SENS:0.800 SPEC:0.750 | COMPOSITE:0.7931 EMA:0.4117
+[mae-tiny | fold 1 | epoch 048] train=0.1270 val_loss=0.1821 auc=0.7625 thr=0.605
+  [Metrics] AUC:0.763 F1:0.895 SENS:0.850 SPEC:0.750 | COMPOSITE:0.8243 EMA:0.5355
+[mae-tiny | fold 1 | epoch 049] train=0.1259 val_loss=0.2020 auc=0.6750 thr=0.594
+  [Metrics] AUC:0.675 F1:0.850 SENS:0.850 SPEC:0.250 | COMPOSITE:0.7162 EMA:-0.0103
+[mae-tiny | fold 1 | epoch 050] train=0.1266 val_loss=0.1866 auc=0.7000 thr=0.608
+  [Metrics] AUC:0.700 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7654 EMA:0.2224
+[mae-tiny | fold 1 | epoch 051] train=0.1332 val_loss=0.2063 auc=0.7000 thr=0.592
+  [Metrics] AUC:0.700 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7405 EMA:0.3779
+[mae-tiny | fold 1 | epoch 052] train=0.1339 val_loss=0.2208 auc=0.7375 thr=0.568
+  [Metrics] AUC:0.738 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7748 EMA:0.4969
+[mae-tiny | fold 1 | epoch 053] train=0.1164 val_loss=0.1702 auc=0.7875 thr=0.623
+  [Metrics] AUC:0.787 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8600 EMA:0.6059
+[mae-tiny | fold 1 | epoch 054] train=0.1377 val_loss=0.1749 auc=0.7625 thr=0.600
+  [Metrics] AUC:0.762 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8537 EMA:0.6802
+[mae-tiny | fold 1 | epoch 055] train=0.1531 val_loss=0.2080 auc=0.6625 thr=0.557
+  [Metrics] AUC:0.663 F1:0.930 SENS:1.000 SPEC:0.250 | COMPOSITE:0.7857 EMA:0.1119
+[mae-tiny | fold 1 | epoch 056] train=0.1272 val_loss=0.2234 auc=0.6875 thr=0.574
+  [Metrics] AUC:0.688 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7374 EMA:0.2995
+[mae-tiny | fold 1 | epoch 057] train=0.1262 val_loss=0.1570 auc=0.7875 thr=0.647
+  [Metrics] AUC:0.787 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8361 EMA:0.4605
+[mae-tiny | fold 1 | epoch 058] train=0.1242 val_loss=0.1683 auc=0.8000 thr=0.584
+  [Metrics] AUC:0.800 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8631 EMA:0.5813
+[mae-tiny | fold 1 | epoch 059] train=0.1168 val_loss=0.1836 auc=0.8125 thr=0.532
+  [Metrics] AUC:0.812 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8662 EMA:0.6668
+[mae-tiny | fold 1 | epoch 060] train=0.1211 val_loss=0.1855 auc=0.7875 thr=0.540
+  [Metrics] AUC:0.787 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8600 EMA:0.7247
+[mae-tiny | fold 1 | epoch 061] train=0.1187 val_loss=0.1934 auc=0.7000 thr=0.555
+  [Metrics] AUC:0.700 F1:0.905 SENS:0.950 SPEC:0.250 | COMPOSITE:0.7712 EMA:0.1387
+[mae-tiny | fold 1 | epoch 062] train=0.1237 val_loss=0.2342 auc=0.7000 thr=0.472
+  [Metrics] AUC:0.700 F1:0.905 SENS:0.950 SPEC:0.250 | COMPOSITE:0.7712 EMA:-0.2716
+[mae-tiny | fold 1 | epoch 063] train=0.1299 val_loss=0.2336 auc=0.6875 thr=0.466
+  [Metrics] AUC:0.688 F1:0.930 SENS:1.000 SPEC:0.250 | COMPOSITE:0.7919 EMA:-0.5525
+[mae-tiny | fold 1 | epoch 064] train=0.1284 val_loss=0.1927 auc=0.7250 thr=0.652
+  [Metrics] AUC:0.725 F1:0.865 SENS:0.800 SPEC:0.750 | COMPOSITE:0.7900 EMA:-0.1498
+[mae-tiny | fold 1 | epoch 065] train=0.1272 val_loss=0.2066 auc=0.7375 thr=0.540
+  [Metrics] AUC:0.738 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.7994 EMA:0.1350
+[mae-tiny | fold 1 | epoch 066] train=0.1222 val_loss=0.1735 auc=0.7875 thr=0.622
+  [Metrics] AUC:0.787 F1:0.895 SENS:0.850 SPEC:0.750 | COMPOSITE:0.8306 EMA:0.3436
+[mae-tiny | fold 1 | epoch 067] train=0.1184 val_loss=0.1623 auc=0.8125 thr=0.600
+  [Metrics] AUC:0.812 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8181 EMA:0.4860
+[mae-tiny | fold 1 | epoch 068] train=0.1186 val_loss=0.2096 auc=0.7375 thr=0.574
+  [Metrics] AUC:0.738 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7499 EMA:0.5652
+[mae-tiny | fold 1 | epoch 069] train=0.1220 val_loss=0.2062 auc=0.6750 thr=0.564
+  [Metrics] AUC:0.675 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7408 EMA:0.0178
+[mae-tiny | fold 1 | epoch 070] train=0.1093 val_loss=0.2313 auc=0.6625 thr=0.561
+  [Metrics] AUC:0.663 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6883 EMA:-0.3810
+  Early stopping @ epoch 70 (best EMA score=0.7265)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.6283 | Best EMA COMPOSITE: 0.7265
+
+=================================================================
+  MAE-Tiny Fold 1  |  Threshold: Youden 0.636
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.825          [0.568 - 1.000]
+  AUC-PR                0.962                        -
+  Sensitivity           0.850          [0.667 - 1.000]
+  Specificity           0.750          [0.000 - 1.000]
+  PPV                   0.944          [0.824 - 1.000]
+  NPV                   0.500          [0.000 - 1.000]
+  Accuracy              0.833          [0.667 - 0.958]
+  F1-Score              0.895          [0.765 - 0.977]
+  Composite             0.840                        -
+
+  CM: TP=17 FP=1 FN=3 TN=3
+  Toplam Hata: 4/24
+=================================================================
+
+======================================================================
+FOLD 2/5
+======================================================================
+  Fold 2: MAE pretrained encoder yüklendi.
+[mae-tiny | fold 2 | epoch 001] train=0.4636 val_loss=0.4312 auc=0.6750 thr=0.489
+  [Metrics] AUC:0.675 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.7837 EMA:0.7837
+[mae-tiny | fold 2 | epoch 002] train=0.3067 val_loss=0.1786 auc=0.8000 thr=0.670
+  [Metrics] AUC:0.800 F1:0.865 SENS:0.800 SPEC:0.750 | COMPOSITE:0.8087 EMA:0.7912
+[mae-tiny | fold 2 | epoch 003] train=0.1840 val_loss=0.1627 auc=0.8250 thr=0.761
+  [Metrics] AUC:0.825 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7967 EMA:0.7929
+    ★ SAVED DUAL-PASS (SENS=0.850≥0.8 SPEC=0.500≥0.5 | comp=0.7967)
+[mae-tiny | fold 2 | epoch 004] train=0.1805 val_loss=0.1513 auc=0.9250 thr=0.702
+  [Metrics] AUC:0.925 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9377 EMA:0.8363
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.750≥0.5 | comp=0.9377)
+[mae-tiny | fold 2 | epoch 005] train=0.1562 val_loss=0.1552 auc=0.9125 thr=0.627
+  [Metrics] AUC:0.912 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9345 EMA:0.8658
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.750≥0.5 | comp=0.9345)
+[mae-tiny | fold 2 | epoch 006] train=0.1609 val_loss=0.1305 auc=0.9250 thr=0.673
+  [Metrics] AUC:0.925 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9377 EMA:0.8873
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.750≥0.5 | comp=0.9377)
+[mae-tiny | fold 2 | epoch 007] train=0.2057 val_loss=0.1319 auc=0.9500 thr=0.700
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439 EMA:0.9043
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.750≥0.5 | comp=0.9439)
+[mae-tiny | fold 2 | epoch 008] train=0.1625 val_loss=0.1711 auc=0.8875 thr=0.570
+  [Metrics] AUC:0.887 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8611 EMA:0.8913
+[mae-tiny | fold 2 | epoch 009] train=0.1797 val_loss=0.1387 auc=0.8875 thr=0.703
+  [Metrics] AUC:0.887 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8611 EMA:0.8823
+[mae-tiny | fold 2 | epoch 010] train=0.1445 val_loss=0.1422 auc=0.8625 thr=0.648
+  [Metrics] AUC:0.863 F1:0.895 SENS:0.850 SPEC:0.750 | COMPOSITE:0.8493 EMA:0.8724
+[mae-tiny | fold 2 | epoch 011] train=0.1576 val_loss=0.1164 auc=0.9375 thr=0.663
+  [Metrics] AUC:0.938 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8975 EMA:0.8799
+[mae-tiny | fold 2 | epoch 012] train=0.1513 val_loss=0.1243 auc=0.9000 thr=0.656
+  [Metrics] AUC:0.900 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8642 EMA:0.8752
+[mae-tiny | fold 2 | epoch 013] train=0.1455 val_loss=0.1479 auc=0.8500 thr=0.662
+  [Metrics] AUC:0.850 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8275 EMA:0.8609
+[mae-tiny | fold 2 | epoch 014] train=0.1501 val_loss=0.1447 auc=0.8125 thr=0.687
+  [Metrics] AUC:0.812 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7936 EMA:0.8407
+[mae-tiny | fold 2 | epoch 015] train=0.1429 val_loss=0.1235 auc=0.9375 thr=0.698
+  [Metrics] AUC:0.938 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8975 EMA:0.8577
+[mae-tiny | fold 2 | epoch 016] train=0.1555 val_loss=0.1458 auc=0.8500 thr=0.678
+  [Metrics] AUC:0.850 F1:0.889 SENS:0.800 SPEC:1.000 | COMPOSITE:0.8647 EMA:0.8598
+[mae-tiny | fold 2 | epoch 017] train=0.1595 val_loss=0.1647 auc=0.6750 thr=0.751
+  [Metrics] AUC:0.675 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6914 EMA:0.2093
+[mae-tiny | fold 2 | epoch 018] train=0.1727 val_loss=0.1438 auc=0.8625 thr=0.726
+  [Metrics] AUC:0.863 F1:0.895 SENS:0.850 SPEC:0.750 | COMPOSITE:0.8493 EMA:0.4013
+[mae-tiny | fold 2 | epoch 019] train=0.1461 val_loss=0.1228 auc=0.9375 thr=0.682
+  [Metrics] AUC:0.938 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8975 EMA:0.5501
+[mae-tiny | fold 2 | epoch 020] train=0.1477 val_loss=0.1193 auc=0.9125 thr=0.707
+  [Metrics] AUC:0.912 F1:0.950 SENS:0.950 SPEC:0.750 | COMPOSITE:0.9106 EMA:0.6583
+[mae-tiny | fold 2 | epoch 021] train=0.1732 val_loss=0.1376 auc=0.8625 thr=0.664
+  [Metrics] AUC:0.862 F1:0.919 SENS:0.850 SPEC:1.000 | COMPOSITE:0.8929 EMA:0.7287
+[mae-tiny | fold 2 | epoch 022] train=0.1466 val_loss=0.1401 auc=0.8375 thr=0.720
+  [Metrics] AUC:0.838 F1:0.889 SENS:0.800 SPEC:1.000 | COMPOSITE:0.8616 EMA:0.7685
+[mae-tiny | fold 2 | epoch 023] train=0.1409 val_loss=0.1413 auc=0.8250 thr=0.743
+  [Metrics] AUC:0.825 F1:0.889 SENS:0.800 SPEC:1.000 | COMPOSITE:0.8585 EMA:0.7955
+[mae-tiny | fold 2 | epoch 024] train=0.1479 val_loss=0.1393 auc=0.7875 thr=0.685
+  [Metrics] AUC:0.788 F1:0.865 SENS:0.800 SPEC:0.750 | COMPOSITE:0.8056 EMA:0.7985
+[mae-tiny | fold 2 | epoch 025] train=0.1435 val_loss=0.1194 auc=0.9250 thr=0.692
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.8389
+[mae-tiny | fold 2 | epoch 026] train=0.1398 val_loss=0.1014 auc=0.9250 thr=0.646
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.8672
+[mae-tiny | fold 2 | epoch 027] train=0.1765 val_loss=0.1451 auc=0.7000 thr=0.683
+  [Metrics] AUC:0.700 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6976 EMA:0.2163
+[mae-tiny | fold 2 | epoch 028] train=0.1510 val_loss=0.1436 auc=0.7000 thr=0.691
+  [Metrics] AUC:0.700 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6976 EMA:-0.2393
+[mae-tiny | fold 2 | epoch 029] train=0.1573 val_loss=0.1196 auc=0.8875 thr=0.672
+  [Metrics] AUC:0.888 F1:0.923 SENS:0.900 SPEC:0.750 | COMPOSITE:0.8801 EMA:0.0965
+[mae-tiny | fold 2 | epoch 030] train=0.1468 val_loss=0.1292 auc=0.8750 thr=0.705
+  [Metrics] AUC:0.875 F1:0.923 SENS:0.900 SPEC:0.750 | COMPOSITE:0.8770 EMA:0.3307
+[mae-tiny | fold 2 | epoch 031] train=0.1469 val_loss=0.1509 auc=0.7000 thr=0.622
+  [Metrics] AUC:0.700 F1:0.909 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7523 EMA:-0.1428
+[mae-tiny | fold 2 | epoch 032] train=0.1507 val_loss=0.1519 auc=0.7125 thr=0.654
+  [Metrics] AUC:0.713 F1:0.909 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7554 EMA:-0.4734
+[mae-tiny | fold 2 | epoch 033] train=0.1558 val_loss=0.1394 auc=0.8125 thr=0.708
+  [Metrics] AUC:0.812 F1:0.865 SENS:0.800 SPEC:0.750 | COMPOSITE:0.8118 EMA:-0.0878
+[mae-tiny | fold 2 | epoch 034] train=0.1446 val_loss=0.1343 auc=0.8125 thr=0.650
+  [Metrics] AUC:0.812 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7936 EMA:0.1766
+[mae-tiny | fold 2 | epoch 035] train=0.1443 val_loss=0.1216 auc=0.9250 thr=0.705
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.4036
+[mae-tiny | fold 2 | epoch 036] train=0.1820 val_loss=0.1338 auc=0.8375 thr=0.709
+  [Metrics] AUC:0.838 F1:0.895 SENS:0.850 SPEC:0.750 | COMPOSITE:0.8431 EMA:0.5354
+[mae-tiny | fold 2 | epoch 037] train=0.1497 val_loss=0.1594 auc=0.6500 thr=0.670
+  [Metrics] AUC:0.650 F1:0.821 SENS:0.800 SPEC:0.250 | COMPOSITE:0.6851 EMA:-0.0197
+[mae-tiny | fold 2 | epoch 038] train=0.1538 val_loss=0.1380 auc=0.7750 thr=0.677
+  [Metrics] AUC:0.775 F1:0.872 SENS:0.850 SPEC:0.500 | COMPOSITE:0.7842 EMA:0.2215
+[mae-tiny | fold 2 | epoch 039] train=0.1482 val_loss=0.1282 auc=0.8875 thr=0.645
+  [Metrics] AUC:0.887 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8611 EMA:0.4134
+[mae-tiny | fold 2 | epoch 040] train=0.1372 val_loss=0.1221 auc=0.9000 thr=0.651
+  [Metrics] AUC:0.900 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8642 EMA:0.5486
+[mae-tiny | fold 2 | epoch 041] train=0.1339 val_loss=0.1094 auc=0.9250 thr=0.704
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.6640
+[mae-tiny | fold 2 | epoch 042] train=0.1412 val_loss=0.1068 auc=0.9250 thr=0.689
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.7447
+[mae-tiny | fold 2 | epoch 043] train=0.1412 val_loss=0.1200 auc=0.8750 thr=0.655
+  [Metrics] AUC:0.875 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8580 EMA:0.7787
+[mae-tiny | fold 2 | epoch 044] train=0.1538 val_loss=0.1347 auc=0.8125 thr=0.614
+  [Metrics] AUC:0.812 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8181 EMA:0.7905
+[mae-tiny | fold 2 | epoch 045] train=0.1509 val_loss=0.1327 auc=0.8875 thr=0.730
+  [Metrics] AUC:0.887 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8369 EMA:0.8044
+[mae-tiny | fold 2 | epoch 046] train=0.1515 val_loss=0.1332 auc=0.8750 thr=0.709
+  [Metrics] AUC:0.875 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8580 EMA:0.8205
+[mae-tiny | fold 2 | epoch 047] train=0.1399 val_loss=0.1333 auc=0.8375 thr=0.657
+  [Metrics] AUC:0.838 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8725 EMA:0.8361
+[mae-tiny | fold 2 | epoch 048] train=0.1385 val_loss=0.1209 auc=0.8875 thr=0.644
+  [Metrics] AUC:0.887 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8850 EMA:0.8507
+[mae-tiny | fold 2 | epoch 049] train=0.1352 val_loss=0.1095 auc=0.9250 thr=0.650
+  [Metrics] AUC:0.925 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8705 EMA:0.8567
+[mae-tiny | fold 2 | epoch 050] train=0.1540 val_loss=0.1121 auc=0.9125 thr=0.654
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8670
+[mae-tiny | fold 2 | epoch 051] train=0.1424 val_loss=0.1431 auc=0.7250 thr=0.673
+  [Metrics] AUC:0.725 F1:0.842 SENS:0.800 SPEC:0.500 | COMPOSITE:0.7468 EMA:0.8310
+[mae-tiny | fold 2 | epoch 052] train=0.1557 val_loss=0.1516 auc=0.6875 thr=0.648
+  [Metrics] AUC:0.688 F1:0.878 SENS:0.900 SPEC:0.250 | COMPOSITE:0.7439 EMA:0.2048
+[mae-tiny | fold 2 | epoch 053] train=0.1479 val_loss=0.1371 auc=0.7875 thr=0.694
+  [Metrics] AUC:0.788 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8119 EMA:0.3869
+[mae-tiny | fold 2 | epoch 054] train=0.1406 val_loss=0.1218 auc=0.8875 thr=0.677
+  [Metrics] AUC:0.887 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8611 EMA:0.5292
+[mae-tiny | fold 2 | epoch 055] train=0.1474 val_loss=0.1235 auc=0.8750 thr=0.654
+  [Metrics] AUC:0.875 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8580 EMA:0.6278
+[mae-tiny | fold 2 | epoch 056] train=0.1363 val_loss=0.1121 auc=0.9250 thr=0.654
+  [Metrics] AUC:0.925 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8943 EMA:0.7078
+[mae-tiny | fold 2 | epoch 057] train=0.1405 val_loss=0.1011 auc=0.9500 thr=0.649
+  [Metrics] AUC:0.950 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.9006 EMA:0.7656
+[mae-tiny | fold 2 | epoch 058] train=0.1375 val_loss=0.1127 auc=0.9125 thr=0.650
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8033
+[mae-tiny | fold 2 | epoch 059] train=0.1310 val_loss=0.1203 auc=0.8875 thr=0.667
+  [Metrics] AUC:0.887 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8850 EMA:0.8278
+[mae-tiny | fold 2 | epoch 060] train=0.1473 val_loss=0.1199 auc=0.8875 thr=0.640
+  [Metrics] AUC:0.887 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8850 EMA:0.8450
+[mae-tiny | fold 2 | epoch 061] train=0.1458 val_loss=0.1277 auc=0.8625 thr=0.670
+  [Metrics] AUC:0.863 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8787 EMA:0.8551
+[mae-tiny | fold 2 | epoch 062] train=0.1355 val_loss=0.1250 auc=0.9125 thr=0.695
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8659
+[mae-tiny | fold 2 | epoch 063] train=0.1630 val_loss=0.1186 auc=0.9125 thr=0.650
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8735
+[mae-tiny | fold 2 | epoch 064] train=0.1404 val_loss=0.1112 auc=0.9250 thr=0.739
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.8914
+[mae-tiny | fold 2 | epoch 065] train=0.1325 val_loss=0.1103 auc=0.9250 thr=0.741
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.9039
+[mae-tiny | fold 2 | epoch 066] train=0.1328 val_loss=0.1072 auc=0.9375 thr=0.745
+  [Metrics] AUC:0.938 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9362 EMA:0.9136
+    ★ SAVED DUAL-PASS (SENS=0.900≥0.8 SPEC=1.000≥0.5 | comp=0.9362)
+[mae-tiny | fold 2 | epoch 067] train=0.1351 val_loss=0.0992 auc=0.9250 thr=0.723
+  [Metrics] AUC:0.925 F1:0.947 SENS:0.900 SPEC:1.000 | COMPOSITE:0.9331 EMA:0.9194
+    ★ SAVED DUAL-PASS (SENS=0.900≥0.8 SPEC=1.000≥0.5 | comp=0.9331)
+[mae-tiny | fold 2 | epoch 068] train=0.1393 val_loss=0.0984 auc=0.9250 thr=0.589
+  [Metrics] AUC:0.925 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8943 EMA:0.9119
+[mae-tiny | fold 2 | epoch 069] train=0.1482 val_loss=0.1142 auc=0.9000 thr=0.622
+  [Metrics] AUC:0.900 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8881 EMA:0.9048
+[mae-tiny | fold 2 | epoch 070] train=0.1450 val_loss=0.1415 auc=0.8000 thr=0.670
+  [Metrics] AUC:0.800 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8392 EMA:0.8851
+[mae-tiny | fold 2 | epoch 071] train=0.1420 val_loss=0.1479 auc=0.7750 thr=0.696
+  [Metrics] AUC:0.775 F1:0.900 SENS:0.900 SPEC:0.500 | COMPOSITE:0.8087 EMA:0.8622
+[mae-tiny | fold 2 | epoch 072] train=0.1377 val_loss=0.1376 auc=0.8250 thr=0.686
+  [Metrics] AUC:0.825 F1:0.927 SENS:0.950 SPEC:0.500 | COMPOSITE:0.8455 EMA:0.8572
+[mae-tiny | fold 2 | epoch 073] train=0.1368 val_loss=0.1193 auc=0.9000 thr=0.667
+  [Metrics] AUC:0.900 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8881 EMA:0.8665
+[mae-tiny | fold 2 | epoch 074] train=0.1275 val_loss=0.1087 auc=0.9125 thr=0.646
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8739
+[mae-tiny | fold 2 | epoch 075] train=0.1287 val_loss=0.1019 auc=0.9250 thr=0.654
+  [Metrics] AUC:0.925 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8943 EMA:0.8800
+[mae-tiny | fold 2 | epoch 076] train=0.1444 val_loss=0.1026 auc=0.9375 thr=0.662
+  [Metrics] AUC:0.938 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8975 EMA:0.8853
+[mae-tiny | fold 2 | epoch 077] train=0.1617 val_loss=0.1047 auc=0.9375 thr=0.663
+  [Metrics] AUC:0.938 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8975 EMA:0.8889
+[mae-tiny | fold 2 | epoch 078] train=0.1383 val_loss=0.1075 auc=0.9375 thr=0.665
+  [Metrics] AUC:0.938 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8975 EMA:0.8915
+[mae-tiny | fold 2 | epoch 079] train=0.1370 val_loss=0.1094 auc=0.9125 thr=0.659
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8914
+[mae-tiny | fold 2 | epoch 080] train=0.1298 val_loss=0.1137 auc=0.9000 thr=0.660
+  [Metrics] AUC:0.900 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8881 EMA:0.8904
+[mae-tiny | fold 2 | epoch 081] train=0.1335 val_loss=0.1156 auc=0.9000 thr=0.654
+  [Metrics] AUC:0.900 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8881 EMA:0.8897
+[mae-tiny | fold 2 | epoch 082] train=0.1368 val_loss=0.1152 auc=0.9125 thr=0.654
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8902
+[mae-tiny | fold 2 | epoch 083] train=0.1274 val_loss=0.1135 auc=0.9125 thr=0.655
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8905
+[mae-tiny | fold 2 | epoch 084] train=0.1405 val_loss=0.1127 auc=0.9125 thr=0.651
+  [Metrics] AUC:0.912 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8912 EMA:0.8907
+[mae-tiny | fold 2 | epoch 085] train=0.1365 val_loss=0.1118 auc=0.9250 thr=0.652
+  [Metrics] AUC:0.925 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8943 EMA:0.8918
+[mae-tiny | fold 2 | epoch 086] train=0.1372 val_loss=0.1089 auc=0.9250 thr=0.653
+  [Metrics] AUC:0.925 F1:0.952 SENS:1.000 SPEC:0.500 | COMPOSITE:0.8943 EMA:0.8926
+[mae-tiny | fold 2 | epoch 087] train=0.1254 val_loss=0.1017 auc=0.9500 thr=0.666
+  [Metrics] AUC:0.950 F1:0.976 SENS:1.000 SPEC:0.750 | COMPOSITE:0.9439 EMA:0.9080
+  Early stopping @ epoch 87 (best EMA score=0.9194)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.8803 | Best EMA COMPOSITE: 0.9194
+
+=================================================================
+  MAE-Tiny Fold 2  |  Threshold: Youden 0.723
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.925          [0.789 - 1.000]
+  AUC-PR                0.987                        -
+  Sensitivity           0.900          [0.750 - 1.000]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.667          [0.286 - 1.000]
+  Accuracy              0.917          [0.792 - 1.000]
+  F1-Score              0.947          [0.857 - 1.000]
+  Composite             0.933                        -
+
+  CM: TP=18 FP=0 FN=2 TN=4
+  Toplam Hata: 2/24
+=================================================================
+
+======================================================================
+FOLD 3/5
+======================================================================
+  Fold 3: MAE pretrained encoder yüklendi.
+[mae-tiny | fold 3 | epoch 001] train=0.8487 val_loss=0.6666 auc=0.7237 thr=0.391
+  [Metrics] AUC:0.724 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7237 EMA:-1.2763
+[mae-tiny | fold 3 | epoch 002] train=0.5007 val_loss=0.2177 auc=0.7632 thr=0.607
+  [Metrics] AUC:0.763 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7767 EMA:-0.6604
+[mae-tiny | fold 3 | epoch 003] train=0.1890 val_loss=0.2029 auc=0.7763 thr=0.776
+  [Metrics] AUC:0.776 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7800 EMA:-0.2283
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.500≥0.5 | comp=0.7800)
+[mae-tiny | fold 3 | epoch 004] train=0.1785 val_loss=0.1745 auc=0.7500 thr=0.685
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-0.5307
+[mae-tiny | fold 3 | epoch 005] train=0.1724 val_loss=0.1696 auc=0.7895 thr=0.630
+  [Metrics] AUC:0.789 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7401 EMA:-0.7494
+[mae-tiny | fold 3 | epoch 006] train=0.1595 val_loss=0.1649 auc=0.7500 thr=0.622
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-0.8955
+[mae-tiny | fold 3 | epoch 007] train=0.1574 val_loss=0.1598 auc=0.7763 thr=0.600
+  [Metrics] AUC:0.776 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7368 EMA:-1.0058
+[mae-tiny | fold 3 | epoch 008] train=0.1533 val_loss=0.1532 auc=0.8026 thr=0.661
+  [Metrics] AUC:0.803 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7434 EMA:-1.0810
+[mae-tiny | fold 3 | epoch 009] train=0.1471 val_loss=0.1516 auc=0.8158 thr=0.637
+  [Metrics] AUC:0.816 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7899 EMA:-0.5198
+[mae-tiny | fold 3 | epoch 010] train=0.1594 val_loss=0.1531 auc=0.8026 thr=0.711
+  [Metrics] AUC:0.803 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7866 EMA:-0.1278
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.500≥0.5 | comp=0.7866)
+[mae-tiny | fold 3 | epoch 011] train=0.1313 val_loss=0.1458 auc=0.7895 thr=0.604
+  [Metrics] AUC:0.789 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7401 EMA:-0.4675
+[mae-tiny | fold 3 | epoch 012] train=0.1723 val_loss=0.1873 auc=0.7368 thr=0.626
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7604 EMA:-0.6991
+[mae-tiny | fold 3 | epoch 013] train=0.1790 val_loss=0.1513 auc=0.8026 thr=0.668
+  [Metrics] AUC:0.803 F1:0.872 SENS:0.895 SPEC:0.250 | COMPOSITE:0.7693 EMA:-0.8586
+[mae-tiny | fold 3 | epoch 014] train=0.1653 val_loss=0.1646 auc=0.8026 thr=0.653
+  [Metrics] AUC:0.803 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8125 EMA:-0.3573
+[mae-tiny | fold 3 | epoch 015] train=0.1479 val_loss=0.1622 auc=0.8026 thr=0.716
+  [Metrics] AUC:0.803 F1:0.865 SENS:0.842 SPEC:0.500 | COMPOSITE:0.7866 EMA:-0.0141
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.500≥0.5 | comp=0.7866)
+[mae-tiny | fold 3 | epoch 016] train=0.1541 val_loss=0.1488 auc=0.8158 thr=0.645
+  [Metrics] AUC:0.816 F1:0.889 SENS:0.842 SPEC:0.750 | COMPOSITE:0.8334 EMA:0.2402
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.750≥0.5 | comp=0.8334)
+[mae-tiny | fold 3 | epoch 017] train=0.1375 val_loss=0.2112 auc=0.7632 thr=0.745
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-0.2118
+[mae-tiny | fold 3 | epoch 018] train=0.1565 val_loss=0.1569 auc=0.7500 thr=0.637
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-0.5192
+[mae-tiny | fold 3 | epoch 019] train=0.1524 val_loss=0.2369 auc=0.7237 thr=0.688
+  [Metrics] AUC:0.724 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7237 EMA:-0.7463
+[mae-tiny | fold 3 | epoch 020] train=0.1969 val_loss=0.1536 auc=0.7763 thr=0.672
+  [Metrics] AUC:0.776 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7703 EMA:-0.8913
+[mae-tiny | fold 3 | epoch 021] train=0.1545 val_loss=0.1626 auc=0.8421 thr=0.677
+  [Metrics] AUC:0.842 F1:0.919 SENS:0.895 SPEC:0.750 | COMPOSITE:0.8659 EMA:-0.3642
+[mae-tiny | fold 3 | epoch 022] train=0.1505 val_loss=0.1608 auc=0.8158 thr=0.736
+  [Metrics] AUC:0.816 F1:0.889 SENS:0.842 SPEC:0.750 | COMPOSITE:0.8334 EMA:-0.0049
+[mae-tiny | fold 3 | epoch 023] train=0.1413 val_loss=0.1478 auc=0.7895 thr=0.625
+  [Metrics] AUC:0.789 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7736 EMA:-0.3714
+[mae-tiny | fold 3 | epoch 024] train=0.1545 val_loss=0.1459 auc=0.7632 thr=0.596
+  [Metrics] AUC:0.763 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7670 EMA:-0.6299
+[mae-tiny | fold 3 | epoch 025] train=0.1474 val_loss=0.1453 auc=0.7632 thr=0.639
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-0.8208
+[mae-tiny | fold 3 | epoch 026] train=0.1323 val_loss=0.2374 auc=0.7500 thr=0.648
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-0.9455
+[mae-tiny | fold 3 | epoch 027] train=0.1589 val_loss=0.1821 auc=0.7368 thr=0.670
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7604 EMA:-1.0337
+[mae-tiny | fold 3 | epoch 028] train=0.1475 val_loss=0.1524 auc=0.7763 thr=0.645
+  [Metrics] AUC:0.776 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7703 EMA:-1.0925
+[mae-tiny | fold 3 | epoch 029] train=0.1357 val_loss=0.2096 auc=0.7368 thr=0.698
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7604 EMA:-1.1366
+[mae-tiny | fold 3 | epoch 030] train=0.1626 val_loss=0.1990 auc=0.7500 thr=0.713
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-1.1665
+[mae-tiny | fold 3 | epoch 031] train=0.1379 val_loss=0.1456 auc=0.7763 thr=0.615
+  [Metrics] AUC:0.776 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7703 EMA:-1.1855
+[mae-tiny | fold 3 | epoch 032] train=0.1396 val_loss=0.1964 auc=0.7368 thr=0.639
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7604 EMA:-1.2017
+[mae-tiny | fold 3 | epoch 033] train=0.1514 val_loss=0.1676 auc=0.7368 thr=0.606
+  [Metrics] AUC:0.737 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7604 EMA:-1.2131
+[mae-tiny | fold 3 | epoch 034] train=0.1334 val_loss=0.1758 auc=0.7632 thr=0.652
+  [Metrics] AUC:0.763 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7670 EMA:-1.2191
+[mae-tiny | fold 3 | epoch 035] train=0.1392 val_loss=0.1632 auc=0.7763 thr=0.589
+  [Metrics] AUC:0.776 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7703 EMA:-1.2223
+[mae-tiny | fold 3 | epoch 036] train=0.1439 val_loss=0.1944 auc=0.7632 thr=0.566
+  [Metrics] AUC:0.763 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7670 EMA:-1.2255
+[mae-tiny | fold 3 | epoch 037] train=0.1320 val_loss=0.3714 auc=0.7237 thr=0.636
+  [Metrics] AUC:0.724 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7571 EMA:-1.2307
+[mae-tiny | fold 3 | epoch 038] train=0.1455 val_loss=0.1473 auc=0.7763 thr=0.627
+  [Metrics] AUC:0.776 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7703 EMA:-1.2304
+[mae-tiny | fold 3 | epoch 039] train=0.1504 val_loss=0.1460 auc=0.8158 thr=0.661
+  [Metrics] AUC:0.816 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8158 EMA:-0.6166
+[mae-tiny | fold 3 | epoch 040] train=0.1365 val_loss=0.1506 auc=0.8158 thr=0.673
+  [Metrics] AUC:0.816 F1:0.895 SENS:0.895 SPEC:0.500 | COMPOSITE:0.8158 EMA:-0.1869
+[mae-tiny | fold 3 | epoch 041] train=0.1349 val_loss=0.1559 auc=0.7895 thr=0.657
+  [Metrics] AUC:0.789 F1:0.872 SENS:0.895 SPEC:0.250 | COMPOSITE:0.7660 EMA:-0.5010
+[mae-tiny | fold 3 | epoch 042] train=0.1428 val_loss=0.1529 auc=0.7763 thr=0.586
+  [Metrics] AUC:0.776 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7703 EMA:-0.7196
+[mae-tiny | fold 3 | epoch 043] train=0.1451 val_loss=0.1642 auc=0.7632 thr=0.580
+  [Metrics] AUC:0.763 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7670 EMA:-0.8736
+[mae-tiny | fold 3 | epoch 044] train=0.1346 val_loss=0.2365 auc=0.7632 thr=0.642
+  [Metrics] AUC:0.763 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7670 EMA:-0.9815
+[mae-tiny | fold 3 | epoch 045] train=0.1304 val_loss=0.2028 auc=0.7632 thr=0.705
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.0670
+[mae-tiny | fold 3 | epoch 046] train=0.1298 val_loss=0.1663 auc=0.7763 thr=0.622
+  [Metrics] AUC:0.776 F1:0.872 SENS:0.895 SPEC:0.250 | COMPOSITE:0.7627 EMA:-1.1181
+[mae-tiny | fold 3 | epoch 047] train=0.1360 val_loss=0.1665 auc=0.8026 thr=0.623
+  [Metrics] AUC:0.803 F1:0.927 SENS:1.000 SPEC:0.250 | COMPOSITE:0.8199 EMA:-1.1367
+[mae-tiny | fold 3 | epoch 048] train=0.1249 val_loss=0.2556 auc=0.7632 thr=0.609
+  [Metrics] AUC:0.763 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7670 EMA:-1.1656
+[mae-tiny | fold 3 | epoch 049] train=0.1487 val_loss=0.1534 auc=0.7500 thr=0.557
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-1.1868
+[mae-tiny | fold 3 | epoch 050] train=0.1388 val_loss=0.1567 auc=0.7500 thr=0.655
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-1.2017
+[mae-tiny | fold 3 | epoch 051] train=0.1400 val_loss=0.1698 auc=0.7500 thr=0.647
+  [Metrics] AUC:0.750 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7637 EMA:-1.2121
+[mae-tiny | fold 3 | epoch 052] train=0.1359 val_loss=0.2006 auc=0.7632 thr=0.652
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.2284
+[mae-tiny | fold 3 | epoch 053] train=0.1604 val_loss=0.2826 auc=0.7632 thr=0.582
+  [Metrics] AUC:0.763 F1:0.905 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7670 EMA:-1.2298
+[mae-tiny | fold 3 | epoch 054] train=0.1347 val_loss=0.1574 auc=0.8158 thr=0.589
+  [Metrics] AUC:0.816 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7980 EMA:-1.2214
+[mae-tiny | fold 3 | epoch 055] train=0.1439 val_loss=0.2044 auc=0.8026 thr=0.659
+  [Metrics] AUC:0.803 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7947 EMA:-1.2166
+[mae-tiny | fold 3 | epoch 056] train=0.1304 val_loss=0.1973 auc=0.7632 thr=0.729
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.2315
+[mae-tiny | fold 3 | epoch 057] train=0.1342 val_loss=0.1748 auc=0.7632 thr=0.665
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.2420
+[mae-tiny | fold 3 | epoch 058] train=0.1455 val_loss=0.1889 auc=0.7632 thr=0.700
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.2493
+[mae-tiny | fold 3 | epoch 059] train=0.1289 val_loss=0.2401 auc=0.7632 thr=0.785
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.2545
+[mae-tiny | fold 3 | epoch 060] train=0.1337 val_loss=0.1913 auc=0.7763 thr=0.701
+  [Metrics] AUC:0.776 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7368 EMA:-1.2571
+[mae-tiny | fold 3 | epoch 061] train=0.1255 val_loss=0.2258 auc=0.7632 thr=0.712
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.2599
+[mae-tiny | fold 3 | epoch 062] train=0.1320 val_loss=0.2111 auc=0.7632 thr=0.718
+  [Metrics] AUC:0.763 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7336 EMA:-1.2619
+[mae-tiny | fold 3 | epoch 063] train=0.1461 val_loss=0.2110 auc=0.8158 thr=0.679
+  [Metrics] AUC:0.816 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7980 EMA:-1.2439
+[mae-tiny | fold 3 | epoch 064] train=0.1381 val_loss=0.1729 auc=0.8158 thr=0.592
+  [Metrics] AUC:0.816 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7980 EMA:-1.2313
+[mae-tiny | fold 3 | epoch 065] train=0.1202 val_loss=0.2112 auc=0.7895 thr=0.646
+  [Metrics] AUC:0.789 F1:0.872 SENS:0.895 SPEC:0.250 | COMPOSITE:0.7660 EMA:-1.2321
+[mae-tiny | fold 3 | epoch 066] train=0.1333 val_loss=0.2962 auc=0.7500 thr=0.734
+  [Metrics] AUC:0.750 F1:0.872 SENS:0.895 SPEC:0.250 | COMPOSITE:0.7561 EMA:-1.2357
+[mae-tiny | fold 3 | epoch 067] train=0.1184 val_loss=0.2632 auc=0.7500 thr=0.692
+  [Metrics] AUC:0.750 F1:0.842 SENS:0.842 SPEC:0.250 | COMPOSITE:0.7303 EMA:-1.2459
+[mae-tiny | fold 3 | epoch 068] train=0.1188 val_loss=0.2475 auc=0.7632 thr=0.598
+  [Metrics] AUC:0.763 F1:0.872 SENS:0.895 SPEC:0.250 | COMPOSITE:0.7594 EMA:-1.2443
+[mae-tiny | fold 3 | epoch 069] train=0.1173 val_loss=0.2775 auc=0.7632 thr=0.607
+  [Metrics] AUC:0.763 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7849 EMA:-1.2355
+[mae-tiny | fold 3 | epoch 070] train=0.1160 val_loss=0.2721 auc=0.7763 thr=0.589
+  [Metrics] AUC:0.776 F1:0.900 SENS:0.947 SPEC:0.250 | COMPOSITE:0.7882 EMA:-1.2284
+  Early stopping @ epoch 70 (best EMA score=0.2402)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.7867 | Best EMA COMPOSITE: 0.2402
+  SWA model kaydedildi.
+
+=================================================================
+  MAE-Tiny Fold 3  |  Threshold: Youden 0.911
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.776          [0.550 - 0.950]
+  AUC-PR                0.955                        -
+  Sensitivity           0.684          [0.456 - 0.889]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.400          [0.111 - 0.727]
+  Accuracy              0.739          [0.565 - 0.913]
+  F1-Score              0.812          [0.626 - 0.941]
+  Composite             0.787                        -
+
+  CM: TP=13 FP=0 FN=6 TN=4
+  Toplam Hata: 6/23
+=================================================================
+
+======================================================================
+FOLD 4/5
+======================================================================
+  Fold 4: MAE pretrained encoder yüklendi.
+[mae-tiny | fold 4 | epoch 001] train=0.3605 val_loss=0.3292 auc=0.6100 thr=0.508
+  [Metrics] AUC:0.610 F1:0.889 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7247 EMA:-1.2753
+[mae-tiny | fold 4 | epoch 002] train=0.2323 val_loss=0.2069 auc=0.6000 thr=0.672
+  [Metrics] AUC:0.600 F1:0.889 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7222 EMA:-1.2760
+[mae-tiny | fold 4 | epoch 003] train=0.1932 val_loss=0.2166 auc=0.6100 thr=0.741
+  [Metrics] AUC:0.610 F1:0.889 SENS:1.000 SPEC:0.000 | COMPOSITE:0.7247 EMA:-1.2758
+    ☆ SAVED FALLBACK (SENS=1.000 SPEC=0.000 | comp=0.7247)
+[mae-tiny | fold 4 | epoch 004] train=0.1576 val_loss=0.1937 auc=0.7200 thr=0.666
+  [Metrics] AUC:0.720 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7605 EMA:-0.6649
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.600≥0.5 | comp=0.7605)
+[mae-tiny | fold 4 | epoch 005] train=0.1497 val_loss=0.1890 auc=0.6800 thr=0.661
+  [Metrics] AUC:0.680 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7645 EMA:-0.8361
+[mae-tiny | fold 4 | epoch 006] train=0.1541 val_loss=0.2033 auc=0.6700 thr=0.674
+  [Metrics] AUC:0.670 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7620 EMA:-0.9567
+[mae-tiny | fold 4 | epoch 007] train=0.1375 val_loss=0.2091 auc=0.6700 thr=0.540
+  [Metrics] AUC:0.670 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7620 EMA:-1.0411
+[mae-tiny | fold 4 | epoch 008] train=0.1410 val_loss=0.1926 auc=0.7100 thr=0.644
+  [Metrics] AUC:0.710 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7720 EMA:-1.0971
+[mae-tiny | fold 4 | epoch 009] train=0.1425 val_loss=0.1824 auc=0.7400 thr=0.592
+  [Metrics] AUC:0.740 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7795 EMA:-1.1341
+[mae-tiny | fold 4 | epoch 010] train=0.1433 val_loss=0.2024 auc=0.7500 thr=0.614
+  [Metrics] AUC:0.750 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7680 EMA:-0.5635
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.600≥0.5 | comp=0.7680)
+[mae-tiny | fold 4 | epoch 011] train=0.1576 val_loss=0.2206 auc=0.6900 thr=0.684
+  [Metrics] AUC:0.690 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7670 EMA:-0.7643
+[mae-tiny | fold 4 | epoch 012] train=0.1475 val_loss=0.2159 auc=0.7300 thr=0.558
+  [Metrics] AUC:0.730 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7525 EMA:-0.9093
+[mae-tiny | fold 4 | epoch 013] train=0.1763 val_loss=0.2152 auc=0.7200 thr=0.755
+  [Metrics] AUC:0.720 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7500 EMA:-1.0115
+[mae-tiny | fold 4 | epoch 014] train=0.1785 val_loss=0.1800 auc=0.7600 thr=0.666
+  [Metrics] AUC:0.760 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7600 EMA:-1.0801
+[mae-tiny | fold 4 | epoch 015] train=0.1510 val_loss=0.1872 auc=0.7400 thr=0.630
+  [Metrics] AUC:0.740 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7795 EMA:-1.1222
+[mae-tiny | fold 4 | epoch 016] train=0.1451 val_loss=0.1900 auc=0.7500 thr=0.734
+  [Metrics] AUC:0.750 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.7326 EMA:-1.1657
+[mae-tiny | fold 4 | epoch 017] train=0.1419 val_loss=0.1834 auc=0.7400 thr=0.613
+  [Metrics] AUC:0.740 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7795 EMA:-1.1822
+[mae-tiny | fold 4 | epoch 018] train=0.1726 val_loss=0.1945 auc=0.6900 thr=0.641
+  [Metrics] AUC:0.690 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7670 EMA:-1.1974
+[mae-tiny | fold 4 | epoch 019] train=0.1390 val_loss=0.1898 auc=0.7300 thr=0.599
+  [Metrics] AUC:0.730 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7770 EMA:-1.2051
+[mae-tiny | fold 4 | epoch 020] train=0.1421 val_loss=0.2000 auc=0.7200 thr=0.622
+  [Metrics] AUC:0.720 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7500 EMA:-1.2186
+[mae-tiny | fold 4 | epoch 021] train=0.1594 val_loss=0.2061 auc=0.7300 thr=0.673
+  [Metrics] AUC:0.730 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7525 EMA:-1.2272
+[mae-tiny | fold 4 | epoch 022] train=0.1493 val_loss=0.1829 auc=0.7400 thr=0.589
+  [Metrics] AUC:0.740 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7795 EMA:-1.2252
+[mae-tiny | fold 4 | epoch 023] train=0.1400 val_loss=0.2063 auc=0.7100 thr=0.688
+  [Metrics] AUC:0.710 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7475 EMA:-1.2334
+[mae-tiny | fold 4 | epoch 024] train=0.1303 val_loss=0.1941 auc=0.7200 thr=0.641
+  [Metrics] AUC:0.720 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7500 EMA:-1.2384
+[mae-tiny | fold 4 | epoch 025] train=0.1352 val_loss=0.1888 auc=0.7500 thr=0.602
+  [Metrics] AUC:0.750 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7575 EMA:-1.2396
+[mae-tiny | fold 4 | epoch 026] train=0.1285 val_loss=0.2211 auc=0.7200 thr=0.598
+  [Metrics] AUC:0.720 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7500 EMA:-1.2427
+[mae-tiny | fold 4 | epoch 027] train=0.1286 val_loss=0.1888 auc=0.7500 thr=0.617
+  [Metrics] AUC:0.750 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7680 EMA:-0.6395
+[mae-tiny | fold 4 | epoch 028] train=0.1385 val_loss=0.1747 auc=0.8000 thr=0.697
+  [Metrics] AUC:0.800 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7805 EMA:-0.2135
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.600≥0.5 | comp=0.7805)
+[mae-tiny | fold 4 | epoch 029] train=0.1357 val_loss=0.1735 auc=0.7900 thr=0.689
+  [Metrics] AUC:0.790 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7780 EMA:0.0840
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.600≥0.5 | comp=0.7780)
+[mae-tiny | fold 4 | epoch 030] train=0.1420 val_loss=0.1726 auc=0.7800 thr=0.650
+  [Metrics] AUC:0.780 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7755 EMA:0.2914
+    ★ SAVED DUAL-PASS (SENS=0.800≥0.8 SPEC=0.600≥0.5 | comp=0.7755)
+[mae-tiny | fold 4 | epoch 031] train=0.1409 val_loss=0.1854 auc=0.7000 thr=0.640
+  [Metrics] AUC:0.700 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7695 EMA:-0.1651
+[mae-tiny | fold 4 | epoch 032] train=0.1669 val_loss=0.1918 auc=0.7200 thr=0.648
+  [Metrics] AUC:0.720 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7745 EMA:-0.4832
+[mae-tiny | fold 4 | epoch 033] train=0.1331 val_loss=0.1853 auc=0.7300 thr=0.611
+  [Metrics] AUC:0.730 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7770 EMA:-0.7052
+[mae-tiny | fold 4 | epoch 034] train=0.1325 val_loss=0.1996 auc=0.7400 thr=0.717
+  [Metrics] AUC:0.740 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7655 EMA:-0.2640
+[mae-tiny | fold 4 | epoch 035] train=0.1314 val_loss=0.1779 auc=0.7900 thr=0.584
+  [Metrics] AUC:0.790 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7920 EMA:-0.5472
+[mae-tiny | fold 4 | epoch 036] train=0.1486 val_loss=0.1814 auc=0.7600 thr=0.649
+  [Metrics] AUC:0.760 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7845 EMA:-0.7477
+[mae-tiny | fold 4 | epoch 037] train=0.1364 val_loss=0.1979 auc=0.7500 thr=0.675
+  [Metrics] AUC:0.750 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7820 EMA:-0.8888
+[mae-tiny | fold 4 | epoch 038] train=0.1308 val_loss=0.1756 auc=0.7700 thr=0.621
+  [Metrics] AUC:0.770 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7870 EMA:-0.9860
+[mae-tiny | fold 4 | epoch 039] train=0.1316 val_loss=0.1938 auc=0.7300 thr=0.607
+  [Metrics] AUC:0.730 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7770 EMA:-1.0571
+[mae-tiny | fold 4 | epoch 040] train=0.1326 val_loss=0.1980 auc=0.7100 thr=0.590
+  [Metrics] AUC:0.710 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7720 EMA:-1.1084
+[mae-tiny | fold 4 | epoch 041] train=0.1223 val_loss=0.1885 auc=0.7200 thr=0.582
+  [Metrics] AUC:0.720 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7745 EMA:-1.1435
+[mae-tiny | fold 4 | epoch 042] train=0.1246 val_loss=0.1955 auc=0.7400 thr=0.615
+  [Metrics] AUC:0.740 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7795 EMA:-1.1666
+[mae-tiny | fold 4 | epoch 043] train=0.1216 val_loss=0.2047 auc=0.7100 thr=0.579
+  [Metrics] AUC:0.710 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7720 EMA:-1.1850
+[mae-tiny | fold 4 | epoch 044] train=0.1369 val_loss=0.1981 auc=0.7600 thr=0.680
+  [Metrics] AUC:0.760 F1:0.842 SENS:0.800 SPEC:0.600 | COMPOSITE:0.7705 EMA:-0.5984
+[mae-tiny | fold 4 | epoch 045] train=0.1350 val_loss=0.1786 auc=0.7800 thr=0.607
+  [Metrics] AUC:0.780 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7895 EMA:-0.7820
+[mae-tiny | fold 4 | epoch 046] train=0.1278 val_loss=0.2010 auc=0.7200 thr=0.572
+  [Metrics] AUC:0.720 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7745 EMA:-0.9150
+[mae-tiny | fold 4 | epoch 047] train=0.1323 val_loss=0.2182 auc=0.7100 thr=0.587
+  [Metrics] AUC:0.710 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7720 EMA:-1.0089
+[mae-tiny | fold 4 | epoch 048] train=0.1257 val_loss=0.1969 auc=0.7100 thr=0.580
+  [Metrics] AUC:0.710 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7720 EMA:-1.0746
+[mae-tiny | fold 4 | epoch 049] train=0.1211 val_loss=0.1721 auc=0.7600 thr=0.566
+  [Metrics] AUC:0.760 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7845 EMA:-1.1169
+[mae-tiny | fold 4 | epoch 050] train=0.1171 val_loss=0.1892 auc=0.7100 thr=0.605
+  [Metrics] AUC:0.710 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.7226 EMA:-1.1650
+[mae-tiny | fold 4 | epoch 051] train=0.1264 val_loss=0.2046 auc=0.7200 thr=0.554
+  [Metrics] AUC:0.720 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7500 EMA:-1.1905
+[mae-tiny | fold 4 | epoch 052] train=0.1366 val_loss=0.2198 auc=0.7200 thr=0.573
+  [Metrics] AUC:0.720 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7745 EMA:-1.2010
+[mae-tiny | fold 4 | epoch 053] train=0.1314 val_loss=0.2474 auc=0.7000 thr=0.690
+  [Metrics] AUC:0.700 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.7201 EMA:-1.2247
+[mae-tiny | fold 4 | epoch 054] train=0.1238 val_loss=0.2000 auc=0.7700 thr=0.541
+  [Metrics] AUC:0.770 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8351 EMA:-1.2068
+[mae-tiny | fold 4 | epoch 055] train=0.1246 val_loss=0.2130 auc=0.7200 thr=0.625
+  [Metrics] AUC:0.720 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.7251 EMA:-1.2272
+[mae-tiny | fold 4 | epoch 056] train=0.1253 val_loss=0.2305 auc=0.7200 thr=0.659
+  [Metrics] AUC:0.720 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.7251 EMA:-1.2415
+[mae-tiny | fold 4 | epoch 057] train=0.1396 val_loss=0.2044 auc=0.7700 thr=0.494
+  [Metrics] AUC:0.770 F1:0.930 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8351 EMA:-1.2185
+[mae-tiny | fold 4 | epoch 058] train=0.1376 val_loss=0.1989 auc=0.7300 thr=0.579
+  [Metrics] AUC:0.730 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7770 EMA:-1.2199
+[mae-tiny | fold 4 | epoch 059] train=0.1349 val_loss=0.1930 auc=0.7300 thr=0.620
+  [Metrics] AUC:0.730 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7525 EMA:-1.2282
+[mae-tiny | fold 4 | epoch 060] train=0.1199 val_loss=0.1730 auc=0.7900 thr=0.608
+  [Metrics] AUC:0.790 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7920 EMA:-1.2221
+[mae-tiny | fold 4 | epoch 061] train=0.1297 val_loss=0.1710 auc=0.7900 thr=0.620
+  [Metrics] AUC:0.790 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7920 EMA:-1.2179
+[mae-tiny | fold 4 | epoch 062] train=0.1190 val_loss=0.1852 auc=0.7600 thr=0.630
+  [Metrics] AUC:0.760 F1:0.850 SENS:0.850 SPEC:0.400 | COMPOSITE:0.7600 EMA:-1.2245
+[mae-tiny | fold 4 | epoch 063] train=0.1241 val_loss=0.2011 auc=0.7300 thr=0.643
+  [Metrics] AUC:0.730 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.7276 EMA:-1.2389
+[mae-tiny | fold 4 | epoch 064] train=0.1387 val_loss=0.1883 auc=0.7900 thr=0.580
+  [Metrics] AUC:0.790 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7920 EMA:-1.2296
+[mae-tiny | fold 4 | epoch 065] train=0.1319 val_loss=0.1943 auc=0.7600 thr=0.592
+  [Metrics] AUC:0.760 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7845 EMA:-1.2254
+[mae-tiny | fold 4 | epoch 066] train=0.1128 val_loss=0.2373 auc=0.7100 thr=0.603
+  [Metrics] AUC:0.710 F1:0.878 SENS:0.900 SPEC:0.400 | COMPOSITE:0.7720 EMA:-1.2262
+[mae-tiny | fold 4 | epoch 067] train=0.1508 val_loss=0.2242 auc=0.7100 thr=0.607
+  [Metrics] AUC:0.710 F1:0.821 SENS:0.800 SPEC:0.400 | COMPOSITE:0.7226 EMA:-1.2415
+[mae-tiny | fold 4 | epoch 068] train=0.1251 val_loss=0.1838 auc=0.7300 thr=0.555
+  [Metrics] AUC:0.730 F1:0.909 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7898 EMA:-1.2321
+[mae-tiny | fold 4 | epoch 069] train=0.1252 val_loss=0.1760 auc=0.7300 thr=0.599
+  [Metrics] AUC:0.730 F1:0.909 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7898 EMA:-1.2256
+[mae-tiny | fold 4 | epoch 070] train=0.1280 val_loss=0.1925 auc=0.7000 thr=0.584
+  [Metrics] AUC:0.700 F1:0.909 SENS:1.000 SPEC:0.200 | COMPOSITE:0.7823 EMA:-1.2232
+  Early stopping @ epoch 70 (best EMA score=0.2914)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.6667 | Best EMA COMPOSITE: 0.2914
+  SWA model kaydedildi.
+
+=================================================================
+  MAE-Tiny Fold 4  |  Threshold: Youden 0.855
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.700          [0.452 - 0.920]
+  AUC-PR                0.921                        -
+  Sensitivity           0.500          [0.286 - 0.714]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.333          [0.118 - 0.583]
+  Accuracy              0.600          [0.400 - 0.800]
+  F1-Score              0.667          [0.444 - 0.833]
+  Composite             0.667                        -
+
+  CM: TP=10 FP=0 FN=10 TN=5
+  Toplam Hata: 10/25
+=================================================================
+
+======================================================================
+FOLD 5/5
+======================================================================
+  Fold 5: MAE pretrained encoder yüklendi.
+[mae-tiny | fold 5 | epoch 001] train=0.6703 val_loss=0.6136 auc=0.7579 thr=0.417
+  [Metrics] AUC:0.758 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7451 EMA:-1.2549
+[mae-tiny | fold 5 | epoch 002] train=0.3913 val_loss=0.2207 auc=0.7474 thr=0.623
+  [Metrics] AUC:0.747 F1:0.821 SENS:0.842 SPEC:0.200 | COMPOSITE:0.7167 EMA:-1.2634
+[mae-tiny | fold 5 | epoch 003] train=0.1791 val_loss=0.2079 auc=0.7579 thr=0.779
+  [Metrics] AUC:0.758 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.7904 EMA:-0.6472
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.600≥0.5 | comp=0.7904)
+[mae-tiny | fold 5 | epoch 004] train=0.1850 val_loss=0.1958 auc=0.8737 thr=0.763
+  [Metrics] AUC:0.874 F1:0.950 SENS:1.000 SPEC:0.600 | COMPOSITE:0.8959 EMA:-0.1843
+    ★ SAVED DUAL-PASS (SENS=1.000≥0.8 SPEC=0.600≥0.5 | comp=0.8959)
+[mae-tiny | fold 5 | epoch 005] train=0.1835 val_loss=0.2095 auc=0.8105 thr=0.591
+  [Metrics] AUC:0.811 F1:0.923 SENS:0.947 SPEC:0.600 | COMPOSITE:0.8550 EMA:0.1275
+    ★ SAVED DUAL-PASS (SENS=0.947≥0.8 SPEC=0.600≥0.5 | comp=0.8550)
+[mae-tiny | fold 5 | epoch 006] train=0.1620 val_loss=0.1722 auc=0.8105 thr=0.683
+  [Metrics] AUC:0.811 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8295 EMA:0.3381
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.600≥0.5 | comp=0.8295)
+[mae-tiny | fold 5 | epoch 007] train=0.1464 val_loss=0.1722 auc=0.8105 thr=0.629
+  [Metrics] AUC:0.811 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8295 EMA:0.4855
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.600≥0.5 | comp=0.8295)
+[mae-tiny | fold 5 | epoch 008] train=0.1462 val_loss=0.2263 auc=0.8632 thr=0.534
+  [Metrics] AUC:0.863 F1:0.919 SENS:0.895 SPEC:0.800 | COMPOSITE:0.8787 EMA:0.6035
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.800≥0.5 | comp=0.8787)
+[mae-tiny | fold 5 | epoch 009] train=0.1774 val_loss=0.1558 auc=0.8316 thr=0.641
+  [Metrics] AUC:0.832 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8347 EMA:0.6728
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.600≥0.5 | comp=0.8347)
+[mae-tiny | fold 5 | epoch 010] train=0.1531 val_loss=0.1704 auc=0.8421 thr=0.606
+  [Metrics] AUC:0.842 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8374 EMA:0.7222
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.600≥0.5 | comp=0.8374)
+[mae-tiny | fold 5 | epoch 011] train=0.1569 val_loss=0.1645 auc=0.8211 thr=0.678
+  [Metrics] AUC:0.821 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8062 EMA:0.7474
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.600≥0.5 | comp=0.8062)
+[mae-tiny | fold 5 | epoch 012] train=0.1536 val_loss=0.1735 auc=0.8421 thr=0.609
+  [Metrics] AUC:0.842 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8475 EMA:0.7774
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.800≥0.5 | comp=0.8475)
+[mae-tiny | fold 5 | epoch 013] train=0.1684 val_loss=0.1613 auc=0.8211 thr=0.670
+  [Metrics] AUC:0.821 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8422 EMA:0.7969
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.800≥0.5 | comp=0.8422)
+[mae-tiny | fold 5 | epoch 014] train=0.1511 val_loss=0.1815 auc=0.8316 thr=0.617
+  [Metrics] AUC:0.832 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8088 EMA:0.8005
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.600≥0.5 | comp=0.8088)
+[mae-tiny | fold 5 | epoch 015] train=0.1347 val_loss=0.1585 auc=0.8316 thr=0.670
+  [Metrics] AUC:0.832 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8449 EMA:0.8138
+    ★ SAVED DUAL-PASS (SENS=0.842≥0.8 SPEC=0.800≥0.5 | comp=0.8449)
+[mae-tiny | fold 5 | epoch 016] train=0.1429 val_loss=0.1845 auc=0.8316 thr=0.572
+  [Metrics] AUC:0.832 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8347 EMA:0.8201
+    ★ SAVED DUAL-PASS (SENS=0.895≥0.8 SPEC=0.600≥0.5 | comp=0.8347)
+[mae-tiny | fold 5 | epoch 017] train=0.1671 val_loss=0.1682 auc=0.7895 thr=0.621
+  [Metrics] AUC:0.789 F1:0.842 SENS:0.842 SPEC:0.400 | COMPOSITE:0.7626 EMA:0.2028
+[mae-tiny | fold 5 | epoch 018] train=0.1390 val_loss=0.1597 auc=0.8000 thr=0.675
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.895 SPEC:0.400 | COMPOSITE:0.7911 EMA:-0.2207
+[mae-tiny | fold 5 | epoch 019] train=0.1420 val_loss=0.1763 auc=0.8526 thr=0.602
+  [Metrics] AUC:0.853 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8501 EMA:0.1006
+[mae-tiny | fold 5 | epoch 020] train=0.1496 val_loss=0.1655 auc=0.8737 thr=0.616
+  [Metrics] AUC:0.874 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8453 EMA:0.3240
+[mae-tiny | fold 5 | epoch 021] train=0.1307 val_loss=0.1647 auc=0.8526 thr=0.614
+  [Metrics] AUC:0.853 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8400 EMA:0.4788
+[mae-tiny | fold 5 | epoch 022] train=0.1351 val_loss=0.1684 auc=0.7684 thr=0.602
+  [Metrics] AUC:0.768 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.7931 EMA:0.5731
+[mae-tiny | fold 5 | epoch 023] train=0.1525 val_loss=0.1636 auc=0.8526 thr=0.636
+  [Metrics] AUC:0.853 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8400 EMA:0.6531
+[mae-tiny | fold 5 | epoch 024] train=0.1378 val_loss=0.1651 auc=0.8526 thr=0.630
+  [Metrics] AUC:0.853 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8400 EMA:0.7092
+[mae-tiny | fold 5 | epoch 025] train=0.1369 val_loss=0.1621 auc=0.8316 thr=0.627
+  [Metrics] AUC:0.832 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8347 EMA:0.7469
+[mae-tiny | fold 5 | epoch 026] train=0.1307 val_loss=0.1760 auc=0.8421 thr=0.595
+  [Metrics] AUC:0.842 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8475 EMA:0.7770
+[mae-tiny | fold 5 | epoch 027] train=0.1298 val_loss=0.1678 auc=0.8421 thr=0.598
+  [Metrics] AUC:0.842 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8475 EMA:0.7982
+[mae-tiny | fold 5 | epoch 028] train=0.1378 val_loss=0.1534 auc=0.8526 thr=0.674
+  [Metrics] AUC:0.853 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8400 EMA:0.8107
+[mae-tiny | fold 5 | epoch 029] train=0.1587 val_loss=0.1660 auc=0.7579 thr=0.649
+  [Metrics] AUC:0.758 F1:0.872 SENS:0.895 SPEC:0.400 | COMPOSITE:0.7806 EMA:0.2017
+[mae-tiny | fold 5 | epoch 030] train=0.1488 val_loss=0.1795 auc=0.6947 thr=0.625
+  [Metrics] AUC:0.695 F1:0.842 SENS:0.842 SPEC:0.400 | COMPOSITE:0.7389 EMA:-0.2371
+[mae-tiny | fold 5 | epoch 031] train=0.1459 val_loss=0.1665 auc=0.7579 thr=0.692
+  [Metrics] AUC:0.758 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.7904 EMA:0.0711
+[mae-tiny | fold 5 | epoch 032] train=0.1535 val_loss=0.1725 auc=0.8105 thr=0.622
+  [Metrics] AUC:0.811 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8036 EMA:0.2909
+[mae-tiny | fold 5 | epoch 033] train=0.1357 val_loss=0.1639 auc=0.8211 thr=0.614
+  [Metrics] AUC:0.821 F1:0.927 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8470 EMA:-0.1423
+[mae-tiny | fold 5 | epoch 034] train=0.1448 val_loss=0.1600 auc=0.8316 thr=0.628
+  [Metrics] AUC:0.832 F1:0.927 SENS:1.000 SPEC:0.400 | COMPOSITE:0.8496 EMA:-0.4447
+[mae-tiny | fold 5 | epoch 035] train=0.1456 val_loss=0.1615 auc=0.7684 thr=0.645
+  [Metrics] AUC:0.768 F1:0.900 SENS:0.947 SPEC:0.400 | COMPOSITE:0.8087 EMA:-0.6687
+[mae-tiny | fold 5 | epoch 036] train=0.1453 val_loss=0.1558 auc=0.8316 thr=0.667
+  [Metrics] AUC:0.832 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8347 EMA:-0.2177
+[mae-tiny | fold 5 | epoch 037] train=0.1330 val_loss=0.1549 auc=0.8526 thr=0.621
+  [Metrics] AUC:0.853 F1:0.923 SENS:0.947 SPEC:0.600 | COMPOSITE:0.8655 EMA:0.1073
+[mae-tiny | fold 5 | epoch 038] train=0.1399 val_loss=0.1848 auc=0.8000 thr=0.574
+  [Metrics] AUC:0.800 F1:0.923 SENS:0.947 SPEC:0.600 | COMPOSITE:0.8523 EMA:0.3308
+[mae-tiny | fold 5 | epoch 039] train=0.1384 val_loss=0.1640 auc=0.8421 thr=0.644
+  [Metrics] AUC:0.842 F1:0.923 SENS:0.947 SPEC:0.600 | COMPOSITE:0.8629 EMA:0.4904
+[mae-tiny | fold 5 | epoch 040] train=0.1353 val_loss=0.1564 auc=0.8632 thr=0.659
+  [Metrics] AUC:0.863 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8426 EMA:0.5961
+[mae-tiny | fold 5 | epoch 041] train=0.1342 val_loss=0.1601 auc=0.8737 thr=0.620
+  [Metrics] AUC:0.874 F1:0.919 SENS:0.895 SPEC:0.800 | COMPOSITE:0.8813 EMA:0.6817
+[mae-tiny | fold 5 | epoch 042] train=0.1434 val_loss=0.1715 auc=0.8632 thr=0.591
+  [Metrics] AUC:0.863 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8426 EMA:0.7299
+[mae-tiny | fold 5 | epoch 043] train=0.1433 val_loss=0.1505 auc=0.8632 thr=0.660
+  [Metrics] AUC:0.863 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8426 EMA:0.7638
+[mae-tiny | fold 5 | epoch 044] train=0.1359 val_loss=0.1573 auc=0.8000 thr=0.634
+  [Metrics] AUC:0.800 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8010 EMA:0.7749
+[mae-tiny | fold 5 | epoch 045] train=0.1304 val_loss=0.1657 auc=0.7789 thr=0.630
+  [Metrics] AUC:0.779 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.7957 EMA:0.7811
+[mae-tiny | fold 5 | epoch 046] train=0.1296 val_loss=0.1717 auc=0.7684 thr=0.621
+  [Metrics] AUC:0.768 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.7931 EMA:0.7847
+[mae-tiny | fold 5 | epoch 047] train=0.1319 val_loss=0.1549 auc=0.7789 thr=0.647
+  [Metrics] AUC:0.779 F1:0.842 SENS:0.842 SPEC:0.400 | COMPOSITE:0.7600 EMA:0.1773
+[mae-tiny | fold 5 | epoch 048] train=0.1332 val_loss=0.1607 auc=0.8526 thr=0.655
+  [Metrics] AUC:0.853 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8141 EMA:0.3683
+[mae-tiny | fold 5 | epoch 049] train=0.1298 val_loss=0.1471 auc=0.8316 thr=0.645
+  [Metrics] AUC:0.832 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8088 EMA:0.5005
+[mae-tiny | fold 5 | epoch 050] train=0.1425 val_loss=0.1777 auc=0.7158 thr=0.578
+  [Metrics] AUC:0.716 F1:0.872 SENS:0.895 SPEC:0.400 | COMPOSITE:0.7701 EMA:-0.0186
+[mae-tiny | fold 5 | epoch 051] train=0.1214 val_loss=0.1808 auc=0.7684 thr=0.574
+  [Metrics] AUC:0.768 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.7931 EMA:0.2249
+[mae-tiny | fold 5 | epoch 052] train=0.1289 val_loss=0.1565 auc=0.8105 thr=0.647
+  [Metrics] AUC:0.811 F1:0.842 SENS:0.842 SPEC:0.400 | COMPOSITE:0.7679 EMA:-0.2122
+[mae-tiny | fold 5 | epoch 053] train=0.1291 val_loss=0.1521 auc=0.7895 thr=0.625
+  [Metrics] AUC:0.789 F1:0.872 SENS:0.895 SPEC:0.400 | COMPOSITE:0.7885 EMA:-0.5120
+[mae-tiny | fold 5 | epoch 054] train=0.1470 val_loss=0.1730 auc=0.8000 thr=0.607
+  [Metrics] AUC:0.800 F1:0.900 SENS:0.947 SPEC:0.400 | COMPOSITE:0.8166 EMA:-0.7134
+[mae-tiny | fold 5 | epoch 055] train=0.1367 val_loss=0.1640 auc=0.8105 thr=0.630
+  [Metrics] AUC:0.811 F1:0.872 SENS:0.895 SPEC:0.400 | COMPOSITE:0.7937 EMA:-0.8613
+[mae-tiny | fold 5 | epoch 056] train=0.1299 val_loss=0.1517 auc=0.8421 thr=0.655
+  [Metrics] AUC:0.842 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8374 EMA:-0.3517
+[mae-tiny | fold 5 | epoch 057] train=0.1328 val_loss=0.1572 auc=0.8526 thr=0.628
+  [Metrics] AUC:0.853 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8400 EMA:0.0058
+[mae-tiny | fold 5 | epoch 058] train=0.1268 val_loss=0.1612 auc=0.8316 thr=0.613
+  [Metrics] AUC:0.832 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8347 EMA:0.2545
+[mae-tiny | fold 5 | epoch 059] train=0.1317 val_loss=0.1641 auc=0.8211 thr=0.612
+  [Metrics] AUC:0.821 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8321 EMA:0.4278
+[mae-tiny | fold 5 | epoch 060] train=0.1342 val_loss=0.1693 auc=0.8526 thr=0.605
+  [Metrics] AUC:0.853 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8400 EMA:0.5514
+[mae-tiny | fold 5 | epoch 061] train=0.1358 val_loss=0.1572 auc=0.8000 thr=0.621
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.895 SPEC:0.400 | COMPOSITE:0.7911 EMA:0.0233
+[mae-tiny | fold 5 | epoch 062] train=0.1387 val_loss=0.1667 auc=0.8211 thr=0.619
+  [Metrics] AUC:0.821 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8062 EMA:0.2582
+[mae-tiny | fold 5 | epoch 063] train=0.1226 val_loss=0.1666 auc=0.8000 thr=0.618
+  [Metrics] AUC:0.800 F1:0.872 SENS:0.895 SPEC:0.400 | COMPOSITE:0.7911 EMA:-0.1819
+[mae-tiny | fold 5 | epoch 064] train=0.1228 val_loss=0.1569 auc=0.8105 thr=0.635
+  [Metrics] AUC:0.811 F1:0.889 SENS:0.842 SPEC:0.800 | COMPOSITE:0.8396 EMA:0.1245
+[mae-tiny | fold 5 | epoch 065] train=0.1350 val_loss=0.1550 auc=0.7684 thr=0.643
+  [Metrics] AUC:0.768 F1:0.850 SENS:0.895 SPEC:0.200 | COMPOSITE:0.7478 EMA:-0.2885
+[mae-tiny | fold 5 | epoch 066] train=0.1373 val_loss=0.1534 auc=0.8211 thr=0.637
+  [Metrics] AUC:0.821 F1:0.895 SENS:0.895 SPEC:0.600 | COMPOSITE:0.8321 EMA:0.0477
+[mae-tiny | fold 5 | epoch 067] train=0.1246 val_loss=0.1566 auc=0.8316 thr=0.617
+  [Metrics] AUC:0.832 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8088 EMA:0.2760
+[mae-tiny | fold 5 | epoch 068] train=0.1243 val_loss=0.1488 auc=0.8211 thr=0.599
+  [Metrics] AUC:0.821 F1:0.905 SENS:1.000 SPEC:0.200 | COMPOSITE:0.8115 EMA:-0.1633
+[mae-tiny | fold 5 | epoch 069] train=0.1312 val_loss=0.1498 auc=0.8211 thr=0.607
+  [Metrics] AUC:0.821 F1:0.842 SENS:0.842 SPEC:0.400 | COMPOSITE:0.7705 EMA:-0.4832
+[mae-tiny | fold 5 | epoch 070] train=0.1358 val_loss=0.1622 auc=0.8316 thr=0.597
+  [Metrics] AUC:0.832 F1:0.865 SENS:0.842 SPEC:0.600 | COMPOSITE:0.8088 EMA:-0.0956
+  Early stopping @ epoch 70 (best EMA score=0.8201)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.8185 | Best EMA COMPOSITE: 0.8201
+  SWA model kaydedildi.
+
+=================================================================
+  MAE-Tiny Fold 5  |  Threshold: Youden 0.604
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.832          [0.621 - 1.000]
+  AUC-PR                0.955                        -
+  Sensitivity           0.789          [0.591 - 0.950]
+  Specificity           0.800          [0.333 - 1.000]
+  PPV                   0.937          [0.786 - 1.000]
+  NPV                   0.500          [0.167 - 0.839]
+  Accuracy              0.792          [0.625 - 0.917]
+  F1-Score              0.857          [0.706 - 0.952]
+  Composite             0.818                        -
+
+  CM: TP=15 FP=1 FN=4 TN=4
+  Toplam Hata: 5/24
+=================================================================
+
+AGGREGATE OOF (5-Fold Cross-Validation):
+
+=================================================================
+  MAE-Tiny Aggregate OOF  |  Threshold: Youden 0.843
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.779          [0.687 - 0.861]
+  AUC-PR                0.946                        -
+  Sensitivity           0.541          [0.436 - 0.635]
+  Specificity           0.955          [0.857 - 1.000]
+  PPV                   0.981          [0.941 - 1.000]
+  NPV                   0.318          [0.203 - 0.433]
+  Accuracy              0.617          [0.525 - 0.700]
+  F1-Score              0.697          [0.603 - 0.773]
+  Composite             0.702                        -
+
+  CM: TP=53 FP=1 FN=45 TN=21
+  Toplam Hata: 46/120
+=================================================================
+
+MAE-TinyTransformer3D — Kalibrasyon: Brier=0.1344 | ECE=0.1090
+
+MAE-TinyTransformer3D — EXTERNAL TEST (ALL FOLDS + ENSEMBLE):
+               fold  auc_roc  sensitivity  specificity  accuracy    f1   ppv   npv  tp  fp  fn  tn
+             Fold 1    0.800        0.737          1.0     0.792 0.848 1.000 0.500  14   0   5   5
+             Fold 2    0.747        0.579          1.0     0.667 0.733 1.000 0.385  11   0   8   5
+             Fold 3    0.695        0.526          1.0     0.625 0.690 1.000 0.357  10   0   9   5
+             Fold 4    0.832        0.842          0.8     0.833 0.889 0.941 0.571  16   1   3   4
+             Fold 5    0.905        0.737          1.0     0.792 0.848 1.000 0.500  14   0   5   5
+    Ensemble (@0.5)    0.800        1.000          0.0     0.792 0.884 0.792 0.000  19   5   0   0
+ Ensemble (@Youden)    0.800        0.632          1.0     0.708 0.774 1.000 0.417  12   0   7   5
+Ensemble (90+ Sens)    0.800        0.947          0.4     0.833 0.900 0.857 0.667  18   3   1   2
+
+MAE-TinyTransformer3D — ENSEMBLE @Youden (0.806) — %95 Bootstrap CI:
+
+=================================================================
+  MAE-TinyTransformer3D  |  Threshold: Youden 0.806
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.800          [0.589 - 0.958]
+  AUC-PR                0.949                        -
+  Sensitivity           0.632          [0.421 - 0.842]
+  Specificity           1.000          [1.000 - 1.000]
+  PPV                   1.000          [1.000 - 1.000]
+  NPV                   0.417          [0.154 - 0.714]
+  Accuracy              0.708          [0.542 - 0.875]
+  F1-Score              0.774          [0.593 - 0.914]
+  Composite             0.765                        -
+
+  CM: TP=12 FP=0 FN=7 TN=5
+  Toplam Hata: 7/24
+=================================================================
+
+MAE-TinyTransformer3D — ENSEMBLE @90%+ Sensitivity (0.637) — %95 Bootstrap CI:
+
+=================================================================
+  MAE-TinyTransformer3D  |  Threshold: 90+Sens 0.637
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.800          [0.589 - 0.958]
+  AUC-PR                0.949                        -
+  Sensitivity           0.947          [0.824 - 1.000]
+  Specificity           0.400          [0.000 - 1.000]
+  PPV                   0.857          [0.684 - 1.000]
+  NPV                   0.667          [0.000 - 1.000]
+  Accuracy              0.833          [0.667 - 0.958]
+  F1-Score              0.900          [0.778 - 0.977]
+  Composite             0.817                        -
+
+  CM: TP=18 FP=3 FN=1 TN=2
+  Toplam Hata: 4/24
+=================================================================

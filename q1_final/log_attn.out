@@ -1,0 +1,1030 @@
+shared_utils.py yüklendi. [Q1 | Sensitivity-First | TTA | ClinicalFocalLoss]
+================================================================================
+Attention-SwinUNETR (AG-MSF) — External Test: 37 hasta
+================================================================================
+
+======================================================================
+FOLD 1/5
+======================================================================
+  Pretrained: 159 katman yüklendi, 0 atlandı.
+[attn-swinunetr | fold 1 | epoch 001] train=0.2251 val_loss=0.2283 auc=0.5119 acc=0.5610
+  [Metrics] AUC:0.512 F1:0.320 SENS:0.200 SPEC:0.952 | COMPOSITE:0.4208 EMA:0.4208
+[attn-swinunetr | fold 1 | epoch 002] train=0.2255 val_loss=0.2212 auc=0.5381 acc=0.5610
+  [Metrics] AUC:0.538 F1:0.261 SENS:0.150 SPEC:1.000 | COMPOSITE:0.4022 EMA:0.4153
+[attn-swinunetr | fold 1 | epoch 003] train=0.2164 val_loss=0.2183 auc=0.5524 acc=0.5366
+  [Metrics] AUC:0.552 F1:0.320 SENS:0.200 SPEC:0.952 | COMPOSITE:0.4310 EMA:0.4200
+[attn-swinunetr | fold 1 | epoch 004] train=0.2161 val_loss=0.2184 auc=0.5500 acc=0.5610
+  [Metrics] AUC:0.550 F1:0.320 SENS:0.200 SPEC:0.952 | COMPOSITE:0.4304 EMA:0.4231
+[attn-swinunetr | fold 1 | epoch 005] train=0.2123 val_loss=0.2251 auc=0.5619 acc=0.5610
+  [Metrics] AUC:0.562 F1:0.333 SENS:0.200 SPEC:1.000 | COMPOSITE:0.4438 EMA:0.4293
+[attn-swinunetr | fold 1 | epoch 006] train=0.2064 val_loss=0.2246 auc=0.5810 acc=0.5610
+  [Metrics] AUC:0.581 F1:0.619 SENS:0.650 SPEC:0.571 | COMPOSITE:0.6132 EMA:0.4845
+[attn-swinunetr | fold 1 | epoch 007] train=0.2041 val_loss=0.2256 auc=0.5881 acc=0.5610
+  [Metrics] AUC:0.588 F1:0.651 SENS:0.700 SPEC:0.571 | COMPOSITE:0.6405 EMA:0.5313
+[attn-swinunetr | fold 1 | epoch 008] train=0.1945 val_loss=0.2532 auc=0.6048 acc=0.5854
+  [Metrics] AUC:0.605 F1:0.651 SENS:0.700 SPEC:0.571 | COMPOSITE:0.6447 EMA:0.5653
+[attn-swinunetr | fold 1 | epoch 009] train=0.2015 val_loss=0.2291 auc=0.6167 acc=0.5854
+  [Metrics] AUC:0.617 F1:0.651 SENS:0.700 SPEC:0.571 | COMPOSITE:0.6477 EMA:0.5900
+[attn-swinunetr | fold 1 | epoch 010] train=0.2110 val_loss=0.2539 auc=0.6238 acc=0.5854
+  [Metrics] AUC:0.624 F1:0.651 SENS:0.700 SPEC:0.571 | COMPOSITE:0.6495 EMA:0.6079
+[attn-swinunetr | fold 1 | epoch 011] train=0.1962 val_loss=0.2297 auc=0.6095 acc=0.5854
+  [Metrics] AUC:0.610 F1:0.650 SENS:0.650 SPEC:0.667 | COMPOSITE:0.6424 EMA:0.6182
+[attn-swinunetr | fold 1 | epoch 012] train=0.2047 val_loss=0.2531 auc=0.6238 acc=0.5854
+  [Metrics] AUC:0.624 F1:0.651 SENS:0.700 SPEC:0.571 | COMPOSITE:0.6495 EMA:0.6276
+[attn-swinunetr | fold 1 | epoch 013] train=0.2089 val_loss=0.2210 auc=0.6262 acc=0.5854
+  [Metrics] AUC:0.626 F1:0.667 SENS:0.700 SPEC:0.619 | COMPOSITE:0.6611 EMA:0.6376
+[attn-swinunetr | fold 1 | epoch 014] train=0.1969 val_loss=0.2750 auc=0.6310 acc=0.5854
+  [Metrics] AUC:0.631 F1:0.632 SENS:0.600 SPEC:0.714 | COMPOSITE:0.6328 EMA:0.6362
+  [Progressive FT] Epoch 15: Backbone çözülüyor, tam model ince ayara başlıyor.
+[attn-swinunetr | fold 1 | epoch 015] train=0.2054 val_loss=0.2283 auc=0.6452 acc=0.6098
+  [Metrics] AUC:0.645 F1:0.667 SENS:0.700 SPEC:0.619 | COMPOSITE:0.6658 EMA:0.6451
+[attn-swinunetr | fold 1 | epoch 016] train=0.1963 val_loss=0.2327 auc=0.6524 acc=0.6341
+  [Metrics] AUC:0.652 F1:0.667 SENS:0.700 SPEC:0.619 | COMPOSITE:0.6676 EMA:0.6518
+[attn-swinunetr | fold 1 | epoch 017] train=0.1989 val_loss=0.2328 auc=0.6524 acc=0.6341
+  [Metrics] AUC:0.652 F1:0.667 SENS:0.700 SPEC:0.619 | COMPOSITE:0.6676 EMA:0.6566
+[attn-swinunetr | fold 1 | epoch 018] train=0.1911 val_loss=0.2299 auc=0.6571 acc=0.6585
+  [Metrics] AUC:0.657 F1:0.708 SENS:0.850 SPEC:0.476 | COMPOSITE:0.7103 EMA:0.6727
+[attn-swinunetr | fold 1 | epoch 019] train=0.1949 val_loss=0.2250 auc=0.6690 acc=0.6829
+  [Metrics] AUC:0.669 F1:0.723 SENS:0.850 SPEC:0.524 | COMPOSITE:0.7242 EMA:0.6881
+[attn-swinunetr | fold 1 | epoch 020] train=0.1878 val_loss=0.2296 auc=0.6619 acc=0.6585
+  [Metrics] AUC:0.662 F1:0.708 SENS:0.850 SPEC:0.476 | COMPOSITE:0.7115 EMA:0.6951
+[attn-swinunetr | fold 1 | epoch 021] train=0.1846 val_loss=0.2252 auc=0.6905 acc=0.7317
+  [Metrics] AUC:0.690 F1:0.756 SENS:0.850 SPEC:0.619 | COMPOSITE:0.7519 EMA:0.7122
+[attn-swinunetr | fold 1 | epoch 022] train=0.1859 val_loss=0.2237 auc=0.6929 acc=0.7317
+  [Metrics] AUC:0.693 F1:0.756 SENS:0.850 SPEC:0.619 | COMPOSITE:0.7525 EMA:0.7242
+[attn-swinunetr | fold 1 | epoch 023] train=0.1905 val_loss=0.2266 auc=0.6929 acc=0.7317
+  [Metrics] AUC:0.693 F1:0.756 SENS:0.850 SPEC:0.619 | COMPOSITE:0.7525 EMA:0.7327
+[attn-swinunetr | fold 1 | epoch 024] train=0.1969 val_loss=0.2260 auc=0.6857 acc=0.7073
+  [Metrics] AUC:0.686 F1:0.727 SENS:0.800 SPEC:0.619 | COMPOSITE:0.7261 EMA:0.7307
+[attn-swinunetr | fold 1 | epoch 025] train=0.1885 val_loss=0.2298 auc=0.6714 acc=0.6585
+  [Metrics] AUC:0.671 F1:0.698 SENS:0.750 SPEC:0.619 | COMPOSITE:0.6976 EMA:0.7208
+[attn-swinunetr | fold 1 | epoch 026] train=0.1911 val_loss=0.2208 auc=0.6881 acc=0.7073
+  [Metrics] AUC:0.688 F1:0.739 SENS:0.850 SPEC:0.571 | COMPOSITE:0.7400 EMA:0.7266
+[attn-swinunetr | fold 1 | epoch 027] train=0.1803 val_loss=0.2270 auc=0.6976 acc=0.7073
+  [Metrics] AUC:0.698 F1:0.739 SENS:0.850 SPEC:0.571 | COMPOSITE:0.7424 EMA:0.7313
+[attn-swinunetr | fold 1 | epoch 028] train=0.1814 val_loss=0.2183 auc=0.7143 acc=0.7317
+  [Metrics] AUC:0.714 F1:0.756 SENS:0.850 SPEC:0.619 | COMPOSITE:0.7578 EMA:0.7393
+[attn-swinunetr | fold 1 | epoch 029] train=0.1866 val_loss=0.2235 auc=0.7214 acc=0.7317
+  [Metrics] AUC:0.721 F1:0.756 SENS:0.850 SPEC:0.619 | COMPOSITE:0.7596 EMA:0.7454
+[attn-swinunetr | fold 1 | epoch 030] train=0.1800 val_loss=0.2090 auc=0.7452 acc=0.7073
+  [Metrics] AUC:0.745 F1:0.750 SENS:0.900 SPEC:0.524 | COMPOSITE:0.7674 EMA:0.7520
+[attn-swinunetr | fold 1 | epoch 031] train=0.1856 val_loss=0.2068 auc=0.7667 acc=0.7317
+  [Metrics] AUC:0.767 F1:0.776 SENS:0.950 SPEC:0.524 | COMPOSITE:0.7966 EMA:0.7654
+[attn-swinunetr | fold 1 | epoch 032] train=0.1767 val_loss=0.2027 auc=0.7690 acc=0.7317
+  [Metrics] AUC:0.769 F1:0.766 SENS:0.900 SPEC:0.571 | COMPOSITE:0.7845 EMA:0.7711
+[attn-swinunetr | fold 1 | epoch 033] train=0.1790 val_loss=0.2089 auc=0.7571 acc=0.7073
+  [Metrics] AUC:0.757 F1:0.750 SENS:0.900 SPEC:0.524 | COMPOSITE:0.7704 EMA:0.7709
+[attn-swinunetr | fold 1 | epoch 034] train=0.1806 val_loss=0.2004 auc=0.7667 acc=0.7317
+  [Metrics] AUC:0.767 F1:0.766 SENS:0.900 SPEC:0.571 | COMPOSITE:0.7839 EMA:0.7748
+[attn-swinunetr | fold 1 | epoch 035] train=0.1870 val_loss=0.2024 auc=0.7786 acc=0.7317
+  [Metrics] AUC:0.779 F1:0.766 SENS:0.900 SPEC:0.571 | COMPOSITE:0.7868 EMA:0.7784
+[attn-swinunetr | fold 1 | epoch 036] train=0.1805 val_loss=0.2120 auc=0.7595 acc=0.7073
+  [Metrics] AUC:0.760 F1:0.750 SENS:0.900 SPEC:0.524 | COMPOSITE:0.7710 EMA:0.7762
+[attn-swinunetr | fold 1 | epoch 037] train=0.1742 val_loss=0.2027 auc=0.7619 acc=0.7073
+  [Metrics] AUC:0.762 F1:0.750 SENS:0.900 SPEC:0.524 | COMPOSITE:0.7715 EMA:0.7748
+[attn-swinunetr | fold 1 | epoch 038] train=0.1697 val_loss=0.2147 auc=0.7619 acc=0.7073
+  [Metrics] AUC:0.762 F1:0.750 SENS:0.900 SPEC:0.524 | COMPOSITE:0.7715 EMA:0.7738
+[attn-swinunetr | fold 1 | epoch 039] train=0.1804 val_loss=0.2124 auc=0.7571 acc=0.7073
+  [Metrics] AUC:0.757 F1:0.739 SENS:0.850 SPEC:0.571 | COMPOSITE:0.7573 EMA:0.7689
+[attn-swinunetr | fold 1 | epoch 040] train=0.1909 val_loss=0.2049 auc=0.7548 acc=0.7073
+  [Metrics] AUC:0.755 F1:0.739 SENS:0.850 SPEC:0.571 | COMPOSITE:0.7567 EMA:0.7652
+[attn-swinunetr | fold 1 | epoch 041] train=0.1769 val_loss=0.2047 auc=0.7595 acc=0.7073
+  [Metrics] AUC:0.760 F1:0.739 SENS:0.850 SPEC:0.571 | COMPOSITE:0.7579 EMA:0.7630
+[attn-swinunetr | fold 1 | epoch 042] train=0.1667 val_loss=0.2203 auc=0.7548 acc=0.7073
+  [Metrics] AUC:0.755 F1:0.739 SENS:0.850 SPEC:0.571 | COMPOSITE:0.7567 EMA:0.7611
+[attn-swinunetr | fold 1 | epoch 043] train=0.1855 val_loss=0.1954 auc=0.7690 acc=0.7073
+  [Metrics] AUC:0.769 F1:0.750 SENS:0.900 SPEC:0.524 | COMPOSITE:0.7733 EMA:0.7648
+[attn-swinunetr | fold 1 | epoch 044] train=0.1740 val_loss=0.1981 auc=0.7786 acc=0.7073
+  [Metrics] AUC:0.779 F1:0.703 SENS:0.650 SPEC:0.810 | COMPOSITE:0.7192 EMA:0.7511
+[attn-swinunetr | fold 1 | epoch 045] train=0.1716 val_loss=0.1871 auc=0.8214 acc=0.7317
+  [Metrics] AUC:0.821 F1:0.757 SENS:0.700 SPEC:0.857 | COMPOSITE:0.7681 EMA:0.7562
+[attn-swinunetr | fold 1 | epoch 046] train=0.1747 val_loss=0.1826 auc=0.8357 acc=0.7317
+  [Metrics] AUC:0.836 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7841 EMA:0.7646
+[attn-swinunetr | fold 1 | epoch 047] train=0.1689 val_loss=0.1795 auc=0.8310 acc=0.7317
+  [Metrics] AUC:0.831 F1:0.757 SENS:0.700 SPEC:0.857 | COMPOSITE:0.7705 EMA:0.7664
+[attn-swinunetr | fold 1 | epoch 048] train=0.1812 val_loss=0.1964 auc=0.8000 acc=0.7073
+  [Metrics] AUC:0.800 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7366 EMA:0.7574
+[attn-swinunetr | fold 1 | epoch 049] train=0.1634 val_loss=0.1925 auc=0.7976 acc=0.7073
+  [Metrics] AUC:0.798 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7360 EMA:0.7510
+[attn-swinunetr | fold 1 | epoch 050] train=0.1753 val_loss=0.1912 auc=0.8071 acc=0.7073
+  [Metrics] AUC:0.807 F1:0.737 SENS:0.700 SPEC:0.810 | COMPOSITE:0.7524 EMA:0.7514
+[attn-swinunetr | fold 1 | epoch 051] train=0.1832 val_loss=0.1978 auc=0.7952 acc=0.7073
+  [Metrics] AUC:0.795 F1:0.718 SENS:0.700 SPEC:0.762 | COMPOSITE:0.7376 EMA:0.7473
+[attn-swinunetr | fold 1 | epoch 052] train=0.1645 val_loss=0.1959 auc=0.7833 acc=0.7073
+  [Metrics] AUC:0.783 F1:0.686 SENS:0.600 SPEC:0.857 | COMPOSITE:0.7058 EMA:0.7348
+[attn-swinunetr | fold 1 | epoch 053] train=0.1793 val_loss=0.1908 auc=0.7905 acc=0.7073
+  [Metrics] AUC:0.790 F1:0.703 SENS:0.650 SPEC:0.810 | COMPOSITE:0.7222 EMA:0.7311
+[attn-swinunetr | fold 1 | epoch 054] train=0.1817 val_loss=0.2017 auc=0.7810 acc=0.7073
+  [Metrics] AUC:0.781 F1:0.686 SENS:0.600 SPEC:0.857 | COMPOSITE:0.7052 EMA:0.7233
+[attn-swinunetr | fold 1 | epoch 055] train=0.1649 val_loss=0.1878 auc=0.8071 acc=0.7073
+  [Metrics] AUC:0.807 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7384 EMA:0.7278
+[attn-swinunetr | fold 1 | epoch 056] train=0.1716 val_loss=0.1830 auc=0.8071 acc=0.7073
+  [Metrics] AUC:0.807 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7384 EMA:0.7310
+[attn-swinunetr | fold 1 | epoch 057] train=0.1744 val_loss=0.1928 auc=0.7929 acc=0.7073
+  [Metrics] AUC:0.793 F1:0.706 SENS:0.600 SPEC:0.905 | COMPOSITE:0.7204 EMA:0.7278
+[attn-swinunetr | fold 1 | epoch 058] train=0.1626 val_loss=0.2022 auc=0.7786 acc=0.7317
+  [Metrics] AUC:0.779 F1:0.706 SENS:0.600 SPEC:0.905 | COMPOSITE:0.7168 EMA:0.7245
+[attn-swinunetr | fold 1 | epoch 059] train=0.1536 val_loss=0.1840 auc=0.7905 acc=0.7317
+  [Metrics] AUC:0.790 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7342 EMA:0.7274
+[attn-swinunetr | fold 1 | epoch 060] train=0.1585 val_loss=0.1933 auc=0.7857 acc=0.7317
+  [Metrics] AUC:0.786 F1:0.756 SENS:0.850 SPEC:0.619 | COMPOSITE:0.7757 EMA:0.7419
+[attn-swinunetr | fold 1 | epoch 061] train=0.1776 val_loss=0.1858 auc=0.8143 acc=0.7317
+  [Metrics] AUC:0.814 F1:0.737 SENS:0.700 SPEC:0.810 | COMPOSITE:0.7542 EMA:0.7456
+[attn-swinunetr | fold 1 | epoch 062] train=0.1762 val_loss=0.1800 auc=0.8286 acc=0.7317
+  [Metrics] AUC:0.829 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7823 EMA:0.7566
+[attn-swinunetr | fold 1 | epoch 063] train=0.1748 val_loss=0.1883 auc=0.7929 acc=0.7073
+  [Metrics] AUC:0.793 F1:0.706 SENS:0.600 SPEC:0.905 | COMPOSITE:0.7204 EMA:0.7457
+[attn-swinunetr | fold 1 | epoch 064] train=0.1682 val_loss=0.1876 auc=0.8048 acc=0.7073
+  [Metrics] AUC:0.805 F1:0.757 SENS:0.700 SPEC:0.857 | COMPOSITE:0.7640 EMA:0.7512
+[attn-swinunetr | fold 1 | epoch 065] train=0.1659 val_loss=0.1886 auc=0.8071 acc=0.7073
+  [Metrics] AUC:0.807 F1:0.757 SENS:0.700 SPEC:0.857 | COMPOSITE:0.7645 EMA:0.7552
+[attn-swinunetr | fold 1 | epoch 066] train=0.1704 val_loss=0.1988 auc=0.7952 acc=0.7073
+  [Metrics] AUC:0.795 F1:0.737 SENS:0.700 SPEC:0.810 | COMPOSITE:0.7494 EMA:0.7535
+[attn-swinunetr | fold 1 | epoch 067] train=0.1619 val_loss=0.1775 auc=0.8262 acc=0.7317
+  [Metrics] AUC:0.826 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7817 EMA:0.7619
+[attn-swinunetr | fold 1 | epoch 068] train=0.1663 val_loss=0.1789 auc=0.8262 acc=0.7317
+  [Metrics] AUC:0.826 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7817 EMA:0.7679
+[attn-swinunetr | fold 1 | epoch 069] train=0.1596 val_loss=0.1731 auc=0.8381 acc=0.7317
+  [Metrics] AUC:0.838 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.7974 EMA:0.7767
+[attn-swinunetr | fold 1 | epoch 070] train=0.1741 val_loss=0.1776 auc=0.8310 acc=0.7073
+  [Metrics] AUC:0.831 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7829 EMA:0.7786
+[attn-swinunetr | fold 1 | epoch 071] train=0.1604 val_loss=0.1861 auc=0.8214 acc=0.7317
+  [Metrics] AUC:0.821 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7805 EMA:0.7792
+[attn-swinunetr | fold 1 | epoch 072] train=0.1622 val_loss=0.1838 auc=0.8238 acc=0.7317
+  [Metrics] AUC:0.824 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7811 EMA:0.7797
+[attn-swinunetr | fold 1 | epoch 073] train=0.1583 val_loss=0.1801 auc=0.8262 acc=0.7317
+  [Metrics] AUC:0.826 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7817 EMA:0.7803
+[attn-swinunetr | fold 1 | epoch 074] train=0.1541 val_loss=0.2007 auc=0.7952 acc=0.7073
+  [Metrics] AUC:0.795 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7354 EMA:0.7669
+[attn-swinunetr | fold 1 | epoch 075] train=0.1678 val_loss=0.1977 auc=0.8095 acc=0.7317
+  [Metrics] AUC:0.810 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7390 EMA:0.7585
+[attn-swinunetr | fold 1 | epoch 076] train=0.1671 val_loss=0.1695 auc=0.8357 acc=0.7317
+  [Metrics] AUC:0.836 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7841 EMA:0.7662
+[attn-swinunetr | fold 1 | epoch 077] train=0.1505 val_loss=0.1750 auc=0.8238 acc=0.7317
+  [Metrics] AUC:0.824 F1:0.757 SENS:0.700 SPEC:0.857 | COMPOSITE:0.7687 EMA:0.7669
+[attn-swinunetr | fold 1 | epoch 078] train=0.1459 val_loss=0.1736 auc=0.8310 acc=0.7317
+  [Metrics] AUC:0.831 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7829 EMA:0.7717
+[attn-swinunetr | fold 1 | epoch 079] train=0.1632 val_loss=0.1842 auc=0.8190 acc=0.7317
+  [Metrics] AUC:0.819 F1:0.765 SENS:0.650 SPEC:0.952 | COMPOSITE:0.7663 EMA:0.7701
+[attn-swinunetr | fold 1 | epoch 080] train=0.1644 val_loss=0.1736 auc=0.8262 acc=0.7317
+  [Metrics] AUC:0.826 F1:0.743 SENS:0.650 SPEC:0.905 | COMPOSITE:0.7555 EMA:0.7657
+[attn-swinunetr | fold 1 | epoch 081] train=0.1419 val_loss=0.1828 auc=0.8167 acc=0.7073
+  [Metrics] AUC:0.817 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7408 EMA:0.7582
+[attn-swinunetr | fold 1 | epoch 082] train=0.1551 val_loss=0.1820 auc=0.8119 acc=0.7317
+  [Metrics] AUC:0.812 F1:0.706 SENS:0.600 SPEC:0.905 | COMPOSITE:0.7252 EMA:0.7483
+[attn-swinunetr | fold 1 | epoch 083] train=0.1572 val_loss=0.1899 auc=0.8024 acc=0.7317
+  [Metrics] AUC:0.802 F1:0.706 SENS:0.600 SPEC:0.905 | COMPOSITE:0.7228 EMA:0.7407
+[attn-swinunetr | fold 1 | epoch 084] train=0.1486 val_loss=0.1822 auc=0.8167 acc=0.7317
+  [Metrics] AUC:0.817 F1:0.722 SENS:0.650 SPEC:0.857 | COMPOSITE:0.7408 EMA:0.7407
+[attn-swinunetr | fold 1 | epoch 085] train=0.1558 val_loss=0.2023 auc=0.8071 acc=0.7317
+  [Metrics] AUC:0.807 F1:0.706 SENS:0.600 SPEC:0.905 | COMPOSITE:0.7240 EMA:0.7357
+[attn-swinunetr | fold 1 | epoch 086] train=0.1613 val_loss=0.1822 auc=0.8429 acc=0.7561
+  [Metrics] AUC:0.843 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7859 EMA:0.7507
+[attn-swinunetr | fold 1 | epoch 087] train=0.1620 val_loss=0.1643 auc=0.8619 acc=0.7561
+  [Metrics] AUC:0.862 F1:0.811 SENS:0.750 SPEC:0.905 | COMPOSITE:0.8164 EMA:0.7704
+[attn-swinunetr | fold 1 | epoch 088] train=0.1510 val_loss=0.1739 auc=0.8595 acc=0.7561
+  [Metrics] AUC:0.860 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.8027 EMA:0.7801
+[attn-swinunetr | fold 1 | epoch 089] train=0.1470 val_loss=0.1725 auc=0.8452 acc=0.7317
+  [Metrics] AUC:0.845 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7865 EMA:0.7820
+[attn-swinunetr | fold 1 | epoch 090] train=0.1596 val_loss=0.1967 auc=0.8310 acc=0.7317
+  [Metrics] AUC:0.831 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7829 EMA:0.7823
+[attn-swinunetr | fold 1 | epoch 091] train=0.1524 val_loss=0.1873 auc=0.8262 acc=0.7073
+  [Metrics] AUC:0.826 F1:0.765 SENS:0.650 SPEC:0.952 | COMPOSITE:0.7681 EMA:0.7780
+[attn-swinunetr | fold 1 | epoch 092] train=0.1577 val_loss=0.1893 auc=0.8214 acc=0.7317
+  [Metrics] AUC:0.821 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7805 EMA:0.7788
+[attn-swinunetr | fold 1 | epoch 093] train=0.1491 val_loss=0.1720 auc=0.8214 acc=0.7317
+  [Metrics] AUC:0.821 F1:0.743 SENS:0.650 SPEC:0.905 | COMPOSITE:0.7543 EMA:0.7714
+[attn-swinunetr | fold 1 | epoch 094] train=0.1495 val_loss=0.1816 auc=0.8310 acc=0.7317
+  [Metrics] AUC:0.831 F1:0.769 SENS:0.750 SPEC:0.810 | COMPOSITE:0.7840 EMA:0.7752
+[attn-swinunetr | fold 1 | epoch 095] train=0.1782 val_loss=0.1672 auc=0.8429 acc=0.7317
+  [Metrics] AUC:0.843 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.7986 EMA:0.7822
+[attn-swinunetr | fold 1 | epoch 096] train=0.1544 val_loss=0.1980 auc=0.7905 acc=0.7073
+  [Metrics] AUC:0.790 F1:0.706 SENS:0.600 SPEC:0.905 | COMPOSITE:0.7198 EMA:0.7635
+[attn-swinunetr | fold 1 | epoch 097] train=0.1482 val_loss=0.1795 auc=0.8000 acc=0.7073
+  [Metrics] AUC:0.800 F1:0.727 SENS:0.600 SPEC:0.952 | COMPOSITE:0.7347 EMA:0.7548
+[attn-swinunetr | fold 1 | epoch 098] train=0.1306 val_loss=0.2080 auc=0.7786 acc=0.7073
+  [Metrics] AUC:0.779 F1:0.727 SENS:0.600 SPEC:0.952 | COMPOSITE:0.7293 EMA:0.7472
+[attn-swinunetr | fold 1 | epoch 099] train=0.1576 val_loss=0.2054 auc=0.7952 acc=0.7317
+  [Metrics] AUC:0.795 F1:0.727 SENS:0.600 SPEC:0.952 | COMPOSITE:0.7335 EMA:0.7431
+[attn-swinunetr | fold 1 | epoch 100] train=0.1429 val_loss=0.1583 auc=0.8452 acc=0.7317
+  [Metrics] AUC:0.845 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.7992 EMA:0.7599
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.7823 | Best EMA COMPOSITE: 0.7823
+  SWA model kaydedildi (genelleme için tercih edildi).
+
+=================================================================
+  AttentionSwinUNETR Fold 1  |  Threshold: Youden 0.545
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.829          [0.690 - 0.939]
+  AUC-PR                0.814                        -
+  Sensitivity           0.700          [0.500 - 0.895]
+  Specificity           0.905          [0.762 - 1.000]
+  PPV                   0.875          [0.687 - 1.000]
+  NPV                   0.760          [0.577 - 0.913]
+  Accuracy              0.805          [0.683 - 0.902]
+  F1-Score              0.778          [0.600 - 0.909]
+  Composite             0.782                        -
+
+  CM: TP=14 FP=2 FN=6 TN=19
+  Toplam Hata: 8/41
+=================================================================
+
+======================================================================
+FOLD 2/5
+======================================================================
+  Pretrained: 159 katman yüklendi, 0 atlandı.
+[attn-swinunetr | fold 2 | epoch 001] train=0.2240 val_loss=0.2229 auc=0.5152 acc=0.4884
+  [Metrics] AUC:0.515 F1:0.414 SENS:0.300 SPEC:0.870 | COMPOSITE:0.4677 EMA:0.4677
+[attn-swinunetr | fold 2 | epoch 002] train=0.2189 val_loss=0.2170 auc=0.5478 acc=0.5116
+  [Metrics] AUC:0.548 F1:0.333 SENS:0.200 SPEC:1.000 | COMPOSITE:0.4403 EMA:0.4595
+[attn-swinunetr | fold 2 | epoch 003] train=0.2175 val_loss=0.2174 auc=0.5543 acc=0.5581
+  [Metrics] AUC:0.554 F1:0.400 SENS:0.250 SPEC:1.000 | COMPOSITE:0.4761 EMA:0.4645
+[attn-swinunetr | fold 2 | epoch 004] train=0.2134 val_loss=0.2153 auc=0.5848 acc=0.5116
+  [Metrics] AUC:0.585 F1:0.400 SENS:0.250 SPEC:1.000 | COMPOSITE:0.4837 EMA:0.4702
+[attn-swinunetr | fold 2 | epoch 005] train=0.2125 val_loss=0.2145 auc=0.5913 acc=0.5349
+  [Metrics] AUC:0.591 F1:0.400 SENS:0.250 SPEC:1.000 | COMPOSITE:0.4853 EMA:0.4748
+[attn-swinunetr | fold 2 | epoch 006] train=0.2076 val_loss=0.2154 auc=0.6000 acc=0.5349
+  [Metrics] AUC:0.600 F1:0.400 SENS:0.250 SPEC:1.000 | COMPOSITE:0.4875 EMA:0.4786
+[attn-swinunetr | fold 2 | epoch 007] train=0.2051 val_loss=0.2149 auc=0.6065 acc=0.5814
+  [Metrics] AUC:0.607 F1:0.500 SENS:0.400 SPEC:0.826 | COMPOSITE:0.5405 EMA:0.4972
+[attn-swinunetr | fold 2 | epoch 008] train=0.2039 val_loss=0.2120 auc=0.6152 acc=0.6047
+  [Metrics] AUC:0.615 F1:0.679 SENS:0.900 SPEC:0.348 | COMPOSITE:0.6908 EMA:0.5553
+[attn-swinunetr | fold 2 | epoch 009] train=0.2037 val_loss=0.2217 auc=0.6174 acc=0.6047
+  [Metrics] AUC:0.617 F1:0.545 SENS:0.450 SPEC:0.826 | COMPOSITE:0.5721 EMA:0.5603
+[attn-swinunetr | fold 2 | epoch 010] train=0.2022 val_loss=0.2083 auc=0.6413 acc=0.5581
+  [Metrics] AUC:0.641 F1:0.516 SENS:0.400 SPEC:0.870 | COMPOSITE:0.5598 EMA:0.5602
+[attn-swinunetr | fold 2 | epoch 011] train=0.2072 val_loss=0.2077 auc=0.6348 acc=0.5814
+  [Metrics] AUC:0.635 F1:0.545 SENS:0.450 SPEC:0.826 | COMPOSITE:0.5765 EMA:0.5651
+[attn-swinunetr | fold 2 | epoch 012] train=0.2007 val_loss=0.2104 auc=0.6326 acc=0.6047
+  [Metrics] AUC:0.633 F1:0.545 SENS:0.450 SPEC:0.826 | COMPOSITE:0.5759 EMA:0.5683
+[attn-swinunetr | fold 2 | epoch 013] train=0.1955 val_loss=0.2109 auc=0.6391 acc=0.6279
+  [Metrics] AUC:0.639 F1:0.680 SENS:0.850 SPEC:0.435 | COMPOSITE:0.6925 EMA:0.6056
+[attn-swinunetr | fold 2 | epoch 014] train=0.1969 val_loss=0.2097 auc=0.6674 acc=0.6279
+  [Metrics] AUC:0.667 F1:0.649 SENS:0.600 SPEC:0.783 | COMPOSITE:0.6564 EMA:0.6208
+  [Progressive FT] Epoch 15: Backbone çözülüyor, tam model ince ayara başlıyor.
+[attn-swinunetr | fold 2 | epoch 015] train=0.2010 val_loss=0.2114 auc=0.6652 acc=0.6279
+  [Metrics] AUC:0.665 F1:0.632 SENS:0.600 SPEC:0.739 | COMPOSITE:0.6451 EMA:0.6281
+[attn-swinunetr | fold 2 | epoch 016] train=0.1836 val_loss=0.2101 auc=0.6674 acc=0.6279
+  [Metrics] AUC:0.667 F1:0.632 SENS:0.600 SPEC:0.739 | COMPOSITE:0.6456 EMA:0.6333
+[attn-swinunetr | fold 2 | epoch 017] train=0.1949 val_loss=0.2115 auc=0.6587 acc=0.6279
+  [Metrics] AUC:0.659 F1:0.611 SENS:0.550 SPEC:0.783 | COMPOSITE:0.6273 EMA:0.6315
+[attn-swinunetr | fold 2 | epoch 018] train=0.1926 val_loss=0.2107 auc=0.6783 acc=0.6279
+  [Metrics] AUC:0.678 F1:0.649 SENS:0.600 SPEC:0.783 | COMPOSITE:0.6591 EMA:0.6398
+[attn-swinunetr | fold 2 | epoch 019] train=0.1907 val_loss=0.2064 auc=0.6826 acc=0.6047
+  [Metrics] AUC:0.683 F1:0.667 SENS:0.600 SPEC:0.826 | COMPOSITE:0.6712 EMA:0.6492
+[attn-swinunetr | fold 2 | epoch 020] train=0.1931 val_loss=0.2117 auc=0.6826 acc=0.6512
+  [Metrics] AUC:0.683 F1:0.629 SENS:0.550 SPEC:0.826 | COMPOSITE:0.6442 EMA:0.6477
+[attn-swinunetr | fold 2 | epoch 021] train=0.1916 val_loss=0.2036 auc=0.6848 acc=0.6279
+  [Metrics] AUC:0.685 F1:0.629 SENS:0.550 SPEC:0.826 | COMPOSITE:0.6448 EMA:0.6468
+[attn-swinunetr | fold 2 | epoch 022] train=0.1874 val_loss=0.2058 auc=0.6891 acc=0.6279
+  [Metrics] AUC:0.689 F1:0.632 SENS:0.600 SPEC:0.739 | COMPOSITE:0.6510 EMA:0.6481
+[attn-swinunetr | fold 2 | epoch 023] train=0.1849 val_loss=0.2080 auc=0.6804 acc=0.6279
+  [Metrics] AUC:0.680 F1:0.562 SENS:0.450 SPEC:0.870 | COMPOSITE:0.5987 EMA:0.6333
+[attn-swinunetr | fold 2 | epoch 024] train=0.1774 val_loss=0.2064 auc=0.6891 acc=0.6279
+  [Metrics] AUC:0.689 F1:0.629 SENS:0.550 SPEC:0.826 | COMPOSITE:0.6458 EMA:0.6370
+[attn-swinunetr | fold 2 | epoch 025] train=0.1894 val_loss=0.2124 auc=0.6913 acc=0.6279
+  [Metrics] AUC:0.691 F1:0.647 SENS:0.550 SPEC:0.870 | COMPOSITE:0.6575 EMA:0.6432
+[attn-swinunetr | fold 2 | epoch 026] train=0.1901 val_loss=0.2040 auc=0.6935 acc=0.6279
+  [Metrics] AUC:0.693 F1:0.632 SENS:0.600 SPEC:0.739 | COMPOSITE:0.6521 EMA:0.6459
+[attn-swinunetr | fold 2 | epoch 027] train=0.1887 val_loss=0.2064 auc=0.6913 acc=0.6512
+  [Metrics] AUC:0.691 F1:0.606 SENS:0.500 SPEC:0.870 | COMPOSITE:0.6298 EMA:0.6410
+[attn-swinunetr | fold 2 | epoch 028] train=0.1870 val_loss=0.2100 auc=0.7043 acc=0.6512
+  [Metrics] AUC:0.704 F1:0.611 SENS:0.550 SPEC:0.783 | COMPOSITE:0.6388 EMA:0.6404
+[attn-swinunetr | fold 2 | epoch 029] train=0.1858 val_loss=0.2029 auc=0.7087 acc=0.6512
+  [Metrics] AUC:0.709 F1:0.667 SENS:0.600 SPEC:0.826 | COMPOSITE:0.6778 EMA:0.6516
+[attn-swinunetr | fold 2 | epoch 030] train=0.1763 val_loss=0.2010 auc=0.7174 acc=0.6512
+  [Metrics] AUC:0.717 F1:0.667 SENS:0.600 SPEC:0.826 | COMPOSITE:0.6799 EMA:0.6601
+[attn-swinunetr | fold 2 | epoch 031] train=0.1647 val_loss=0.2077 auc=0.7043 acc=0.6744
+  [Metrics] AUC:0.704 F1:0.667 SENS:0.600 SPEC:0.826 | COMPOSITE:0.6767 EMA:0.6651
+[attn-swinunetr | fold 2 | epoch 032] train=0.1708 val_loss=0.1989 auc=0.7152 acc=0.6744
+  [Metrics] AUC:0.715 F1:0.667 SENS:0.600 SPEC:0.826 | COMPOSITE:0.6794 EMA:0.6694
+[attn-swinunetr | fold 2 | epoch 033] train=0.1864 val_loss=0.2068 auc=0.7152 acc=0.6977
+  [Metrics] AUC:0.715 F1:0.723 SENS:0.850 SPEC:0.565 | COMPOSITE:0.7419 EMA:0.6911
+[attn-swinunetr | fold 2 | epoch 034] train=0.1839 val_loss=0.2047 auc=0.7217 acc=0.6977
+  [Metrics] AUC:0.722 F1:0.723 SENS:0.850 SPEC:0.565 | COMPOSITE:0.7436 EMA:0.7069
+[attn-swinunetr | fold 2 | epoch 035] train=0.1828 val_loss=0.2027 auc=0.7239 acc=0.6977
+  [Metrics] AUC:0.724 F1:0.723 SENS:0.850 SPEC:0.565 | COMPOSITE:0.7441 EMA:0.7180
+[attn-swinunetr | fold 2 | epoch 036] train=0.1749 val_loss=0.1992 auc=0.7304 acc=0.6744
+  [Metrics] AUC:0.730 F1:0.683 SENS:0.700 SPEC:0.696 | COMPOSITE:0.7027 EMA:0.7134
+[attn-swinunetr | fold 2 | epoch 037] train=0.1670 val_loss=0.2118 auc=0.7261 acc=0.6977
+  [Metrics] AUC:0.726 F1:0.647 SENS:0.550 SPEC:0.870 | COMPOSITE:0.6662 EMA:0.6993
+[attn-swinunetr | fold 2 | epoch 038] train=0.1710 val_loss=0.1984 auc=0.7326 acc=0.6977
+  [Metrics] AUC:0.733 F1:0.723 SENS:0.850 SPEC:0.565 | COMPOSITE:0.7463 EMA:0.7134
+[attn-swinunetr | fold 2 | epoch 039] train=0.1696 val_loss=0.2061 auc=0.7304 acc=0.6977
+  [Metrics] AUC:0.730 F1:0.647 SENS:0.550 SPEC:0.870 | COMPOSITE:0.6673 EMA:0.6996
+[attn-swinunetr | fold 2 | epoch 040] train=0.1665 val_loss=0.2124 auc=0.7261 acc=0.6744
+  [Metrics] AUC:0.726 F1:0.698 SENS:0.750 SPEC:0.652 | COMPOSITE:0.7163 EMA:0.7046
+[attn-swinunetr | fold 2 | epoch 041] train=0.1733 val_loss=0.1919 auc=0.7304 acc=0.6512
+  [Metrics] AUC:0.730 F1:0.606 SENS:0.500 SPEC:0.870 | COMPOSITE:0.6396 EMA:0.6851
+[attn-swinunetr | fold 2 | epoch 042] train=0.1678 val_loss=0.2052 auc=0.7261 acc=0.6512
+  [Metrics] AUC:0.726 F1:0.625 SENS:0.500 SPEC:0.913 | COMPOSITE:0.6497 EMA:0.6745
+[attn-swinunetr | fold 2 | epoch 043] train=0.1596 val_loss=0.2257 auc=0.7283 acc=0.6512
+  [Metrics] AUC:0.728 F1:0.606 SENS:0.500 SPEC:0.870 | COMPOSITE:0.6390 EMA:0.6638
+[attn-swinunetr | fold 2 | epoch 044] train=0.1727 val_loss=0.2023 auc=0.7239 acc=0.6977
+  [Metrics] AUC:0.724 F1:0.723 SENS:0.850 SPEC:0.565 | COMPOSITE:0.7441 EMA:0.6879
+[attn-swinunetr | fold 2 | epoch 045] train=0.1746 val_loss=0.2121 auc=0.7152 acc=0.6977
+  [Metrics] AUC:0.715 F1:0.723 SENS:0.850 SPEC:0.565 | COMPOSITE:0.7419 EMA:0.7041
+[attn-swinunetr | fold 2 | epoch 046] train=0.1663 val_loss=0.2107 auc=0.7261 acc=0.7209
+  [Metrics] AUC:0.726 F1:0.727 SENS:0.800 SPEC:0.652 | COMPOSITE:0.7412 EMA:0.7152
+[attn-swinunetr | fold 2 | epoch 047] train=0.1668 val_loss=0.2195 auc=0.7217 acc=0.6977
+  [Metrics] AUC:0.722 F1:0.711 SENS:0.800 SPEC:0.609 | COMPOSITE:0.7295 EMA:0.7195
+[attn-swinunetr | fold 2 | epoch 048] train=0.1516 val_loss=0.2059 auc=0.7261 acc=0.6512
+  [Metrics] AUC:0.726 F1:0.647 SENS:0.550 SPEC:0.870 | COMPOSITE:0.6662 EMA:0.7035
+[attn-swinunetr | fold 2 | epoch 049] train=0.1793 val_loss=0.1927 auc=0.7304 acc=0.6512
+  [Metrics] AUC:0.730 F1:0.667 SENS:0.650 SPEC:0.739 | COMPOSITE:0.6876 EMA:0.6988
+[attn-swinunetr | fold 2 | epoch 050] train=0.1740 val_loss=0.2207 auc=0.7239 acc=0.6512
+  [Metrics] AUC:0.724 F1:0.667 SENS:0.600 SPEC:0.826 | COMPOSITE:0.6816 EMA:0.6936
+[attn-swinunetr | fold 2 | epoch 051] train=0.1624 val_loss=0.1986 auc=0.7283 acc=0.6512
+  [Metrics] AUC:0.728 F1:0.684 SENS:0.650 SPEC:0.783 | COMPOSITE:0.6980 EMA:0.6949
+[attn-swinunetr | fold 2 | epoch 052] train=0.1553 val_loss=0.2143 auc=0.7304 acc=0.6512
+  [Metrics] AUC:0.730 F1:0.647 SENS:0.550 SPEC:0.870 | COMPOSITE:0.6673 EMA:0.6866
+[attn-swinunetr | fold 2 | epoch 053] train=0.1467 val_loss=0.2161 auc=0.7304 acc=0.6744
+  [Metrics] AUC:0.730 F1:0.647 SENS:0.550 SPEC:0.870 | COMPOSITE:0.6673 EMA:0.6808
+[attn-swinunetr | fold 2 | epoch 054] train=0.1695 val_loss=0.2082 auc=0.7326 acc=0.6744
+  [Metrics] AUC:0.733 F1:0.629 SENS:0.550 SPEC:0.826 | COMPOSITE:0.6567 EMA:0.6736
+[attn-swinunetr | fold 2 | epoch 055] train=0.1733 val_loss=0.2396 auc=0.7239 acc=0.6512
+  [Metrics] AUC:0.724 F1:0.629 SENS:0.550 SPEC:0.826 | COMPOSITE:0.6545 EMA:0.6679
+[attn-swinunetr | fold 2 | epoch 056] train=0.1560 val_loss=0.1954 auc=0.7261 acc=0.6279
+  [Metrics] AUC:0.726 F1:0.647 SENS:0.550 SPEC:0.870 | COMPOSITE:0.6662 EMA:0.6674
+[attn-swinunetr | fold 2 | epoch 057] train=0.1516 val_loss=0.2172 auc=0.7239 acc=0.6512
+  [Metrics] AUC:0.724 F1:0.667 SENS:0.650 SPEC:0.739 | COMPOSITE:0.6860 EMA:0.6730
+[attn-swinunetr | fold 2 | epoch 058] train=0.1688 val_loss=0.2168 auc=0.7217 acc=0.6512
+  [Metrics] AUC:0.722 F1:0.625 SENS:0.500 SPEC:0.913 | COMPOSITE:0.6486 EMA:0.6657
+[attn-swinunetr | fold 2 | epoch 059] train=0.1577 val_loss=0.2133 auc=0.7239 acc=0.6512
+  [Metrics] AUC:0.724 F1:0.625 SENS:0.500 SPEC:0.913 | COMPOSITE:0.6492 EMA:0.6607
+[attn-swinunetr | fold 2 | epoch 060] train=0.1600 val_loss=0.1991 auc=0.7196 acc=0.6512
+  [Metrics] AUC:0.720 F1:0.629 SENS:0.550 SPEC:0.826 | COMPOSITE:0.6534 EMA:0.6585
+[attn-swinunetr | fold 2 | epoch 061] train=0.1555 val_loss=0.2373 auc=0.7152 acc=0.6279
+  [Metrics] AUC:0.715 F1:0.698 SENS:0.750 SPEC:0.652 | COMPOSITE:0.7135 EMA:0.6750
+[attn-swinunetr | fold 2 | epoch 062] train=0.1582 val_loss=0.2077 auc=0.7304 acc=0.6512
+  [Metrics] AUC:0.730 F1:0.625 SENS:0.500 SPEC:0.913 | COMPOSITE:0.6508 EMA:0.6678
+[attn-swinunetr | fold 2 | epoch 063] train=0.1612 val_loss=0.2187 auc=0.7196 acc=0.6512
+  [Metrics] AUC:0.720 F1:0.667 SENS:0.650 SPEC:0.739 | COMPOSITE:0.6849 EMA:0.6729
+[attn-swinunetr | fold 2 | epoch 064] train=0.1492 val_loss=0.2106 auc=0.7130 acc=0.6279
+  [Metrics] AUC:0.713 F1:0.684 SENS:0.650 SPEC:0.783 | COMPOSITE:0.6942 EMA:0.6793
+[attn-swinunetr | fold 2 | epoch 065] train=0.1503 val_loss=0.2438 auc=0.7196 acc=0.6279
+  [Metrics] AUC:0.720 F1:0.684 SENS:0.650 SPEC:0.783 | COMPOSITE:0.6958 EMA:0.6843
+[attn-swinunetr | fold 2 | epoch 066] train=0.1484 val_loss=0.2041 auc=0.7283 acc=0.6512
+  [Metrics] AUC:0.728 F1:0.667 SENS:0.600 SPEC:0.826 | COMPOSITE:0.6826 EMA:0.6838
+[attn-swinunetr | fold 2 | epoch 067] train=0.1492 val_loss=0.2366 auc=0.7304 acc=0.6977
+  [Metrics] AUC:0.730 F1:0.684 SENS:0.650 SPEC:0.783 | COMPOSITE:0.6986 EMA:0.6882
+[attn-swinunetr | fold 2 | epoch 068] train=0.1532 val_loss=0.2060 auc=0.7391 acc=0.6512
+  [Metrics] AUC:0.739 F1:0.718 SENS:0.700 SPEC:0.783 | COMPOSITE:0.7267 EMA:0.6997
+[attn-swinunetr | fold 2 | epoch 069] train=0.1495 val_loss=0.2297 auc=0.7348 acc=0.6744
+  [Metrics] AUC:0.735 F1:0.703 SENS:0.650 SPEC:0.826 | COMPOSITE:0.7108 EMA:0.7031
+[attn-swinunetr | fold 2 | epoch 070] train=0.1266 val_loss=0.2174 auc=0.7261 acc=0.6512
+  [Metrics] AUC:0.726 F1:0.686 SENS:0.600 SPEC:0.870 | COMPOSITE:0.6934 EMA:0.7002
+[attn-swinunetr | fold 2 | epoch 071] train=0.1660 val_loss=0.2571 auc=0.7304 acc=0.7209
+  [Metrics] AUC:0.730 F1:0.703 SENS:0.650 SPEC:0.826 | COMPOSITE:0.7097 EMA:0.7030
+[attn-swinunetr | fold 2 | epoch 072] train=0.1466 val_loss=0.2071 auc=0.7370 acc=0.6512
+  [Metrics] AUC:0.737 F1:0.700 SENS:0.700 SPEC:0.739 | COMPOSITE:0.7151 EMA:0.7066
+  Early stopping @ epoch 72 (best EMA composite=0.7195)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.6950 | Best EMA COMPOSITE: 0.7195
+
+=================================================================
+  AttentionSwinUNETR Fold 2  |  Threshold: Youden 0.616
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.722          [0.558 - 0.870]
+  AUC-PR                0.643                        -
+  Sensitivity           0.800          [0.609 - 0.952]
+  Specificity           0.609          [0.409 - 0.808]
+  PPV                   0.640          [0.448 - 0.826]
+  NPV                   0.778          [0.562 - 0.947]
+  Accuracy              0.698          [0.558 - 0.837]
+  F1-Score              0.711          [0.542 - 0.844]
+  Composite             0.730                        -
+
+  CM: TP=16 FP=9 FN=4 TN=14
+  Toplam Hata: 13/43
+=================================================================
+
+======================================================================
+FOLD 3/5
+======================================================================
+  Pretrained: 159 katman yüklendi, 0 atlandı.
+[attn-swinunetr | fold 3 | epoch 001] train=0.2196 val_loss=0.2180 auc=0.6992 acc=0.6250
+  [Metrics] AUC:0.699 F1:0.645 SENS:0.526 SPEC:0.905 | COMPOSITE:0.6560 EMA:0.6560
+[attn-swinunetr | fold 3 | epoch 002] train=0.2182 val_loss=0.2170 auc=0.7318 acc=0.7250
+  [Metrics] AUC:0.732 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7566 EMA:0.6862
+[attn-swinunetr | fold 3 | epoch 003] train=0.2182 val_loss=0.2156 auc=0.7168 acc=0.7500
+  [Metrics] AUC:0.717 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7644 EMA:0.7097
+[attn-swinunetr | fold 3 | epoch 004] train=0.2175 val_loss=0.2137 auc=0.6942 acc=0.7250
+  [Metrics] AUC:0.694 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7472 EMA:0.7209
+[attn-swinunetr | fold 3 | epoch 005] train=0.2134 val_loss=0.2134 auc=0.6817 acc=0.7000
+  [Metrics] AUC:0.682 F1:0.727 SENS:0.842 SPEC:0.571 | COMPOSITE:0.7327 EMA:0.7245
+[attn-swinunetr | fold 3 | epoch 006] train=0.2084 val_loss=0.2103 auc=0.6792 acc=0.6750
+  [Metrics] AUC:0.679 F1:0.714 SENS:0.789 SPEC:0.619 | COMPOSITE:0.7175 EMA:0.7224
+[attn-swinunetr | fold 3 | epoch 007] train=0.2048 val_loss=0.2124 auc=0.6792 acc=0.6750
+  [Metrics] AUC:0.679 F1:0.700 SENS:0.737 SPEC:0.667 | COMPOSITE:0.7027 EMA:0.7165
+[attn-swinunetr | fold 3 | epoch 008] train=0.2048 val_loss=0.2097 auc=0.6767 acc=0.7000
+  [Metrics] AUC:0.677 F1:0.727 SENS:0.842 SPEC:0.571 | COMPOSITE:0.7314 EMA:0.7210
+[attn-swinunetr | fold 3 | epoch 009] train=0.2042 val_loss=0.2096 auc=0.6692 acc=0.6750
+  [Metrics] AUC:0.669 F1:0.732 SENS:0.789 SPEC:0.667 | COMPOSITE:0.7265 EMA:0.7226
+[attn-swinunetr | fold 3 | epoch 010] train=0.2063 val_loss=0.2089 auc=0.6892 acc=0.6500
+  [Metrics] AUC:0.689 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7433 EMA:0.7288
+[attn-swinunetr | fold 3 | epoch 011] train=0.1974 val_loss=0.2109 auc=0.7118 acc=0.7000
+  [Metrics] AUC:0.712 F1:0.732 SENS:0.789 SPEC:0.667 | COMPOSITE:0.7372 EMA:0.7313
+[attn-swinunetr | fold 3 | epoch 012] train=0.2050 val_loss=0.2171 auc=0.7193 acc=0.7000
+  [Metrics] AUC:0.719 F1:0.769 SENS:0.789 SPEC:0.762 | COMPOSITE:0.7627 EMA:0.7408
+[attn-swinunetr | fold 3 | epoch 013] train=0.2047 val_loss=0.2166 auc=0.6892 acc=0.6500
+  [Metrics] AUC:0.689 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7433 EMA:0.7415
+[attn-swinunetr | fold 3 | epoch 014] train=0.2065 val_loss=0.2069 auc=0.6842 acc=0.6250
+  [Metrics] AUC:0.684 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7420 EMA:0.7417
+  [Progressive FT] Epoch 15: Backbone çözülüyor, tam model ince ayara başlıyor.
+[attn-swinunetr | fold 3 | epoch 015] train=0.1967 val_loss=0.2073 auc=0.6867 acc=0.6250
+  [Metrics] AUC:0.687 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7426 EMA:0.7420
+[attn-swinunetr | fold 3 | epoch 016] train=0.2030 val_loss=0.2074 auc=0.6892 acc=0.6500
+  [Metrics] AUC:0.689 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7433 EMA:0.7423
+[attn-swinunetr | fold 3 | epoch 017] train=0.2013 val_loss=0.2089 auc=0.6867 acc=0.6250
+  [Metrics] AUC:0.687 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7426 EMA:0.7424
+[attn-swinunetr | fold 3 | epoch 018] train=0.2037 val_loss=0.2096 auc=0.6842 acc=0.6250
+  [Metrics] AUC:0.684 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7420 EMA:0.7423
+[attn-swinunetr | fold 3 | epoch 019] train=0.1973 val_loss=0.2086 auc=0.6917 acc=0.6500
+  [Metrics] AUC:0.692 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7439 EMA:0.7428
+[attn-swinunetr | fold 3 | epoch 020] train=0.1921 val_loss=0.2124 auc=0.6942 acc=0.7000
+  [Metrics] AUC:0.694 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7445 EMA:0.7433
+[attn-swinunetr | fold 3 | epoch 021] train=0.1929 val_loss=0.2089 auc=0.6942 acc=0.7000
+  [Metrics] AUC:0.694 F1:0.732 SENS:0.789 SPEC:0.667 | COMPOSITE:0.7328 EMA:0.7402
+[attn-swinunetr | fold 3 | epoch 022] train=0.1951 val_loss=0.2104 auc=0.6992 acc=0.7000
+  [Metrics] AUC:0.699 F1:0.732 SENS:0.789 SPEC:0.667 | COMPOSITE:0.7341 EMA:0.7383
+[attn-swinunetr | fold 3 | epoch 023] train=0.1891 val_loss=0.2093 auc=0.7068 acc=0.7000
+  [Metrics] AUC:0.707 F1:0.732 SENS:0.789 SPEC:0.667 | COMPOSITE:0.7359 EMA:0.7376
+[attn-swinunetr | fold 3 | epoch 024] train=0.1891 val_loss=0.2078 auc=0.7268 acc=0.7250
+  [Metrics] AUC:0.727 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7527 EMA:0.7421
+[attn-swinunetr | fold 3 | epoch 025] train=0.1911 val_loss=0.2044 auc=0.7318 acc=0.7250
+  [Metrics] AUC:0.732 F1:0.769 SENS:0.789 SPEC:0.762 | COMPOSITE:0.7659 EMA:0.7492
+[attn-swinunetr | fold 3 | epoch 026] train=0.1865 val_loss=0.2078 auc=0.7494 acc=0.7750
+  [Metrics] AUC:0.749 F1:0.780 SENS:0.842 SPEC:0.714 | COMPOSITE:0.7843 EMA:0.7598
+[attn-swinunetr | fold 3 | epoch 027] train=0.1822 val_loss=0.1998 auc=0.7318 acc=0.7750
+  [Metrics] AUC:0.732 F1:0.780 SENS:0.842 SPEC:0.714 | COMPOSITE:0.7800 EMA:0.7658
+[attn-swinunetr | fold 3 | epoch 028] train=0.1937 val_loss=0.2024 auc=0.7143 acc=0.7500
+  [Metrics] AUC:0.714 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7638 EMA:0.7652
+[attn-swinunetr | fold 3 | epoch 029] train=0.1873 val_loss=0.2217 auc=0.7193 acc=0.7250
+  [Metrics] AUC:0.719 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7535 EMA:0.7617
+[attn-swinunetr | fold 3 | epoch 030] train=0.1842 val_loss=0.2074 auc=0.7118 acc=0.7250
+  [Metrics] AUC:0.712 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7516 EMA:0.7587
+[attn-swinunetr | fold 3 | epoch 031] train=0.1764 val_loss=0.2127 auc=0.7118 acc=0.7250
+  [Metrics] AUC:0.712 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7516 EMA:0.7565
+[attn-swinunetr | fold 3 | epoch 032] train=0.1928 val_loss=0.2083 auc=0.7143 acc=0.7250
+  [Metrics] AUC:0.714 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7522 EMA:0.7552
+[attn-swinunetr | fold 3 | epoch 033] train=0.1741 val_loss=0.2091 auc=0.7118 acc=0.7250
+  [Metrics] AUC:0.712 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7516 EMA:0.7541
+[attn-swinunetr | fold 3 | epoch 034] train=0.1811 val_loss=0.2138 auc=0.7193 acc=0.7250
+  [Metrics] AUC:0.719 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7535 EMA:0.7539
+[attn-swinunetr | fold 3 | epoch 035] train=0.1646 val_loss=0.2081 auc=0.7143 acc=0.7500
+  [Metrics] AUC:0.714 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7638 EMA:0.7569
+[attn-swinunetr | fold 3 | epoch 036] train=0.1755 val_loss=0.2089 auc=0.7093 acc=0.7250
+  [Metrics] AUC:0.709 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7510 EMA:0.7551
+[attn-swinunetr | fold 3 | epoch 037] train=0.1721 val_loss=0.2137 auc=0.7068 acc=0.7250
+  [Metrics] AUC:0.707 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7503 EMA:0.7537
+[attn-swinunetr | fold 3 | epoch 038] train=0.1723 val_loss=0.2105 auc=0.6942 acc=0.7250
+  [Metrics] AUC:0.694 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7472 EMA:0.7517
+[attn-swinunetr | fold 3 | epoch 039] train=0.1719 val_loss=0.2098 auc=0.6942 acc=0.7250
+  [Metrics] AUC:0.694 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7472 EMA:0.7504
+[attn-swinunetr | fold 3 | epoch 040] train=0.1711 val_loss=0.2117 auc=0.6917 acc=0.7250
+  [Metrics] AUC:0.692 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7466 EMA:0.7492
+[attn-swinunetr | fold 3 | epoch 041] train=0.1778 val_loss=0.2091 auc=0.6967 acc=0.7250
+  [Metrics] AUC:0.697 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7478 EMA:0.7488
+[attn-swinunetr | fold 3 | epoch 042] train=0.1697 val_loss=0.2148 auc=0.7118 acc=0.7250
+  [Metrics] AUC:0.712 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7516 EMA:0.7496
+[attn-swinunetr | fold 3 | epoch 043] train=0.1714 val_loss=0.2067 auc=0.7143 acc=0.7500
+  [Metrics] AUC:0.714 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7638 EMA:0.7539
+[attn-swinunetr | fold 3 | epoch 044] train=0.1446 val_loss=0.2152 auc=0.7118 acc=0.7500
+  [Metrics] AUC:0.712 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7632 EMA:0.7567
+[attn-swinunetr | fold 3 | epoch 045] train=0.1620 val_loss=0.2143 auc=0.7143 acc=0.7500
+  [Metrics] AUC:0.714 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7638 EMA:0.7588
+[attn-swinunetr | fold 3 | epoch 046] train=0.1646 val_loss=0.2119 auc=0.7043 acc=0.7500
+  [Metrics] AUC:0.704 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7613 EMA:0.7595
+[attn-swinunetr | fold 3 | epoch 047] train=0.1753 val_loss=0.2096 auc=0.7268 acc=0.7500
+  [Metrics] AUC:0.727 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7669 EMA:0.7618
+[attn-swinunetr | fold 3 | epoch 048] train=0.1684 val_loss=0.2149 auc=0.7168 acc=0.7500
+  [Metrics] AUC:0.717 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7644 EMA:0.7626
+[attn-swinunetr | fold 3 | epoch 049] train=0.1763 val_loss=0.2134 auc=0.7118 acc=0.7500
+  [Metrics] AUC:0.712 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7632 EMA:0.7627
+[attn-swinunetr | fold 3 | epoch 050] train=0.1592 val_loss=0.2168 auc=0.6992 acc=0.7500
+  [Metrics] AUC:0.699 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7600 EMA:0.7619
+[attn-swinunetr | fold 3 | epoch 051] train=0.1741 val_loss=0.2181 auc=0.7143 acc=0.7500
+  [Metrics] AUC:0.714 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7638 EMA:0.7625
+[attn-swinunetr | fold 3 | epoch 052] train=0.1542 val_loss=0.2069 auc=0.7168 acc=0.7500
+  [Metrics] AUC:0.717 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7644 EMA:0.7631
+[attn-swinunetr | fold 3 | epoch 053] train=0.1595 val_loss=0.2081 auc=0.7368 acc=0.7500
+  [Metrics] AUC:0.737 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7694 EMA:0.7650
+[attn-swinunetr | fold 3 | epoch 054] train=0.1705 val_loss=0.2019 auc=0.7494 acc=0.7500
+  [Metrics] AUC:0.749 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7726 EMA:0.7672
+[attn-swinunetr | fold 3 | epoch 055] train=0.1650 val_loss=0.2066 auc=0.7444 acc=0.7500
+  [Metrics] AUC:0.744 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7713 EMA:0.7685
+[attn-swinunetr | fold 3 | epoch 056] train=0.1546 val_loss=0.2075 auc=0.7218 acc=0.7500
+  [Metrics] AUC:0.722 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7657 EMA:0.7676
+[attn-swinunetr | fold 3 | epoch 057] train=0.1593 val_loss=0.2115 auc=0.7218 acc=0.7500
+  [Metrics] AUC:0.722 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7657 EMA:0.7670
+[attn-swinunetr | fold 3 | epoch 058] train=0.1737 val_loss=0.2155 auc=0.7218 acc=0.7500
+  [Metrics] AUC:0.722 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7657 EMA:0.7666
+[attn-swinunetr | fold 3 | epoch 059] train=0.1557 val_loss=0.2106 auc=0.7218 acc=0.7500
+  [Metrics] AUC:0.722 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7657 EMA:0.7663
+[attn-swinunetr | fold 3 | epoch 060] train=0.1588 val_loss=0.2193 auc=0.7193 acc=0.7500
+  [Metrics] AUC:0.719 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7650 EMA:0.7659
+[attn-swinunetr | fold 3 | epoch 061] train=0.1632 val_loss=0.2231 auc=0.7093 acc=0.7250
+  [Metrics] AUC:0.709 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7510 EMA:0.7615
+[attn-swinunetr | fold 3 | epoch 062] train=0.1571 val_loss=0.2230 auc=0.7243 acc=0.7250
+  [Metrics] AUC:0.724 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7547 EMA:0.7594
+[attn-swinunetr | fold 3 | epoch 063] train=0.1715 val_loss=0.2142 auc=0.7368 acc=0.7500
+  [Metrics] AUC:0.737 F1:0.762 SENS:0.842 SPEC:0.667 | COMPOSITE:0.7694 EMA:0.7624
+[attn-swinunetr | fold 3 | epoch 064] train=0.1627 val_loss=0.2137 auc=0.7444 acc=0.7250
+  [Metrics] AUC:0.744 F1:0.750 SENS:0.789 SPEC:0.714 | COMPOSITE:0.7570 EMA:0.7608
+[attn-swinunetr | fold 3 | epoch 065] train=0.1581 val_loss=0.2220 auc=0.7218 acc=0.7250
+  [Metrics] AUC:0.722 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7541 EMA:0.7588
+[attn-swinunetr | fold 3 | epoch 066] train=0.1517 val_loss=0.2267 auc=0.7068 acc=0.7250
+  [Metrics] AUC:0.707 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7503 EMA:0.7563
+[attn-swinunetr | fold 3 | epoch 067] train=0.1559 val_loss=0.2305 auc=0.7093 acc=0.7250
+  [Metrics] AUC:0.709 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7510 EMA:0.7547
+[attn-swinunetr | fold 3 | epoch 068] train=0.1595 val_loss=0.2292 auc=0.7068 acc=0.7250
+  [Metrics] AUC:0.707 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7503 EMA:0.7534
+[attn-swinunetr | fold 3 | epoch 069] train=0.1658 val_loss=0.2378 auc=0.6992 acc=0.7250
+  [Metrics] AUC:0.699 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7485 EMA:0.7519
+[attn-swinunetr | fold 3 | epoch 070] train=0.1583 val_loss=0.2477 auc=0.7318 acc=0.7250
+  [Metrics] AUC:0.732 F1:0.737 SENS:0.737 SPEC:0.762 | COMPOSITE:0.7393 EMA:0.7481
+[attn-swinunetr | fold 3 | epoch 071] train=0.1470 val_loss=0.2364 auc=0.7093 acc=0.7250
+  [Metrics] AUC:0.709 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7510 EMA:0.7490
+[attn-swinunetr | fold 3 | epoch 072] train=0.1464 val_loss=0.2385 auc=0.7093 acc=0.7000
+  [Metrics] AUC:0.709 F1:0.737 SENS:0.737 SPEC:0.762 | COMPOSITE:0.7337 EMA:0.7444
+[attn-swinunetr | fold 3 | epoch 073] train=0.1679 val_loss=0.2285 auc=0.7193 acc=0.7000
+  [Metrics] AUC:0.719 F1:0.737 SENS:0.737 SPEC:0.762 | COMPOSITE:0.7362 EMA:0.7419
+[attn-swinunetr | fold 3 | epoch 074] train=0.1647 val_loss=0.2276 auc=0.7193 acc=0.7250
+  [Metrics] AUC:0.719 F1:0.737 SENS:0.737 SPEC:0.762 | COMPOSITE:0.7362 EMA:0.7402
+[attn-swinunetr | fold 3 | epoch 075] train=0.1376 val_loss=0.2337 auc=0.7143 acc=0.7250
+  [Metrics] AUC:0.714 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7522 EMA:0.7438
+[attn-swinunetr | fold 3 | epoch 076] train=0.1435 val_loss=0.2361 auc=0.7193 acc=0.7250
+  [Metrics] AUC:0.719 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7535 EMA:0.7467
+[attn-swinunetr | fold 3 | epoch 077] train=0.1424 val_loss=0.2367 auc=0.7343 acc=0.7250
+  [Metrics] AUC:0.734 F1:0.737 SENS:0.737 SPEC:0.762 | COMPOSITE:0.7400 EMA:0.7447
+[attn-swinunetr | fold 3 | epoch 078] train=0.1384 val_loss=0.2393 auc=0.7293 acc=0.7250
+  [Metrics] AUC:0.729 F1:0.737 SENS:0.737 SPEC:0.762 | COMPOSITE:0.7387 EMA:0.7429
+[attn-swinunetr | fold 3 | epoch 079] train=0.1531 val_loss=0.2376 auc=0.7243 acc=0.7250
+  [Metrics] AUC:0.724 F1:0.737 SENS:0.737 SPEC:0.762 | COMPOSITE:0.7375 EMA:0.7413
+[attn-swinunetr | fold 3 | epoch 080] train=0.1340 val_loss=0.2393 auc=0.7444 acc=0.7250
+  [Metrics] AUC:0.744 F1:0.744 SENS:0.842 SPEC:0.619 | COMPOSITE:0.7597 EMA:0.7468
+  Early stopping @ epoch 80 (best EMA composite=0.7685)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.7356 | Best EMA COMPOSITE: 0.7685
+
+=================================================================
+  AttentionSwinUNETR Fold 3  |  Threshold: Youden 0.569
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.744          [0.573 - 0.900]
+  AUC-PR                0.673                        -
+  Sensitivity           0.842          [0.667 - 1.000]
+  Specificity           0.667          [0.450 - 0.857]
+  PPV                   0.696          [0.500 - 0.870]
+  NPV                   0.824          [0.600 - 1.000]
+  Accuracy              0.750          [0.600 - 0.875]
+  F1-Score              0.762          [0.591 - 0.889]
+  Composite             0.771                        -
+
+  CM: TP=16 FP=7 FN=3 TN=14
+  Toplam Hata: 10/40
+=================================================================
+
+======================================================================
+FOLD 4/5
+======================================================================
+  Pretrained: 159 katman yüklendi, 0 atlandı.
+[attn-swinunetr | fold 4 | epoch 001] train=0.2305 val_loss=0.2335 auc=0.6259 acc=0.5714
+  [Metrics] AUC:0.626 F1:0.571 SENS:0.476 SPEC:0.810 | COMPOSITE:0.5874 EMA:0.5874
+[attn-swinunetr | fold 4 | epoch 002] train=0.2245 val_loss=0.2221 auc=0.7551 acc=0.6667
+  [Metrics] AUC:0.755 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6578 EMA:0.6085
+[attn-swinunetr | fold 4 | epoch 003] train=0.2205 val_loss=0.2163 auc=0.7438 acc=0.7143
+  [Metrics] AUC:0.744 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7469 EMA:0.6501
+[attn-swinunetr | fold 4 | epoch 004] train=0.2197 val_loss=0.2143 auc=0.7302 acc=0.6667
+  [Metrics] AUC:0.730 F1:0.667 SENS:0.619 SPEC:0.762 | COMPOSITE:0.6802 EMA:0.6591
+[attn-swinunetr | fold 4 | epoch 005] train=0.2154 val_loss=0.2126 auc=0.7188 acc=0.6667
+  [Metrics] AUC:0.719 F1:0.650 SENS:0.619 SPEC:0.714 | COMPOSITE:0.6660 EMA:0.6612
+[attn-swinunetr | fold 4 | epoch 006] train=0.2169 val_loss=0.2119 auc=0.7302 acc=0.6905
+  [Metrics] AUC:0.730 F1:0.667 SENS:0.619 SPEC:0.762 | COMPOSITE:0.6802 EMA:0.6669
+[attn-swinunetr | fold 4 | epoch 007] train=0.2183 val_loss=0.2087 auc=0.7143 acc=0.6429
+  [Metrics] AUC:0.714 F1:0.533 SENS:0.381 SPEC:0.952 | COMPOSITE:0.5881 EMA:0.6432
+[attn-swinunetr | fold 4 | epoch 008] train=0.2112 val_loss=0.2124 auc=0.7188 acc=0.6667
+  [Metrics] AUC:0.719 F1:0.650 SENS:0.619 SPEC:0.714 | COMPOSITE:0.6660 EMA:0.6501
+[attn-swinunetr | fold 4 | epoch 009] train=0.2165 val_loss=0.2108 auc=0.7347 acc=0.6429
+  [Metrics] AUC:0.735 F1:0.667 SENS:0.619 SPEC:0.762 | COMPOSITE:0.6813 EMA:0.6594
+[attn-swinunetr | fold 4 | epoch 010] train=0.2116 val_loss=0.2133 auc=0.7347 acc=0.7143
+  [Metrics] AUC:0.735 F1:0.714 SENS:0.714 SPEC:0.714 | COMPOSITE:0.7194 EMA:0.6774
+[attn-swinunetr | fold 4 | epoch 011] train=0.2120 val_loss=0.2107 auc=0.7528 acc=0.7619
+  [Metrics] AUC:0.753 F1:0.773 SENS:0.810 SPEC:0.714 | COMPOSITE:0.7719 EMA:0.7058
+[attn-swinunetr | fold 4 | epoch 012] train=0.2050 val_loss=0.2160 auc=0.7324 acc=0.6429
+  [Metrics] AUC:0.732 F1:0.682 SENS:0.714 SPEC:0.619 | COMPOSITE:0.6964 EMA:0.7030
+[attn-swinunetr | fold 4 | epoch 013] train=0.2044 val_loss=0.2118 auc=0.7438 acc=0.6667
+  [Metrics] AUC:0.744 F1:0.727 SENS:0.762 SPEC:0.667 | COMPOSITE:0.7344 EMA:0.7124
+[attn-swinunetr | fold 4 | epoch 014] train=0.2268 val_loss=0.2107 auc=0.7234 acc=0.6667
+  [Metrics] AUC:0.723 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6499 EMA:0.6936
+  [Progressive FT] Epoch 15: Backbone çözülüyor, tam model ince ayara başlıyor.
+[attn-swinunetr | fold 4 | epoch 015] train=0.2042 val_loss=0.2052 auc=0.7279 acc=0.6429
+  [Metrics] AUC:0.728 F1:0.711 SENS:0.762 SPEC:0.619 | COMPOSITE:0.7193 EMA:0.7013
+[attn-swinunetr | fold 4 | epoch 016] train=0.1975 val_loss=0.2036 auc=0.7324 acc=0.6429
+  [Metrics] AUC:0.732 F1:0.611 SENS:0.524 SPEC:0.810 | COMPOSITE:0.6406 EMA:0.6831
+[attn-swinunetr | fold 4 | epoch 017] train=0.1998 val_loss=0.2024 auc=0.7324 acc=0.6190
+  [Metrics] AUC:0.732 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6522 EMA:0.6738
+[attn-swinunetr | fold 4 | epoch 018] train=0.1980 val_loss=0.2024 auc=0.7279 acc=0.6190
+  [Metrics] AUC:0.728 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6510 EMA:0.6670
+[attn-swinunetr | fold 4 | epoch 019] train=0.2044 val_loss=0.2018 auc=0.7279 acc=0.6429
+  [Metrics] AUC:0.728 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6510 EMA:0.6622
+[attn-swinunetr | fold 4 | epoch 020] train=0.1985 val_loss=0.2037 auc=0.7392 acc=0.6667
+  [Metrics] AUC:0.739 F1:0.625 SENS:0.476 SPEC:0.952 | COMPOSITE:0.6506 EMA:0.6587
+[attn-swinunetr | fold 4 | epoch 021] train=0.1891 val_loss=0.1989 auc=0.7438 acc=0.6190
+  [Metrics] AUC:0.744 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6550 EMA:0.6576
+[attn-swinunetr | fold 4 | epoch 022] train=0.1930 val_loss=0.2007 auc=0.7415 acc=0.6429
+  [Metrics] AUC:0.741 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6354 EMA:0.6509
+[attn-swinunetr | fold 4 | epoch 023] train=0.1992 val_loss=0.2035 auc=0.7211 acc=0.6190
+  [Metrics] AUC:0.721 F1:0.611 SENS:0.524 SPEC:0.810 | COMPOSITE:0.6378 EMA:0.6470
+[attn-swinunetr | fold 4 | epoch 024] train=0.1952 val_loss=0.2057 auc=0.7166 acc=0.6429
+  [Metrics] AUC:0.717 F1:0.606 SENS:0.476 SPEC:0.905 | COMPOSITE:0.6330 EMA:0.6428
+[attn-swinunetr | fold 4 | epoch 025] train=0.1947 val_loss=0.2034 auc=0.7120 acc=0.6429
+  [Metrics] AUC:0.712 F1:0.611 SENS:0.524 SPEC:0.810 | COMPOSITE:0.6355 EMA:0.6406
+[attn-swinunetr | fold 4 | epoch 026] train=0.1962 val_loss=0.2021 auc=0.7188 acc=0.6429
+  [Metrics] AUC:0.719 F1:0.650 SENS:0.619 SPEC:0.714 | COMPOSITE:0.6660 EMA:0.6482
+[attn-swinunetr | fold 4 | epoch 027] train=0.1875 val_loss=0.2005 auc=0.7324 acc=0.6190
+  [Metrics] AUC:0.732 F1:0.667 SENS:0.619 SPEC:0.762 | COMPOSITE:0.6807 EMA:0.6580
+[attn-swinunetr | fold 4 | epoch 028] train=0.1931 val_loss=0.1997 auc=0.7324 acc=0.6190
+  [Metrics] AUC:0.732 F1:0.667 SENS:0.619 SPEC:0.762 | COMPOSITE:0.6807 EMA:0.6648
+[attn-swinunetr | fold 4 | epoch 029] train=0.1907 val_loss=0.2051 auc=0.7211 acc=0.6667
+  [Metrics] AUC:0.721 F1:0.650 SENS:0.619 SPEC:0.714 | COMPOSITE:0.6666 EMA:0.6653
+[attn-swinunetr | fold 4 | epoch 030] train=0.1853 val_loss=0.2005 auc=0.7234 acc=0.6429
+  [Metrics] AUC:0.723 F1:0.667 SENS:0.619 SPEC:0.762 | COMPOSITE:0.6785 EMA:0.6693
+[attn-swinunetr | fold 4 | epoch 031] train=0.1834 val_loss=0.1984 auc=0.7211 acc=0.6429
+  [Metrics] AUC:0.721 F1:0.714 SENS:0.714 SPEC:0.714 | COMPOSITE:0.7160 EMA:0.6833
+[attn-swinunetr | fold 4 | epoch 032] train=0.1840 val_loss=0.1995 auc=0.7279 acc=0.6667
+  [Metrics] AUC:0.728 F1:0.683 SENS:0.667 SPEC:0.714 | COMPOSITE:0.6932 EMA:0.6863
+[attn-swinunetr | fold 4 | epoch 033] train=0.1778 val_loss=0.2036 auc=0.7143 acc=0.6667
+  [Metrics] AUC:0.714 F1:0.650 SENS:0.619 SPEC:0.714 | COMPOSITE:0.6649 EMA:0.6798
+[attn-swinunetr | fold 4 | epoch 034] train=0.1847 val_loss=0.1988 auc=0.7279 acc=0.6667
+  [Metrics] AUC:0.728 F1:0.698 SENS:0.714 SPEC:0.667 | COMPOSITE:0.7064 EMA:0.6878
+[attn-swinunetr | fold 4 | epoch 035] train=0.1907 val_loss=0.1973 auc=0.7234 acc=0.6667
+  [Metrics] AUC:0.723 F1:0.611 SENS:0.524 SPEC:0.810 | COMPOSITE:0.6384 EMA:0.6730
+[attn-swinunetr | fold 4 | epoch 036] train=0.1770 val_loss=0.1959 auc=0.7506 acc=0.6667
+  [Metrics] AUC:0.751 F1:0.667 SENS:0.619 SPEC:0.762 | COMPOSITE:0.6853 EMA:0.6767
+[attn-swinunetr | fold 4 | epoch 037] train=0.1811 val_loss=0.1932 auc=0.7551 acc=0.6905
+  [Metrics] AUC:0.755 F1:0.714 SENS:0.714 SPEC:0.714 | COMPOSITE:0.7245 EMA:0.6910
+[attn-swinunetr | fold 4 | epoch 038] train=0.1825 val_loss=0.1973 auc=0.7370 acc=0.6905
+  [Metrics] AUC:0.737 F1:0.647 SENS:0.524 SPEC:0.905 | COMPOSITE:0.6651 EMA:0.6832
+[attn-swinunetr | fold 4 | epoch 039] train=0.1830 val_loss=0.1931 auc=0.7324 acc=0.6667
+  [Metrics] AUC:0.732 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6522 EMA:0.6739
+[attn-swinunetr | fold 4 | epoch 040] train=0.1827 val_loss=0.1952 auc=0.7234 acc=0.6667
+  [Metrics] AUC:0.723 F1:0.552 SENS:0.381 SPEC:1.000 | COMPOSITE:0.6021 EMA:0.6524
+[attn-swinunetr | fold 4 | epoch 041] train=0.1849 val_loss=0.1892 auc=0.7483 acc=0.6905
+  [Metrics] AUC:0.748 F1:0.629 SENS:0.524 SPEC:0.857 | COMPOSITE:0.6561 EMA:0.6535
+[attn-swinunetr | fold 4 | epoch 042] train=0.1794 val_loss=0.1858 auc=0.7664 acc=0.6905
+  [Metrics] AUC:0.766 F1:0.647 SENS:0.524 SPEC:0.905 | COMPOSITE:0.6724 EMA:0.6592
+[attn-swinunetr | fold 4 | epoch 043] train=0.1846 val_loss=0.2066 auc=0.7483 acc=0.6905
+  [Metrics] AUC:0.748 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6371 EMA:0.6525
+[attn-swinunetr | fold 4 | epoch 044] train=0.1835 val_loss=0.1834 auc=0.7778 acc=0.7143
+  [Metrics] AUC:0.778 F1:0.667 SENS:0.524 SPEC:0.952 | COMPOSITE:0.6873 EMA:0.6630
+[attn-swinunetr | fold 4 | epoch 045] train=0.1857 val_loss=0.1836 auc=0.7732 acc=0.7143
+  [Metrics] AUC:0.773 F1:0.667 SENS:0.524 SPEC:0.952 | COMPOSITE:0.6862 EMA:0.6699
+[attn-swinunetr | fold 4 | epoch 046] train=0.1725 val_loss=0.1850 auc=0.7846 acc=0.7143
+  [Metrics] AUC:0.785 F1:0.732 SENS:0.714 SPEC:0.762 | COMPOSITE:0.7434 EMA:0.6920
+[attn-swinunetr | fold 4 | epoch 047] train=0.1828 val_loss=0.1846 auc=0.7664 acc=0.6905
+  [Metrics] AUC:0.766 F1:0.667 SENS:0.524 SPEC:0.952 | COMPOSITE:0.6845 EMA:0.6897
+[attn-swinunetr | fold 4 | epoch 048] train=0.1682 val_loss=0.1851 auc=0.7551 acc=0.7143
+  [Metrics] AUC:0.755 F1:0.667 SENS:0.524 SPEC:0.952 | COMPOSITE:0.6816 EMA:0.6873
+[attn-swinunetr | fold 4 | epoch 049] train=0.1582 val_loss=0.1911 auc=0.7415 acc=0.7143
+  [Metrics] AUC:0.741 F1:0.750 SENS:0.857 SPEC:0.571 | COMPOSITE:0.7586 EMA:0.7087
+[attn-swinunetr | fold 4 | epoch 050] train=0.1656 val_loss=0.1902 auc=0.7483 acc=0.7143
+  [Metrics] AUC:0.748 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7480 EMA:0.7205
+[attn-swinunetr | fold 4 | epoch 051] train=0.1683 val_loss=0.1921 auc=0.7574 acc=0.7143
+  [Metrics] AUC:0.757 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7503 EMA:0.7294
+[attn-swinunetr | fold 4 | epoch 052] train=0.1725 val_loss=0.1880 auc=0.7755 acc=0.7381
+  [Metrics] AUC:0.776 F1:0.667 SENS:0.524 SPEC:0.952 | COMPOSITE:0.6867 EMA:0.7166
+[attn-swinunetr | fold 4 | epoch 053] train=0.1600 val_loss=0.1883 auc=0.7732 acc=0.7381
+  [Metrics] AUC:0.773 F1:0.667 SENS:0.524 SPEC:0.952 | COMPOSITE:0.6862 EMA:0.7075
+[attn-swinunetr | fold 4 | epoch 054] train=0.1738 val_loss=0.1952 auc=0.7370 acc=0.7143
+  [Metrics] AUC:0.737 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7452 EMA:0.7188
+[attn-swinunetr | fold 4 | epoch 055] train=0.1738 val_loss=0.1925 auc=0.7370 acc=0.7381
+  [Metrics] AUC:0.737 F1:0.766 SENS:0.857 SPEC:0.619 | COMPOSITE:0.7686 EMA:0.7337
+[attn-swinunetr | fold 4 | epoch 056] train=0.1719 val_loss=0.1911 auc=0.7392 acc=0.7381
+  [Metrics] AUC:0.739 F1:0.766 SENS:0.857 SPEC:0.619 | COMPOSITE:0.7692 EMA:0.7444
+[attn-swinunetr | fold 4 | epoch 057] train=0.1678 val_loss=0.1898 auc=0.7483 acc=0.7381
+  [Metrics] AUC:0.748 F1:0.766 SENS:0.857 SPEC:0.619 | COMPOSITE:0.7714 EMA:0.7525
+[attn-swinunetr | fold 4 | epoch 058] train=0.1714 val_loss=0.1904 auc=0.7438 acc=0.7381
+  [Metrics] AUC:0.744 F1:0.766 SENS:0.857 SPEC:0.619 | COMPOSITE:0.7703 EMA:0.7578
+[attn-swinunetr | fold 4 | epoch 059] train=0.1674 val_loss=0.1863 auc=0.7619 acc=0.7143
+  [Metrics] AUC:0.762 F1:0.647 SENS:0.524 SPEC:0.905 | COMPOSITE:0.6713 EMA:0.7319
+[attn-swinunetr | fold 4 | epoch 060] train=0.1672 val_loss=0.1906 auc=0.7619 acc=0.6905
+  [Metrics] AUC:0.762 F1:0.647 SENS:0.524 SPEC:0.905 | COMPOSITE:0.6713 EMA:0.7137
+[attn-swinunetr | fold 4 | epoch 061] train=0.1550 val_loss=0.1866 auc=0.7664 acc=0.6905
+  [Metrics] AUC:0.766 F1:0.667 SENS:0.524 SPEC:0.952 | COMPOSITE:0.6845 EMA:0.7049
+[attn-swinunetr | fold 4 | epoch 062] train=0.1629 val_loss=0.1857 auc=0.7574 acc=0.7143
+  [Metrics] AUC:0.757 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7503 EMA:0.7185
+[attn-swinunetr | fold 4 | epoch 063] train=0.1548 val_loss=0.1901 auc=0.7460 acc=0.7143
+  [Metrics] AUC:0.746 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7475 EMA:0.7272
+[attn-swinunetr | fold 4 | epoch 064] train=0.1630 val_loss=0.1853 auc=0.7574 acc=0.7143
+  [Metrics] AUC:0.757 F1:0.645 SENS:0.476 SPEC:1.000 | COMPOSITE:0.6673 EMA:0.7092
+[attn-swinunetr | fold 4 | epoch 065] train=0.1645 val_loss=0.1899 auc=0.7596 acc=0.7143
+  [Metrics] AUC:0.760 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7509 EMA:0.7217
+[attn-swinunetr | fold 4 | epoch 066] train=0.1665 val_loss=0.1941 auc=0.7551 acc=0.7143
+  [Metrics] AUC:0.755 F1:0.739 SENS:0.810 SPEC:0.619 | COMPOSITE:0.7497 EMA:0.7301
+[attn-swinunetr | fold 4 | epoch 067] train=0.1748 val_loss=0.1926 auc=0.7596 acc=0.7143
+  [Metrics] AUC:0.760 F1:0.647 SENS:0.524 SPEC:0.905 | COMPOSITE:0.6707 EMA:0.7123
+[attn-swinunetr | fold 4 | epoch 068] train=0.1677 val_loss=0.1929 auc=0.7460 acc=0.6905
+  [Metrics] AUC:0.746 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6365 EMA:0.6896
+[attn-swinunetr | fold 4 | epoch 069] train=0.1577 val_loss=0.1941 auc=0.7347 acc=0.6905
+  [Metrics] AUC:0.735 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6337 EMA:0.6728
+[attn-swinunetr | fold 4 | epoch 070] train=0.1583 val_loss=0.1946 auc=0.7279 acc=0.6905
+  [Metrics] AUC:0.728 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6320 EMA:0.6606
+[attn-swinunetr | fold 4 | epoch 071] train=0.1596 val_loss=0.2004 auc=0.7211 acc=0.6667
+  [Metrics] AUC:0.721 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6303 EMA:0.6515
+[attn-swinunetr | fold 4 | epoch 072] train=0.1756 val_loss=0.1913 auc=0.7415 acc=0.7143
+  [Metrics] AUC:0.741 F1:0.645 SENS:0.476 SPEC:1.000 | COMPOSITE:0.6633 EMA:0.6550
+[attn-swinunetr | fold 4 | epoch 073] train=0.1557 val_loss=0.1959 auc=0.7392 acc=0.6905
+  [Metrics] AUC:0.739 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6348 EMA:0.6490
+[attn-swinunetr | fold 4 | epoch 074] train=0.1582 val_loss=0.1894 auc=0.7551 acc=0.6905
+  [Metrics] AUC:0.755 F1:0.645 SENS:0.476 SPEC:1.000 | COMPOSITE:0.6667 EMA:0.6543
+[attn-swinunetr | fold 4 | epoch 075] train=0.1723 val_loss=0.1895 auc=0.7528 acc=0.6905
+  [Metrics] AUC:0.753 F1:0.684 SENS:0.619 SPEC:0.810 | COMPOSITE:0.6974 EMA:0.6672
+[attn-swinunetr | fold 4 | epoch 076] train=0.1482 val_loss=0.1870 auc=0.7551 acc=0.7143
+  [Metrics] AUC:0.755 F1:0.645 SENS:0.476 SPEC:1.000 | COMPOSITE:0.6667 EMA:0.6671
+[attn-swinunetr | fold 4 | epoch 077] train=0.1501 val_loss=0.2043 auc=0.7415 acc=0.6667
+  [Metrics] AUC:0.741 F1:0.600 SENS:0.429 SPEC:1.000 | COMPOSITE:0.6354 EMA:0.6576
+[attn-swinunetr | fold 4 | epoch 078] train=0.1568 val_loss=0.2073 auc=0.7483 acc=0.6905
+  [Metrics] AUC:0.748 F1:0.684 SENS:0.619 SPEC:0.810 | COMPOSITE:0.6962 EMA:0.6692
+[attn-swinunetr | fold 4 | epoch 079] train=0.1560 val_loss=0.1910 auc=0.7642 acc=0.7143
+  [Metrics] AUC:0.764 F1:0.645 SENS:0.476 SPEC:1.000 | COMPOSITE:0.6690 EMA:0.6691
+[attn-swinunetr | fold 4 | epoch 080] train=0.1657 val_loss=0.1908 auc=0.7551 acc=0.7143
+  [Metrics] AUC:0.755 F1:0.645 SENS:0.476 SPEC:1.000 | COMPOSITE:0.6667 EMA:0.6684
+[attn-swinunetr | fold 4 | epoch 081] train=0.1559 val_loss=0.1903 auc=0.7642 acc=0.7143
+  [Metrics] AUC:0.764 F1:0.684 SENS:0.619 SPEC:0.810 | COMPOSITE:0.7002 EMA:0.6779
+[attn-swinunetr | fold 4 | epoch 082] train=0.1540 val_loss=0.1874 auc=0.7755 acc=0.7143
+  [Metrics] AUC:0.776 F1:0.732 SENS:0.714 SPEC:0.762 | COMPOSITE:0.7411 EMA:0.6969
+[attn-swinunetr | fold 4 | epoch 083] train=0.1756 val_loss=0.1943 auc=0.7732 acc=0.7381
+  [Metrics] AUC:0.773 F1:0.732 SENS:0.714 SPEC:0.762 | COMPOSITE:0.7405 EMA:0.7100
+  Early stopping @ epoch 83 (best EMA composite=0.7578)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.6679 | Best EMA COMPOSITE: 0.7578
+
+=================================================================
+  AttentionSwinUNETR Fold 4  |  Threshold: Youden 0.561
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.744          [0.588 - 0.888]
+  AUC-PR                0.794                        -
+  Sensitivity           0.857          [0.700 - 1.000]
+  Specificity           0.619          [0.407 - 0.826]
+  PPV                   0.692          [0.519 - 0.870]
+  NPV                   0.812          [0.611 - 1.000]
+  Accuracy              0.738          [0.595 - 0.857]
+  F1-Score              0.766          [0.615 - 0.889]
+  Composite             0.770                        -
+
+  CM: TP=18 FP=8 FN=3 TN=13
+  Toplam Hata: 11/42
+=================================================================
+
+======================================================================
+FOLD 5/5
+======================================================================
+  Pretrained: 159 katman yüklendi, 0 atlandı.
+[attn-swinunetr | fold 5 | epoch 001] train=0.2336 val_loss=0.2349 auc=0.7762 acc=0.8049
+  [Metrics] AUC:0.776 F1:0.818 SENS:0.900 SPEC:0.714 | COMPOSITE:0.8207 EMA:0.8207
+[attn-swinunetr | fold 5 | epoch 002] train=0.2278 val_loss=0.2213 auc=0.8095 acc=0.8049
+  [Metrics] AUC:0.810 F1:0.818 SENS:0.900 SPEC:0.714 | COMPOSITE:0.8291 EMA:0.8232
+[attn-swinunetr | fold 5 | epoch 003] train=0.2199 val_loss=0.2142 auc=0.8548 acc=0.8293
+  [Metrics] AUC:0.855 F1:0.833 SENS:0.750 SPEC:0.952 | COMPOSITE:0.8274 EMA:0.8245
+[attn-swinunetr | fold 5 | epoch 004] train=0.2156 val_loss=0.2102 auc=0.8524 acc=0.8293
+  [Metrics] AUC:0.852 F1:0.821 SENS:0.800 SPEC:0.857 | COMPOSITE:0.8268 EMA:0.8252
+[attn-swinunetr | fold 5 | epoch 005] train=0.2153 val_loss=0.2077 auc=0.8619 acc=0.8293
+  [Metrics] AUC:0.862 F1:0.821 SENS:0.800 SPEC:0.857 | COMPOSITE:0.8292 EMA:0.8264
+[attn-swinunetr | fold 5 | epoch 006] train=0.2136 val_loss=0.2019 auc=0.8714 acc=0.8537
+  [Metrics] AUC:0.871 F1:0.850 SENS:0.850 SPEC:0.857 | COMPOSITE:0.8564 EMA:0.8354
+[attn-swinunetr | fold 5 | epoch 007] train=0.2131 val_loss=0.1949 auc=0.8643 acc=0.8537
+  [Metrics] AUC:0.864 F1:0.850 SENS:0.850 SPEC:0.857 | COMPOSITE:0.8546 EMA:0.8412
+[attn-swinunetr | fold 5 | epoch 008] train=0.2120 val_loss=0.1962 auc=0.8690 acc=0.8293
+  [Metrics] AUC:0.869 F1:0.833 SENS:0.750 SPEC:0.952 | COMPOSITE:0.8310 EMA:0.8381
+[attn-swinunetr | fold 5 | epoch 009] train=0.2080 val_loss=0.1906 auc=0.8762 acc=0.8780
+  [Metrics] AUC:0.876 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8702 EMA:0.8477
+[attn-swinunetr | fold 5 | epoch 010] train=0.2065 val_loss=0.2046 auc=0.8738 acc=0.8780
+  [Metrics] AUC:0.874 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8696 EMA:0.8543
+[attn-swinunetr | fold 5 | epoch 011] train=0.2170 val_loss=0.1944 auc=0.8690 acc=0.8780
+  [Metrics] AUC:0.869 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8684 EMA:0.8585
+[attn-swinunetr | fold 5 | epoch 012] train=0.2130 val_loss=0.1947 auc=0.8833 acc=0.9024
+  [Metrics] AUC:0.883 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8849 EMA:0.8664
+[attn-swinunetr | fold 5 | epoch 013] train=0.2048 val_loss=0.2024 auc=0.8881 acc=0.9024
+  [Metrics] AUC:0.888 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8861 EMA:0.8723
+[attn-swinunetr | fold 5 | epoch 014] train=0.2157 val_loss=0.1910 auc=0.8833 acc=0.9024
+  [Metrics] AUC:0.883 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8849 EMA:0.8761
+  [Progressive FT] Epoch 15: Backbone çözülüyor, tam model ince ayara başlıyor.
+[attn-swinunetr | fold 5 | epoch 015] train=0.2068 val_loss=0.1878 auc=0.8786 acc=0.9024
+  [Metrics] AUC:0.879 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8837 EMA:0.8784
+[attn-swinunetr | fold 5 | epoch 016] train=0.2052 val_loss=0.1869 auc=0.8881 acc=0.9024
+  [Metrics] AUC:0.888 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8861 EMA:0.8807
+[attn-swinunetr | fold 5 | epoch 017] train=0.2084 val_loss=0.1861 auc=0.8881 acc=0.9024
+  [Metrics] AUC:0.888 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8861 EMA:0.8823
+[attn-swinunetr | fold 5 | epoch 018] train=0.2029 val_loss=0.1850 auc=0.8905 acc=0.9024
+  [Metrics] AUC:0.890 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8867 EMA:0.8836
+[attn-swinunetr | fold 5 | epoch 019] train=0.2046 val_loss=0.1838 auc=0.8929 acc=0.9024
+  [Metrics] AUC:0.893 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8873 EMA:0.8847
+[attn-swinunetr | fold 5 | epoch 020] train=0.2004 val_loss=0.1813 auc=0.8976 acc=0.9024
+  [Metrics] AUC:0.898 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8884 EMA:0.8858
+[attn-swinunetr | fold 5 | epoch 021] train=0.2033 val_loss=0.1799 auc=0.9048 acc=0.9024
+  [Metrics] AUC:0.905 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8902 EMA:0.8871
+[attn-swinunetr | fold 5 | epoch 022] train=0.1962 val_loss=0.1791 auc=0.9143 acc=0.8780
+  [Metrics] AUC:0.914 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8797 EMA:0.8849
+[attn-swinunetr | fold 5 | epoch 023] train=0.2007 val_loss=0.1767 auc=0.9143 acc=0.8780
+  [Metrics] AUC:0.914 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8797 EMA:0.8834
+[attn-swinunetr | fold 5 | epoch 024] train=0.2000 val_loss=0.1766 auc=0.9167 acc=0.9024
+  [Metrics] AUC:0.917 F1:0.900 SENS:0.900 SPEC:0.905 | COMPOSITE:0.9049 EMA:0.8898
+[attn-swinunetr | fold 5 | epoch 025] train=0.1984 val_loss=0.1821 auc=0.9167 acc=0.9024
+  [Metrics] AUC:0.917 F1:0.895 SENS:0.850 SPEC:0.952 | COMPOSITE:0.8932 EMA:0.8908
+[attn-swinunetr | fold 5 | epoch 026] train=0.2048 val_loss=0.1795 auc=0.9071 acc=0.8780
+  [Metrics] AUC:0.907 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8779 EMA:0.8870
+[attn-swinunetr | fold 5 | epoch 027] train=0.1923 val_loss=0.1767 auc=0.9214 acc=0.9024
+  [Metrics] AUC:0.921 F1:0.900 SENS:0.900 SPEC:0.905 | COMPOSITE:0.9061 EMA:0.8927
+[attn-swinunetr | fold 5 | epoch 028] train=0.1979 val_loss=0.1770 auc=0.9119 acc=0.8780
+  [Metrics] AUC:0.912 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8791 EMA:0.8886
+[attn-swinunetr | fold 5 | epoch 029] train=0.1980 val_loss=0.1770 auc=0.9095 acc=0.8780
+  [Metrics] AUC:0.910 F1:0.872 SENS:0.850 SPEC:0.905 | COMPOSITE:0.8785 EMA:0.8856
+[attn-swinunetr | fold 5 | epoch 030] train=0.1948 val_loss=0.1696 auc=0.9167 acc=0.8780
+  [Metrics] AUC:0.917 F1:0.878 SENS:0.900 SPEC:0.857 | COMPOSITE:0.8923 EMA:0.8876
+[attn-swinunetr | fold 5 | epoch 031] train=0.1953 val_loss=0.1703 auc=0.9167 acc=0.8780
+  [Metrics] AUC:0.917 F1:0.878 SENS:0.900 SPEC:0.857 | COMPOSITE:0.8923 EMA:0.8890
+[attn-swinunetr | fold 5 | epoch 032] train=0.1802 val_loss=0.1714 auc=0.8905 acc=0.8293
+  [Metrics] AUC:0.890 F1:0.844 SENS:0.950 SPEC:0.714 | COMPOSITE:0.8734 EMA:0.8843
+[attn-swinunetr | fold 5 | epoch 033] train=0.1948 val_loss=0.1711 auc=0.8833 acc=0.8049
+  [Metrics] AUC:0.883 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.8087 EMA:0.8616
+[attn-swinunetr | fold 5 | epoch 034] train=0.2002 val_loss=0.1741 auc=0.8786 acc=0.8049
+  [Metrics] AUC:0.879 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.8075 EMA:0.8454
+[attn-swinunetr | fold 5 | epoch 035] train=0.1951 val_loss=0.1674 auc=0.8929 acc=0.8049
+  [Metrics] AUC:0.893 F1:0.833 SENS:0.750 SPEC:0.952 | COMPOSITE:0.8369 EMA:0.8428
+[attn-swinunetr | fold 5 | epoch 036] train=0.1938 val_loss=0.1752 auc=0.8952 acc=0.8293
+  [Metrics] AUC:0.895 F1:0.824 SENS:0.700 SPEC:1.000 | COMPOSITE:0.8247 EMA:0.8374
+[attn-swinunetr | fold 5 | epoch 037] train=0.1975 val_loss=0.1761 auc=0.8786 acc=0.8049
+  [Metrics] AUC:0.879 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.8075 EMA:0.8284
+[attn-swinunetr | fold 5 | epoch 038] train=0.1894 val_loss=0.1775 auc=0.8762 acc=0.8049
+  [Metrics] AUC:0.876 F1:0.826 SENS:0.950 SPEC:0.667 | COMPOSITE:0.8581 EMA:0.8373
+[attn-swinunetr | fold 5 | epoch 039] train=0.1918 val_loss=0.1788 auc=0.8786 acc=0.8293
+  [Metrics] AUC:0.879 F1:0.844 SENS:0.950 SPEC:0.714 | COMPOSITE:0.8704 EMA:0.8472
+[attn-swinunetr | fold 5 | epoch 040] train=0.1901 val_loss=0.1752 auc=0.8714 acc=0.8293
+  [Metrics] AUC:0.871 F1:0.844 SENS:0.950 SPEC:0.714 | COMPOSITE:0.8686 EMA:0.8537
+[attn-swinunetr | fold 5 | epoch 041] train=0.1866 val_loss=0.1754 auc=0.8690 acc=0.8293
+  [Metrics] AUC:0.869 F1:0.837 SENS:0.900 SPEC:0.762 | COMPOSITE:0.8558 EMA:0.8543
+[attn-swinunetr | fold 5 | epoch 042] train=0.1903 val_loss=0.1750 auc=0.8714 acc=0.8293
+  [Metrics] AUC:0.871 F1:0.844 SENS:0.950 SPEC:0.714 | COMPOSITE:0.8686 EMA:0.8586
+[attn-swinunetr | fold 5 | epoch 043] train=0.1812 val_loss=0.1825 auc=0.8786 acc=0.8293
+  [Metrics] AUC:0.879 F1:0.844 SENS:0.950 SPEC:0.714 | COMPOSITE:0.8704 EMA:0.8621
+[attn-swinunetr | fold 5 | epoch 044] train=0.1827 val_loss=0.1708 auc=0.8762 acc=0.8537
+  [Metrics] AUC:0.876 F1:0.864 SENS:0.950 SPEC:0.762 | COMPOSITE:0.8817 EMA:0.8680
+[attn-swinunetr | fold 5 | epoch 045] train=0.1800 val_loss=0.1716 auc=0.8714 acc=0.8293
+  [Metrics] AUC:0.871 F1:0.837 SENS:0.900 SPEC:0.762 | COMPOSITE:0.8564 EMA:0.8645
+[attn-swinunetr | fold 5 | epoch 046] train=0.1761 val_loss=0.1759 auc=0.8619 acc=0.8049
+  [Metrics] AUC:0.862 F1:0.818 SENS:0.900 SPEC:0.714 | COMPOSITE:0.8422 EMA:0.8578
+[attn-swinunetr | fold 5 | epoch 047] train=0.1743 val_loss=0.1706 auc=0.8690 acc=0.8293
+  [Metrics] AUC:0.869 F1:0.837 SENS:0.900 SPEC:0.762 | COMPOSITE:0.8558 EMA:0.8572
+[attn-swinunetr | fold 5 | epoch 048] train=0.1732 val_loss=0.1778 auc=0.8690 acc=0.8049
+  [Metrics] AUC:0.869 F1:0.833 SENS:0.750 SPEC:0.952 | COMPOSITE:0.8310 EMA:0.8494
+[attn-swinunetr | fold 5 | epoch 049] train=0.1754 val_loss=0.1831 auc=0.8548 acc=0.8049
+  [Metrics] AUC:0.855 F1:0.811 SENS:0.750 SPEC:0.905 | COMPOSITE:0.8146 EMA:0.8389
+[attn-swinunetr | fold 5 | epoch 050] train=0.1721 val_loss=0.1894 auc=0.8381 acc=0.8049
+  [Metrics] AUC:0.838 F1:0.818 SENS:0.900 SPEC:0.714 | COMPOSITE:0.8362 EMA:0.8381
+[attn-swinunetr | fold 5 | epoch 051] train=0.1795 val_loss=0.1902 auc=0.8286 acc=0.8049
+  [Metrics] AUC:0.829 F1:0.818 SENS:0.900 SPEC:0.714 | COMPOSITE:0.8338 EMA:0.8368
+[attn-swinunetr | fold 5 | epoch 052] train=0.1620 val_loss=0.1959 auc=0.8405 acc=0.7805
+  [Metrics] AUC:0.840 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7853 EMA:0.8214
+[attn-swinunetr | fold 5 | epoch 053] train=0.1781 val_loss=0.1915 auc=0.8524 acc=0.8049
+  [Metrics] AUC:0.852 F1:0.811 SENS:0.750 SPEC:0.905 | COMPOSITE:0.8140 EMA:0.8192
+[attn-swinunetr | fold 5 | epoch 054] train=0.1802 val_loss=0.1840 auc=0.8571 acc=0.8293
+  [Metrics] AUC:0.857 F1:0.829 SENS:0.850 SPEC:0.810 | COMPOSITE:0.8405 EMA:0.8256
+[attn-swinunetr | fold 5 | epoch 055] train=0.1600 val_loss=0.1864 auc=0.8595 acc=0.8293
+  [Metrics] AUC:0.860 F1:0.833 SENS:0.750 SPEC:0.952 | COMPOSITE:0.8286 EMA:0.8265
+[attn-swinunetr | fold 5 | epoch 056] train=0.1812 val_loss=0.1802 auc=0.8619 acc=0.8293
+  [Metrics] AUC:0.862 F1:0.829 SENS:0.850 SPEC:0.810 | COMPOSITE:0.8417 EMA:0.8310
+[attn-swinunetr | fold 5 | epoch 057] train=0.1864 val_loss=0.1881 auc=0.8667 acc=0.8293
+  [Metrics] AUC:0.867 F1:0.837 SENS:0.900 SPEC:0.762 | COMPOSITE:0.8553 EMA:0.8383
+[attn-swinunetr | fold 5 | epoch 058] train=0.1737 val_loss=0.1783 auc=0.8714 acc=0.8293
+  [Metrics] AUC:0.871 F1:0.837 SENS:0.900 SPEC:0.762 | COMPOSITE:0.8564 EMA:0.8437
+[attn-swinunetr | fold 5 | epoch 059] train=0.1723 val_loss=0.1884 auc=0.8667 acc=0.8293
+  [Metrics] AUC:0.867 F1:0.829 SENS:0.850 SPEC:0.810 | COMPOSITE:0.8429 EMA:0.8435
+[attn-swinunetr | fold 5 | epoch 060] train=0.1782 val_loss=0.1826 auc=0.8714 acc=0.8293
+  [Metrics] AUC:0.871 F1:0.833 SENS:0.750 SPEC:0.952 | COMPOSITE:0.8315 EMA:0.8399
+[attn-swinunetr | fold 5 | epoch 061] train=0.1786 val_loss=0.1784 auc=0.8619 acc=0.8293
+  [Metrics] AUC:0.862 F1:0.821 SENS:0.800 SPEC:0.857 | COMPOSITE:0.8292 EMA:0.8367
+[attn-swinunetr | fold 5 | epoch 062] train=0.1772 val_loss=0.1996 auc=0.8381 acc=0.7805
+  [Metrics] AUC:0.838 F1:0.800 SENS:0.900 SPEC:0.667 | COMPOSITE:0.8245 EMA:0.8330
+[attn-swinunetr | fold 5 | epoch 063] train=0.1762 val_loss=0.1860 auc=0.8571 acc=0.8049
+  [Metrics] AUC:0.857 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.8021 EMA:0.8238
+[attn-swinunetr | fold 5 | epoch 064] train=0.1722 val_loss=0.1936 auc=0.8476 acc=0.7805
+  [Metrics] AUC:0.848 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.7998 EMA:0.8166
+[attn-swinunetr | fold 5 | epoch 065] train=0.1629 val_loss=0.1958 auc=0.8262 acc=0.7561
+  [Metrics] AUC:0.826 F1:0.765 SENS:0.650 SPEC:0.952 | COMPOSITE:0.7681 EMA:0.8020
+[attn-swinunetr | fold 5 | epoch 066] train=0.1630 val_loss=0.1963 auc=0.8429 acc=0.7805
+  [Metrics] AUC:0.843 F1:0.765 SENS:0.650 SPEC:0.952 | COMPOSITE:0.7722 EMA:0.7931
+[attn-swinunetr | fold 5 | epoch 067] train=0.1592 val_loss=0.2025 auc=0.8381 acc=0.7805
+  [Metrics] AUC:0.838 F1:0.800 SENS:0.700 SPEC:0.952 | COMPOSITE:0.7974 EMA:0.7944
+[attn-swinunetr | fold 5 | epoch 068] train=0.1824 val_loss=0.2066 auc=0.8262 acc=0.7561
+  [Metrics] AUC:0.826 F1:0.778 SENS:0.700 SPEC:0.905 | COMPOSITE:0.7817 EMA:0.7906
+[attn-swinunetr | fold 5 | epoch 069] train=0.1638 val_loss=0.2155 auc=0.8024 acc=0.7317
+  [Metrics] AUC:0.802 F1:0.727 SENS:0.600 SPEC:0.952 | COMPOSITE:0.7353 EMA:0.7740
+[attn-swinunetr | fold 5 | epoch 070] train=0.1678 val_loss=0.2066 auc=0.8262 acc=0.7561
+  [Metrics] AUC:0.826 F1:0.765 SENS:0.650 SPEC:0.952 | COMPOSITE:0.7681 EMA:0.7722
+  Early stopping @ epoch 70 (best EMA composite=0.8927)
+  SWA model finalize ediliyor...
+  SWA val COMPOSITE: 0.7681 | Best EMA COMPOSITE: 0.8927
+
+=================================================================
+  AttentionSwinUNETR Fold 5  |  Threshold: Youden 0.599
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.921          [0.807 - 0.995]
+  AUC-PR                0.946                        -
+  Sensitivity           0.900          [0.750 - 1.000]
+  Specificity           0.905          [0.765 - 1.000]
+  PPV                   0.900          [0.750 - 1.000]
+  NPV                   0.905          [0.765 - 1.000]
+  Accuracy              0.902          [0.805 - 0.976]
+  F1-Score              0.900          [0.783 - 0.978]
+  Composite             0.906                        -
+
+  CM: TP=18 FP=2 FN=2 TN=19
+  Toplam Hata: 4/41
+=================================================================
+
+AGGREGATE OOF (5-Fold Cross-Validation):
+
+=================================================================
+  Attention-SwinUNETR Aggregate OOF  |  Threshold: Youden 0.561
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.765          [0.698 - 0.830]
+  AUC-PR                0.714                        -
+  Sensitivity           0.820          [0.740 - 0.890]
+  Specificity           0.645          [0.548 - 0.736]
+  PPV                   0.683          [0.599 - 0.765]
+  NPV                   0.793          [0.708 - 0.876]
+  Accuracy              0.729          [0.667 - 0.788]
+  F1-Score              0.745          [0.676 - 0.805]
+  Composite             0.761                        -
+
+  CM: TP=82 FP=38 FN=18 TN=69
+  Toplam Hata: 56/207
+=================================================================
+
+Attention-SwinUNETR — Kalibrasyon: Brier=0.2201 | ECE=0.1824
+
+Attention-SwinUNETR — EXTERNAL TEST (ALL FOLDS + ENSEMBLE):
+               fold  auc_roc  sensitivity  specificity  accuracy    f1   ppv   npv  tp  fp  fn  tn
+             Fold 1    0.766        0.667        0.842     0.757 0.727 0.800 0.727  12   3   6  16
+             Fold 2    0.766        0.611        0.895     0.757 0.710 0.846 0.708  11   2   7  17
+             Fold 3    0.681        0.500        0.895     0.703 0.621 0.818 0.654   9   2   9  17
+             Fold 4    0.673        0.500        0.842     0.676 0.600 0.750 0.640   9   3   9  16
+             Fold 5    0.795        0.722        0.789     0.757 0.743 0.765 0.750  13   4   5  15
+    Ensemble (@0.5)    0.751        0.833        0.316     0.568 0.652 0.536 0.667  15  13   3   6
+ Ensemble (@Youden)    0.751        0.667        0.842     0.757 0.727 0.800 0.727  12   3   6  16
+Ensemble (90+ Sens)    0.751        0.944        0.211     0.568 0.680 0.531 0.800  17  15   1   4
+
+Attention-SwinUNETR — ENSEMBLE @Youden (0.622) — %95 Bootstrap CI:
+
+=================================================================
+  Attention-SwinUNETR  |  Threshold: Youden 0.622
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.751          [0.573 - 0.908]
+  AUC-PR                0.807                        -
+  Sensitivity           0.667          [0.429 - 0.882]
+  Specificity           0.842          [0.667 - 1.000]
+  PPV                   0.800          [0.583 - 1.000]
+  NPV                   0.727          [0.520 - 0.905]
+  Accuracy              0.757          [0.595 - 0.892]
+  F1-Score              0.727          [0.522 - 0.882]
+  Composite             0.729                        -
+
+  CM: TP=12 FP=3 FN=6 TN=16
+  Toplam Hata: 9/37
+=================================================================
+
+Attention-SwinUNETR — ENSEMBLE @90%+ Sensitivity (0.477) — %95 Bootstrap CI:
+
+=================================================================
+  Attention-SwinUNETR  |  Threshold: 90+Sens 0.477
+=================================================================
+  Metrik                Değer                   95% CI
+  -------------------------------------------------------
+  AUC-ROC               0.751          [0.573 - 0.908]
+  AUC-PR                0.807                        -
+  Sensitivity           0.944          [0.818 - 1.000]
+  Specificity           0.211          [0.048 - 0.400]
+  PPV                   0.531          [0.364 - 0.700]
+  NPV                   0.800          [0.333 - 1.000]
+  Accuracy              0.568          [0.405 - 0.730]
+  F1-Score              0.680          [0.513 - 0.814]
+  Composite             0.720                        -
+
+  CM: TP=17 FP=15 FN=1 TN=4
+  Toplam Hata: 16/37
+=================================================================

@@ -1,0 +1,11 @@
+__pycache__/
+*.pt
+*.pth
+*.h5
+*.log
+datas/
+datas_128/
+datas_backup_before_dedup_fix/
+datas_old_q1/
+experiments*/
+.ipynb_checkpoints/
