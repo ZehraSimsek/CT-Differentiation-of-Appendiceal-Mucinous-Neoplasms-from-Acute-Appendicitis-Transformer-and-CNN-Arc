@@ -1,0 +1,7 @@
+shared_utils.py yüklendi. [Q1 | Sensitivity-First | TTA | ClinicalFocalLoss]
+Single Model Significance against AUC=0.50:
+============================================================
+attention_swinunetr       | AUC: 0.821 | z=3.586, p=3.356e-04
+mae_tinytransformer       | AUC: 0.758 | z=2.653, p=7.976e-03
+segformer3d               | AUC: 0.821 | z=3.207, p=1.341e-03
+swinunetr_lp              | AUC: 0.853 | z=4.533, p=5.810e-06
