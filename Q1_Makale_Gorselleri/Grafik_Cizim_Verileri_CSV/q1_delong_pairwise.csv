@@ -1,0 +1,7 @@
+model_1,auc_1,model_2,auc_2,auc_diff,z,p_value,significant_p<0.05
+Attention-SwinUNETR,0.8211,MAE-TinyTransformer3D,0.7579,0.0632,0.9886,0.32285,False
+Attention-SwinUNETR,0.8211,SegFormer3D-MSCA,0.8211,0.0,0.0,1.0,False
+Attention-SwinUNETR,0.8211,SwinUNETR Linear-Probe,0.8526,-0.0316,-0.7436,0.45713,False
+MAE-TinyTransformer3D,0.7579,SegFormer3D-MSCA,0.8211,-0.0632,-0.7238,0.4692,False
+MAE-TinyTransformer3D,0.7579,SwinUNETR Linear-Probe,0.8526,-0.0947,-1.2033,0.22887,False
+SegFormer3D-MSCA,0.8211,SwinUNETR Linear-Probe,0.8526,-0.0316,-0.2979,0.76575,False

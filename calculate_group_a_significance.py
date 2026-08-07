@@ -2,34 +2,32 @@ import sys, os
 from pathlib import Path
 import numpy as np
 import pandas as pd
-import math
-
-# Add the directory to the path to import shared_utils
-sys.path.insert(0, "/home/zera/Downloads/Appendiks varyasyon3 DS-20260713T105239Z-2-001/Appendiks varyasyon3 DS/segformer")
-from shared_utils import _fast_delong, _norm_cdf
+from scipy.stats import norm
 
 EXPERIMENTS_DIR = Path("/home/zera/Downloads/Appendiks varyasyon3 DS-20260713T105239Z-2-001/Appendiks varyasyon3 DS/segformer/experiments_q1_128")
 
-def single_model_delong_test_vs_chance(y_true, y_prob):
+def single_model_vs_chance_hm(y_true, y_prob):
+    # Hanley-McNeil approach for testing AUC vs 0.5 (Null Hypothesis Variance)
     y_true = np.asarray(y_true).astype(int)
-    order = np.argsort(-y_true)
-    y_true_sorted = y_true[order]
-    label_1_count = int(y_true_sorted.sum())
+    y_prob = np.asarray(y_prob)
     
-    # We pass the predictions as a 1xN array
-    preds = np.asarray(y_prob)[order].reshape(1, -1)
-    aucs, delongcov = _fast_delong(preds, label_1_count)
+    n1 = np.sum(y_true == 1)
+    n2 = np.sum(y_true == 0)
     
-    auc = aucs[0]
-    var = delongcov if np.isscalar(delongcov) or delongcov.ndim == 0 else delongcov[0, 0]
+    # Calculate AUC using Mann-Whitney U statistic formulation for exactness
+    pos = y_prob[y_true == 1]
+    neg = y_prob[y_true == 0]
+    u_stat = sum([sum(p > neg) + 0.5 * sum(p == neg) for p in pos])
+    auc = u_stat / (n1 * n2)
     
-    if var <= 0:
-        return float(auc), 0.0, 1.0
-        
-    z = (auc - 0.50) / np.sqrt(var)
-    p = float(2 * (1 - _norm_cdf(abs(z))))
+    # Variance under the null hypothesis H0: AUC = 0.5
+    var_null = (n1 + n2 + 1) / (12 * n1 * n2)
+    se_null = np.sqrt(var_null)
     
-    return float(auc), float(z), p
+    z = (auc - 0.50) / se_null
+    p = 2 * (1 - norm.cdf(abs(z)))
+    
+    return float(auc), float(z), float(p)
 
 def main():
     found = {}
@@ -43,14 +41,14 @@ def main():
         if probs_path.exists():
             found[model_dir.name] = probs_path
             
-    print("Single Model Significance against AUC=0.50:")
-    print("="*60)
+    print("Single Model Significance against AUC=0.50 (Hanley-McNeil Null Variance):")
+    print("="*75)
     for model_name, probs_path in found.items():
         df = pd.read_csv(probs_path)
         y_true = df["label"].values
         y_prob = df["prob_mucinous"].values
         
-        auc, z, p = single_model_delong_test_vs_chance(y_true, y_prob)
+        auc, z, p = single_model_vs_chance_hm(y_true, y_prob)
         print(f"{model_name:25s} | AUC: {auc:.3f} | z={z:.3f}, p={p:.3e}")
 
 if __name__ == '__main__':

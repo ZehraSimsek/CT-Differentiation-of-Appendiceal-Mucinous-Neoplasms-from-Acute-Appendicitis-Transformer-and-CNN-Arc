@@ -1,0 +1,6 @@
+Single Model Significance against AUC=0.50 (Hanley-McNeil Null Variance):
+===========================================================================
+attention_swinunetr       | AUC: 0.821 | z=2.168, p=3.016e-02
+mae_tinytransformer       | AUC: 0.758 | z=1.742, p=8.159e-02
+segformer3d               | AUC: 0.821 | z=2.168, p=3.016e-02
+swinunetr_lp              | AUC: 0.853 | z=2.381, p=1.725e-02
