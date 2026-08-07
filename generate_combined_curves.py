@@ -131,8 +131,8 @@ def cnn_pr_runs(model_name):
     precs = []
     for run, grp in df_m.groupby("Run"):
         grp = grp.sort_values("Recall")
-        precs.append(np.interp(common_rec, grp["Recall"].values[::-1],
-                               grp["Precision"].values[::-1]))
+        precs.append(np.interp(common_rec, grp["Recall"].values,
+                               grp["Precision"].values))
     mean_prec = np.mean(precs, axis=0)
     # common_rec artan sırada (0'dan 1'e), trapz'nin pozitif sonuç vermesi için
     # x ekseninin artan veya azalan olması önemli, ancak mutlak değer garantidir.
