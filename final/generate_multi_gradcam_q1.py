@@ -203,13 +203,13 @@ def main():
         else:
             roi_text = " (No ROI)"
             
-        axes[0].set_title(f"Original MRI/CT{roi_text}\nTrue: {label_str}", fontsize=24)
+        axes[0].set_title(f"Original MRI/CT{roi_text}\nTrue: {label_str}", fontsize=24, fontweight='bold')
         axes[0].axis('off')
         
         col = 1
         for m_name, extractor in models.items():
             if extractor is None:
-                axes[col].set_title(f"{m_name}\n(Weights missing)", fontsize=24)
+                axes[col].set_title(f"{m_name}\n(Weights missing)", fontsize=24, fontweight='bold')
                 axes[col].axis('off')
                 col += 1
                 continue
@@ -233,7 +233,7 @@ def main():
                     axes[col].contour(mask_slice, colors='yellow', linewidths=1.5, alpha=0.8)
 
                 color = "green" if (prob >= m_threshold and true_label == 1) or (prob < m_threshold and true_label == 0) else "red"
-                axes[col].set_title(f"{m_name}\nPred: {pred_str} ({prob:.2f})", color=color, fontsize=24)
+                axes[col].set_title(f"{m_name}\nPred: {pred_str} ({prob:.2f})", color=color, fontsize=24, fontweight='bold')
                 axes[col].axis('off')
             except Exception as e:
                 print(f"Hata {m_name}: {e}")

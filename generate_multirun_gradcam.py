@@ -243,14 +243,14 @@ def main():
                 roi_text = " (ROI: Yellow)"
             else:
                 roi_text = " (No ROI)"
-            axes[0].set_title(f"Original CT{roi_text} - Slice {slice_idx+1}/{D}\nTrue: {label_str}", fontsize=24)
+            axes[0].set_title(f"Original CT{roi_text} - Slice {slice_idx+1}/{D}\nTrue: {label_str}", fontsize=24, fontweight='bold')
             axes[0].axis('off')
             
             col = 1
             for m_name in models.keys():
                 c_data = cam_data.get(m_name)
                 if c_data is None:
-                    axes[col].set_title(f"{m_name}\n(Hata/Eksik)", fontsize=24)
+                    axes[col].set_title(f"{m_name}\n(Hata/Eksik)", fontsize=24, fontweight='bold')
                     axes[col].axis('off')
                 else:
                     cam_3d_model = c_data["cam_3d"]
@@ -268,7 +268,7 @@ def main():
                     axes[col].imshow(img_slice, cmap="gray")
                     axes[col].imshow(cam_slice, cmap="jet", alpha=0.5)
                     color = "green" if (prob >= m_threshold and true_label == 1) or (prob < m_threshold and true_label == 0) else "red"
-                    axes[col].set_title(f"{m_name}\nPred: {pred_str} ({prob:.2f})", color=color, fontsize=24)
+                    axes[col].set_title(f"{m_name}\nPred: {pred_str} ({prob:.2f})", color=color, fontsize=24, fontweight='bold')
                     axes[col].axis('off')
                 col += 1
                 

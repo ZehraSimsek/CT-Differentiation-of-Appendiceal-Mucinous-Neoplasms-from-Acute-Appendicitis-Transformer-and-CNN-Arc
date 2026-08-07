@@ -127,16 +127,16 @@ def main():
         # Plot
         fig, axes = plt.subplots(1, 3, figsize=(15, 5))
         axes[0].imshow(img_slice, cmap="gray")
-        axes[0].set_title(f"Original MRI/CT Slice\nLabel: {label_str}", fontsize=24)
+        axes[0].set_title(f"Original MRI/CT Slice\nLabel: {label_str}", fontsize=24, fontweight='bold')
         axes[0].axis('off')
         
         axes[1].imshow(cam_slice, cmap="jet")
-        axes[1].set_title(f"Grad-CAM (Attention Map)\nFocus on 'Mucinous'", fontsize=24)
+        axes[1].set_title(f"Grad-CAM (Attention Map)\nFocus on 'Mucinous'", fontsize=24, fontweight='bold')
         axes[1].axis('off')
         
         axes[2].imshow(img_slice, cmap="gray")
         axes[2].imshow(cam_slice, cmap="jet", alpha=0.5)
-        axes[2].set_title(f"Overlay\nPred: {pred_str} (Prob: {prob:.2f})", fontsize=24)
+        axes[2].set_title(f"Overlay\nPred: {pred_str} (Prob: {prob:.2f})", fontsize=24, fontweight='bold')
         axes[2].axis('off')
         
         save_path = OUT_DIR / f"gradcam_{pid}_{label_str}.png"
