@@ -134,7 +134,9 @@ def cnn_pr_runs(model_name):
         precs.append(np.interp(common_rec, grp["Recall"].values[::-1],
                                grp["Precision"].values[::-1]))
     mean_prec = np.mean(precs, axis=0)
-    mean_ap   = float(np.trapezoid(mean_prec[::-1], common_rec[::-1]))
+    # common_rec artan sırada (0'dan 1'e), trapz'nin pozitif sonuç vermesi için
+    # x ekseninin artan veya azalan olması önemli, ancak mutlak değer garantidir.
+    mean_ap   = abs(float(np.trapezoid(mean_prec, common_rec)))
     return common_rec, precs, mean_prec, mean_ap
 
 
