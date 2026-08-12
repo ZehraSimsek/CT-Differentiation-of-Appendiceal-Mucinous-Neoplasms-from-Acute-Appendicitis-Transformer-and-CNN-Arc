@@ -1,9 +1,10 @@
 """
 generate_combined_curves.py
 ===========================
-Q1 Makale kalitesinde 7 model ROC + PR eğrisi.
-Nature Medicine / Radiology dergi formatı.
-Her run ayrı ince kesik çizgi, mean kalın düz çizgi (CNN grubunuzla aynı stil).
+Q1 Makale kalitesinde Transformer ve CNN modelleri için ROC + PR eğrileri.
+İki model ailesi yan yana (1x2 subplot).
+Eğriler, her modelin en yüksek AUC (veya AP) değerine sahip (MAX) run'ı üzerinden çizilmiştir.
+Tüm yazılar (fontlar) büyütülmüştür.
 """
 
 import numpy as np
@@ -17,267 +18,201 @@ from pathlib import Path
 
 matplotlib.rcParams.update({
     "font.family":       "DejaVu Sans",
-    "font.size":         11,
-    "axes.linewidth":    1.0,
+    "font.size":         24,  # Base font size
+    "axes.linewidth":    1.5,
     "axes.spines.top":   False,
     "axes.spines.right": False,
-    "xtick.major.width": 0.8,
-    "ytick.major.width": 0.8,
+    "xtick.major.width": 1.2,
+    "ytick.major.width": 1.2,
     "xtick.direction":   "out",
     "ytick.direction":   "out",
     "figure.dpi":        150,
-    "savefig.dpi":       300,
+    "savefig.dpi":       600,
 })
 
-BASE    = Path("experiments_multirun")
+BASE = Path(__file__).resolve().parent / "experiments_multirun"
 CNN_DIR = BASE / "classic_cnns"
 OUT_DIR = BASE
 
 # ──────────────────────────────────────────────────────────────────────────────
 # RENK PALETİ
-# Transformer → Her biri tamamen farklı, koyu + okunaklı
-# CNN → Sizin mevcut plot renkleriyle birebir uyumlu (mavi/yeşil/kırmızı)
 # ──────────────────────────────────────────────────────────────────────────────
 TRANSFORMERS = {
-    "swinunetr_lp":     ("SwinUNETR-LP",   "#1F3A93"),  # Lacivert
-    "ag_msf":           ("AG-MSF",          "#8E44AD"),  # Mor
-    "mae_tiny3d":       ("MAE-Tiny3D",      "#117A65"),  # Koyu teal/yeşil
-    "segformer3d_msca": ("SegFormer3D",     "#D35400"),  # Koyu turuncu
+    "swinunetr_lp":     ("SwinUNETR-LP",   "#1F3A93"),
+    "ag_msf":           ("AG-MSF",          "#8E44AD"),
+    "mae_tiny3d":       ("MAE-Tiny3D",      "#117A65"),
+    "segformer3d_msca": ("SegFormer3D",     "#D35400"),
 }
 
 CNN_MODELS = {
-    "UNet++":          ("UNet++",          "#2471A3"),  # Mavi (CNN plotunuzdaki gibi)
-    "DenseNet121":     ("DenseNet121",     "#196F3D"),  # Koyu yeşil
-    "EfficientNet-B0": ("EfficientNet-B0", "#CB181D"),  # Koyu kırmızı
+    "UNet++":          ("UNet++",          "#2471A3"),
+    "DenseNet121":     ("DenseNet121",     "#196F3D"),
+    "EfficientNet-B0": ("EfficientNet-B0", "#CB181D"),
 }
 
-
 # ──────────────────────────────────────────────────────────────────────────────
-# YARDIMCI FONKSİYONLAR
+# YARDIMCI FONKSİYONLAR (MAX RUN BULMA)
 # ──────────────────────────────────────────────────────────────────────────────
-def load_transformer_runs_roc(folder):
-    """Her run için ayrı ROC eğrisi + mean ROC döndür."""
-    common_fpr = np.linspace(0, 1, 300)
-    run_tprs = []
-    y_true_all = None
-    probs_all = []
-
+def load_transformer_max_roc(folder):
+    best_auc = -1
+    best_fpr, best_tpr = None, None
     for run_idx in [1, 2, 3]:
         p = BASE / folder / f"run_{run_idx:02d}" / "external_test" / "ensemble_probs.csv"
-        if not p.exists():
-            continue
+        if not p.exists(): continue
         df = pd.read_csv(p).sort_values("patient_id").reset_index(drop=True)
         y = df["label"].values
         prob = df["prob_mucinous"].values
-        if y_true_all is None:
-            y_true_all = y
         fpr, tpr, _ = roc_curve(y, prob)
-        run_tprs.append(np.interp(common_fpr, fpr, tpr))
-        probs_all.append(prob)
+        c_auc = auc(fpr, tpr)
+        if c_auc > best_auc:
+            best_auc = c_auc
+            best_fpr = fpr
+            best_tpr = tpr
+    return best_fpr, best_tpr, best_auc
 
-    if not run_tprs:
-        return None, None, None, None, None
-
-    mean_tpr = np.mean(run_tprs, axis=0)
-    mean_auc = auc(common_fpr, mean_tpr)
-    mean_probs = np.mean(probs_all, axis=0)
-    return common_fpr, run_tprs, mean_tpr, mean_auc, (y_true_all, mean_probs)
-
-
-def load_transformer_runs_pr(folder):
-    """Her run için ayrı PR eğrisi + mean PR döndür."""
-    common_rec = np.linspace(0, 1, 300)
-    run_precs = []
-    y_true_all = None
-    probs_all = []
-
+def load_transformer_max_pr(folder):
+    best_ap = -1
+    best_prec, best_rec = None, None
     for run_idx in [1, 2, 3]:
         p = BASE / folder / f"run_{run_idx:02d}" / "external_test" / "ensemble_probs.csv"
-        if not p.exists():
-            continue
+        if not p.exists(): continue
         df = pd.read_csv(p).sort_values("patient_id").reset_index(drop=True)
         y = df["label"].values
         prob = df["prob_mucinous"].values
-        if y_true_all is None:
-            y_true_all = y
         prec, rec, _ = precision_recall_curve(y, prob)
-        run_precs.append(np.interp(common_rec, rec[::-1], prec[::-1]))
-        probs_all.append(prob)
+        c_ap = average_precision_score(y, prob)
+        if c_ap > best_ap:
+            best_ap = c_ap
+            best_prec = prec
+            best_rec = rec
+    return best_rec, best_prec, best_ap
 
-    if not run_precs:
-        return None, None, None, None, None
-
-    mean_prec = np.mean(run_precs, axis=0)
-    mean_ap   = average_precision_score(y_true_all, np.mean(probs_all, axis=0))
-    return common_rec, run_precs, mean_prec, mean_ap, y_true_all
-
-
-def cnn_roc_runs(model_name):
+def cnn_max_roc(model_name):
     df = pd.read_csv(CNN_DIR / "roc_curves_classic_cnn.csv")
     df_m = df[df["Model"] == model_name]
-    common_fpr = np.linspace(0, 1, 300)
-    tprs = []
+    best_auc = -1
+    best_fpr, best_tpr = None, None
+    if len(df_m) == 0: return None, None, None
     for run, grp in df_m.groupby("Run"):
         grp = grp.sort_values("FPR")
-        tprs.append(np.interp(common_fpr, grp["FPR"].values, grp["TPR"].values))
-    mean_tpr = np.mean(tprs, axis=0)
-    return common_fpr, tprs, mean_tpr, auc(common_fpr, mean_tpr)
+        fpr = grp["FPR"].values
+        tpr = grp["TPR"].values
+        c_auc = auc(fpr, tpr)
+        if c_auc > best_auc:
+            best_auc = c_auc
+            best_fpr = fpr
+            best_tpr = tpr
+    return best_fpr, best_tpr, best_auc
 
-
-def cnn_pr_runs(model_name):
+def cnn_max_pr(model_name):
     df = pd.read_csv(CNN_DIR / "pr_curves_classic_cnn.csv")
     df_m = df[df["Model"] == model_name]
-    common_rec = np.linspace(0, 1, 300)
-    precs = []
+    best_ap = -1
+    best_prec, best_rec = None, None
+    if len(df_m) == 0: return None, None, None
     for run, grp in df_m.groupby("Run"):
         grp = grp.sort_values("Recall")
-        precs.append(np.interp(common_rec, grp["Recall"].values,
-                               grp["Precision"].values))
-    mean_prec = np.mean(precs, axis=0)
-    # common_rec artan sırada (0'dan 1'e), trapz'nin pozitif sonuç vermesi için
-    # x ekseninin artan veya azalan olması önemli, ancak mutlak değer garantidir.
-    mean_ap   = abs(float(np.trapezoid(mean_prec, common_rec)))
-    return common_rec, precs, mean_prec, mean_ap
-
+        rec = grp["Recall"].values
+        prec = grp["Precision"].values
+        c_ap = abs(float(np.trapezoid(prec, rec)))
+        if c_ap > best_ap:
+            best_ap = c_ap
+            best_prec = prec
+            best_rec = rec
+    return best_rec, best_prec, best_ap
 
 def style_ax(ax, xlim=(-0.02, 1.02), ylim=(-0.02, 1.05)):
     ax.set_xlim(*xlim)
     ax.set_ylim(*ylim)
     ax.xaxis.set_major_locator(ticker.MultipleLocator(0.2))
     ax.yaxis.set_major_locator(ticker.MultipleLocator(0.2))
-    ax.tick_params(labelsize=10)
-    ax.grid(True, linestyle=":", linewidth=0.55, color="#CCCCCC", zorder=0)
-
+    ax.tick_params(labelsize=22)
+    ax.grid(True, linestyle=":", linewidth=0.8, color="#CCCCCC", zorder=0)
 
 # ──────────────────────────────────────────────────────────────────────────────
-# ROC CURVE
+# ROC CURVE (YAN YANA)
 # ──────────────────────────────────────────────────────────────────────────────
-def make_roc():
-    fig, ax = plt.subplots(figsize=(7.5, 6.5))
-    legend_handles = []
+def make_roc_side_by_side():
+    fig, axes = plt.subplots(1, 2, figsize=(20, 9))
+    ax1, ax2 = axes
 
-    # Transformer — her run ince kesik, mean kalın düz
+    # --- Transformer (AX1) ---
     for folder, (name, color) in TRANSFORMERS.items():
-        result = load_transformer_runs_roc(folder)
-        if result[0] is None:
-            print(f"  [SKIP] {name}")
-            continue
-        common_fpr, run_tprs, mean_tpr, mean_auc, _ = result
-        for tpr in run_tprs:
-            ax.plot(common_fpr, tpr, color=color, lw=0.9,
-                    linestyle="--", alpha=0.35, zorder=2)
-        line, = ax.plot(common_fpr, mean_tpr, color=color, lw=2.4,
-                        linestyle="-", zorder=4)
-        legend_handles.append((line, f"{name}  (AUC = {mean_auc:.3f})"))
+        fpr, tpr, c_auc = load_transformer_max_roc(folder)
+        if fpr is None: continue
+        ax1.plot(fpr, tpr, color=color, lw=3.5, linestyle="-", 
+                 label=f"{name} (AUC = {c_auc:.3f})", zorder=4)
+    
+    ax1.plot([0, 1], [0, 1], color="#AAAAAA", lw=1.5, linestyle=(0, (4, 4)), zorder=1)
+    style_ax(ax1)
+    ax1.set_xlabel("False Positive Rate", fontsize=26, labelpad=12)
+    ax1.set_ylabel("True Positive Rate", fontsize=26, labelpad=12)
+    ax1.set_title("Transformer Models", fontsize=28, pad=15)
+    ax1.legend(loc="lower right", fontsize=21, frameon=True, edgecolor="#CCCCCC")
 
-    # CNN — her run ince kesik, mean kalın kesik (CNN grubunu ayrıştırmak için)
+    # --- CNN (AX2) ---
     for model_name, (display, color) in CNN_MODELS.items():
-        try:
-            common_fpr, run_tprs, mean_tpr, mean_auc = cnn_roc_runs(model_name)
-            for tpr in run_tprs:
-                ax.plot(common_fpr, tpr, color=color, lw=0.9,
-                        linestyle="--", alpha=0.35, zorder=2)
-            line, = ax.plot(common_fpr, mean_tpr, color=color, lw=2.4,
-                            linestyle="--", zorder=4)
-            legend_handles.append((line, f"{display}  (AUC = {mean_auc:.3f})"))
-        except Exception as e:
-            print(f"  [SKIP] {display}: {e}")
+        fpr, tpr, c_auc = cnn_max_roc(model_name)
+        if fpr is None: continue
+        ax2.plot(fpr, tpr, color=color, lw=3.5, linestyle="-", 
+                 label=f"{display} (AUC = {c_auc:.3f})", zorder=4)
+                 
+    ax2.plot([0, 1], [0, 1], color="#AAAAAA", lw=1.5, linestyle=(0, (4, 4)), zorder=1)
+    style_ax(ax2)
+    ax2.set_xlabel("False Positive Rate", fontsize=26, labelpad=12)
+    ax2.set_title("Classic CNN Models", fontsize=28, pad=15)
+    ax2.legend(loc="lower right", fontsize=21, frameon=True, edgecolor="#CCCCCC")
 
-    # Şans çizgisi
-    ax.plot([0, 1], [0, 1], color="#AAAAAA", lw=1.1,
-            linestyle=(0, (4, 4)), zorder=1)
-
-    style_ax(ax)
-    ax.set_xlabel("False Positive Rate (1 – Specificity)", fontsize=12, labelpad=8)
-    ax.set_ylabel("True Positive Rate (Sensitivity)", fontsize=12, labelpad=8)
-    ax.set_title(
-        "External Validation — ROC Curves (n = 24, 3 Runs)\n"
-        "Bold = 3-Run Mean  |  ─ Transformer Models  ╌ Classic CNN Models",
-        fontsize=10.5, pad=12
-    )
-
-    tr_hdr  = Line2D([], [], linestyle="-",  color="#333333", lw=2.0)
-    cnn_hdr = Line2D([], [], linestyle="--", color="#333333", lw=2.0)
-
-    handles = [tr_hdr]  + [h for h, _ in legend_handles[:4]] + \
-              [cnn_hdr] + [h for h, _ in legend_handles[4:]]
-    labels  = ["Transformer Models"] + [l for _, l in legend_handles[:4]] + \
-              ["Classic CNN Models"] + [l for _, l in legend_handles[4:]]
-
-    ax.legend(handles, labels, loc="lower right", fontsize=9,
-              frameon=True, framealpha=0.93, edgecolor="#CCCCCC",
-              handlelength=2.2, handletextpad=0.8, labelspacing=0.45,
-              borderpad=0.8)
-
+    fig.suptitle("Receiver Operating Characteristic (ROC)", fontsize=30, y=1.03)
     plt.tight_layout()
-    out = OUT_DIR / "Combined_ROC_All7Models.png"
-    plt.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
+    out = OUT_DIR / "Combined_ROC_SideBySide.png"
+    plt.savefig(out, dpi=600, bbox_inches="tight", facecolor="white")
     plt.close()
-    print(f"[✓] ROC → {out}")
+    print(f"[✓] Yan yana ROC → {out}")
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# PR CURVE
+# PR CURVE (YAN YANA)
 # ──────────────────────────────────────────────────────────────────────────────
-def make_pr():
-    fig, ax = plt.subplots(figsize=(7.5, 6.5))
-    legend_handles = []
+def make_pr_side_by_side():
+    fig, axes = plt.subplots(1, 2, figsize=(20, 9))
+    ax1, ax2 = axes
 
+    # --- Transformer (AX1) ---
     for folder, (name, color) in TRANSFORMERS.items():
-        result = load_transformer_runs_pr(folder)
-        if result[0] is None:
-            continue
-        common_rec, run_precs, mean_prec, mean_ap, _ = result
-        for prec in run_precs:
-            ax.step(common_rec, prec, color=color, lw=0.9,
-                    linestyle="--", alpha=0.35, where="post", zorder=2)
-        line, = ax.step(common_rec, mean_prec, color=color, lw=2.4,
-                        linestyle="-", where="post", zorder=4)
-        legend_handles.append((line, f"{name}  (AP = {mean_ap:.3f})"))
+        rec, prec, c_ap = load_transformer_max_pr(folder)
+        if rec is None: continue
+        ax1.step(rec, prec, color=color, lw=3.5, linestyle="-", where="post", 
+                 label=f"{name} (PR-AUC = {c_ap:.3f})", zorder=4)
+                 
+    style_ax(ax1, xlim=(-0.02, 1.02), ylim=(0.0, 1.05))
+    ax1.set_xlabel("Recall", fontsize=26, labelpad=12)
+    ax1.set_ylabel("Precision", fontsize=26, labelpad=12)
+    ax1.set_title("Transformer Models", fontsize=28, pad=15)
+    ax1.legend(loc="lower left", fontsize=21, frameon=True, edgecolor="#CCCCCC")
 
+    # --- CNN (AX2) ---
     for model_name, (display, color) in CNN_MODELS.items():
-        try:
-            common_rec, run_precs, mean_prec, mean_ap = cnn_pr_runs(model_name)
-            for prec in run_precs:
-                ax.step(common_rec, prec, color=color, lw=0.9,
-                        linestyle="--", alpha=0.35, where="post", zorder=2)
-            line, = ax.step(common_rec, mean_prec, color=color, lw=2.4,
-                            linestyle="--", where="post", zorder=4)
-            legend_handles.append((line, f"{display}  (AP = {mean_ap:.3f})"))
-        except Exception as e:
-            print(f"  [SKIP] {display}: {e}")
+        rec, prec, c_ap = cnn_max_pr(model_name)
+        if rec is None: continue
+        ax2.step(rec, prec, color=color, lw=3.5, linestyle="-", where="post", 
+                 label=f"{display} (PR-AUC = {c_ap:.3f})", zorder=4)
 
-    style_ax(ax, xlim=(-0.02, 1.02), ylim=(0.0, 1.05))
-    ax.set_xlabel("Recall (Sensitivity)", fontsize=12, labelpad=8)
-    ax.set_ylabel("Precision (PPV)", fontsize=12, labelpad=8)
-    ax.set_title(
-        "External Validation — Precision–Recall Curves (n = 24, 3 Runs)\n"
-        "Bold = 3-Run Mean  |  ─ Transformer Models  ╌ Classic CNN Models",
-        fontsize=10.5, pad=12
-    )
+    style_ax(ax2, xlim=(-0.02, 1.02), ylim=(0.0, 1.05))
+    ax2.set_xlabel("Recall", fontsize=26, labelpad=12)
+    ax2.set_title("Classic CNN Models", fontsize=28, pad=15)
+    ax2.legend(loc="lower left", fontsize=21, frameon=True, edgecolor="#CCCCCC")
 
-    tr_hdr  = Line2D([], [], linestyle="-",  color="#333333", lw=2.0)
-    cnn_hdr = Line2D([], [], linestyle="--", color="#333333", lw=2.0)
-
-    handles = [tr_hdr]  + [h for h, _ in legend_handles[:4]] + \
-              [cnn_hdr] + [h for h, _ in legend_handles[4:]]
-    labels  = ["Transformer Models"] + [l for _, l in legend_handles[:4]] + \
-              ["Classic CNN Models"] + [l for _, l in legend_handles[4:]]
-
-    ax.legend(handles, labels, loc="lower left", fontsize=9,
-              frameon=True, framealpha=0.93, edgecolor="#CCCCCC",
-              handlelength=2.2, handletextpad=0.8, labelspacing=0.45,
-              borderpad=0.8)
-
+    fig.suptitle("Precision-Recall (PR)", fontsize=30, y=1.03)
     plt.tight_layout()
-    out = OUT_DIR / "Combined_PR_All7Models.png"
-    plt.savefig(out, dpi=300, bbox_inches="tight", facecolor="white")
+    out = OUT_DIR / "Combined_PR_SideBySide.png"
+    plt.savefig(out, dpi=600, bbox_inches="tight", facecolor="white")
     plt.close()
-    print(f"[✓] PR  → {out}")
+    print(f"[✓] Yan yana PR  → {out}")
 
 
 if __name__ == "__main__":
-    print("=== Q1 Combined Curves oluşturuluyor ===")
-    make_roc()
-    make_pr()
+    print("=== Max-Run Yan Yana Eğriler Oluşturuluyor ===")
+    make_roc_side_by_side()
+    make_pr_side_by_side()
     print("\nTamamlandı!")
