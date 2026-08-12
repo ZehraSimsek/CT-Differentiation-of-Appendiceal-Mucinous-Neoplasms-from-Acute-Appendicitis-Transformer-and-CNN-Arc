@@ -1,7 +1,0 @@
-Benzersiz hasta: 241
-Leakage kaydı: 2
-Eksik dosya: 0
-Label uyuşmazlığı: 0
-Shape dağılımı:
-image_shape
-(32, 128, 128, 1)    241
