@@ -1,11 +1,56 @@
+# Python cache
 __pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Model weights
 *.pt
 *.pth
 *.h5
+
+# Logs
 *.log
+
+# Data directories
 datas/
 datas_128/
+datas_2d/
 datas_backup_before_dedup_fix/
 datas_old_q1/
+
+# Experiment outputs (all)
 experiments*/
-.ipynb_checkpoints/
+
+# Görsel ve CSV çıktıları
+*.png
+*.jpg
+*.jpeg
+*.csv
+*.zip
+*.doc
+*.docx
+
+# Makale görselleri klasörü
+Q1_Makale_Gorselleri/
+Q1_Makale_Gorselleri.zip
+
+# Notebook
+*.ipynb
+
+# Scratch/test/geçici dosyalar
+scratch_*.py
+test_*.py
+view_*.py
+patch_*.py
+fix_*.py
+
+# Diğer
+*.json
+radiomics_lite_features.csv
+fold_calibration_results.csv
+data_audit_report.csv
+data_audit_summary.txt
+group_a_significance_results*.txt
+scanner_site_clusters.csv
+patient_orhan_erdogan_all_slices.png

@@ -4,10 +4,10 @@ import pandas as pd
 from sklearn.model_selection import StratifiedKFold, train_test_split
 
 BASE_DIR = Path("/home/zera/Downloads/Appendiks varyasyon3 DS-20260713T105239Z-2-001/Appendiks varyasyon3 DS")
-MUSINOZ_DIR = BASE_DIR / "musinoz_128"
-APANDISIT_DIR = BASE_DIR / "apandisit_128"
+MUSINOZ_DIR = BASE_DIR / "musinoz_2d" / "v02_slice_bbox_resize_128_D32"
+APANDISIT_DIR = BASE_DIR / "apandisit_2d" / "v02_slice_bbox_resize_128_D32"
 
-OUT_DIR = BASE_DIR / "segformer" / "datas"
+OUT_DIR = BASE_DIR / "segformer" / "datas_2d"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 data = []
