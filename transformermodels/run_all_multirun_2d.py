@@ -1,16 +1,19 @@
 """
-run_all_multirun.py
-===================
-Grup A — 4 model, 3 run, 5 fold (toplam 60 model eğitimi).
-Tüm çıktılar → experiments_multirun/<model_adı>/run_XX/
+run_all_multirun_2d.py
+======================
+Grup A — 4 Transformer modeli, 3 run, 5 fold (toplam 60 model eğitimi).
+YENİ 2D veriseti üzerinde çalışır (apandisit_2d + musinoz_2d, toplam 244 hasta).
+Tüm çıktılar → experiments_multirun_2d/<model_adı>/run_XX/
 Çalıştırma:
     cd segformer
-    nohup /home/zera/venvs/torch/bin/python run_all_multirun.py \
-        > experiments_multirun/master.log 2>&1 &
+    nohup /home/zera/venvs/torch/bin/python transformermodels/run_all_multirun_2d.py \
+        > experiments_multirun_2d/master.log 2>&1 &
 """
 import sys, os, json, time
 sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath("final"))
+sys.path.insert(0, os.path.abspath("transformermodels"))
+sys.path.insert(0, os.path.abspath("transformermodels/final"))
 import numpy as np
 import pandas as pd
 import torch
@@ -30,8 +33,8 @@ from torch.utils.data import DataLoader
 N_RUNS    = 3
 RUN_SEEDS = [42, 123, 456]
 DATA_ROOT = Path("/home/zera/Downloads/Appendiks varyasyon3 DS-20260713T105239Z-2-001/Appendiks varyasyon3 DS")
-DATAS_DIR = DATA_ROOT / "segformer" / "datas"
-OUT_ROOT  = DATA_ROOT / "segformer" / "experiments_multirun"
+DATAS_DIR = DATA_ROOT / "segformer" / "datas_2d"        
+OUT_ROOT  = DATA_ROOT / "segformer" / "experiments_multirun_2d"  
 OUT_ROOT.mkdir(parents=True, exist_ok=True)
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Device: {DEVICE}")
@@ -114,12 +117,6 @@ def run_one_fold_clean(train_df, val_df, fold_idx, config, fold_dir, builder, mo
     best_pred["youden_threshold"] = opt_thr
     return m, ci, best_pred
 def run_model_multirun(model_tag, builder, config, pretrain_fn=None):
-    """
-    model_tag   : "SwinUNETR-LP" gibi gösterim adı
-    builder     : () -> nn.Module
-    config      : eğitim parametreleri dict
-    pretrain_fn : MAE gibi ön-eğitim gerektiren modeller için callable(manifest_df, config, base_dir)
-    """
     base_dir = OUT_ROOT / model_tag.lower().replace("-", "_").replace(" ", "_")
     base_dir.mkdir(parents=True, exist_ok=True)
     setup_file_logging(base_dir / "train_log.txt")
@@ -139,8 +136,8 @@ def run_model_multirun(model_tag, builder, config, pretrain_fn=None):
         run_dir = base_dir / f"run_{run_idx:02d}"
         run_dir.mkdir(parents=True, exist_ok=True)
         if mae_encoder_path is not None:
-            import final.train_mae_tinytransformer as _mae_mod
-            _mae_enc_path = mae_encoder_path  
+            import transformermodels.final.train_mae_tinytransformer as _mae_mod
+            _mae_enc_path = mae_encoder_path
             def _mae_builder_with_encoder():
                 m = _mae_mod.build_model().to(DEVICE)
                 if _mae_enc_path.exists():
@@ -200,18 +197,18 @@ def main():
     t_start = time.time()
     import hashlib
     expected_hashes = {
-        "fold_1_train.csv": "f54cc614082867ec0528992dd86b7f6f",
-        "fold_1_val.csv":   "af3865e3516b035cd4c5464c5cff1f7d",
-        "fold_2_train.csv": "0d4bd47467e27b287cf89f96ec339a3d",
-        "fold_2_val.csv":   "8aa6d207ddb025829be00dac74419631",
-        "fold_3_train.csv": "7d20739202c7078d55ced20e5c84d20d",
-        "fold_3_val.csv":   "6874d9dfcbcc86a2836da050aacb3fcf",
-        "fold_4_train.csv": "0ec66b13e42e0b498659663348c43daf",
-        "fold_4_val.csv":   "e8b1676ffa9d1f6ca6d19c43da146f29",
-        "fold_5_train.csv": "0ee4fd63fe7ee3d93ebf35763cb8d108",
-        "fold_5_val.csv":   "4827c02f3572091b7723ba3e0a43aed8",
+        "fold_1_train.csv": "42be48706af91948ebe9d2fc365c352b",
+        "fold_1_val.csv":   "6c7fa00e50a58d990652b0a95545fa5c",
+        "fold_2_train.csv": "ed4f6067f96738ec6938bf9ea7298561",
+        "fold_2_val.csv":   "1dc27d335efb4116a51d0b586e7cf76b",
+        "fold_3_train.csv": "1a40015eb991dd5fd49c9da2ba19cc53",
+        "fold_3_val.csv":   "90ce95f96a9edbd736eefe014066abad",
+        "fold_4_train.csv": "97066eb3557220f7018024ae01f0583d",
+        "fold_4_val.csv":   "83eb8971e7eb5d66758cfa90e3ad6ea5",
+        "fold_5_train.csv": "d138f47b966ef928bdfe9fb2eed46674",
+        "fold_5_val.csv":   "8a757810ea687441b045dd2d15dca48b",
     }
-    print("=== FOLD BÜTÜNLÜK KONTROLÜ ===")
+    print("=== FOLD BÜTÜNLÜK KONTROLÜ (2D Dataset) ===")
     for fname, h_exp in expected_hashes.items():
         h_got = hashlib.md5((DATAS_DIR / fname).read_bytes()).hexdigest()
         ok = h_got == h_exp
@@ -219,7 +216,7 @@ def main():
         if not ok:
             raise RuntimeError(f"FOLD DEĞİŞMİŞ: {fname}. Eğitimi durdurun!")
     print("  Fold atamaları doğrulandı.\n")
-    import final.train_swinunetr_linearprobe as swin_lp
+    import transformermodels.final.train_swinunetr_linearprobe as swin_lp
     CONFIG_SWIN_LP = dict(SHARED_CONFIG)
     CONFIG_SWIN_LP.update({
         "model_name": "swinunetr_lp", "feature_size": 48,
@@ -229,13 +226,12 @@ def main():
         "batch_size": 2, "accum_steps": 8,
         "min_epochs_before_save": 3, "ema_alpha": 0.3,
     })
-    _swin_lp_data_root = DATA_ROOT
     def _build_swin_lp():
         m = swin_lp.build_model().to(DEVICE)
         m = swin_lp.load_pretrained_swin(m)
         return m
     run_model_multirun("SwinUNETR-LP", _build_swin_lp, CONFIG_SWIN_LP)
-    import final.train_attention_swinunetr as attn_swin
+    import transformermodels.final.train_attention_swinunetr as attn_swin
     CONFIG_ATTN = dict(SHARED_CONFIG)
     CONFIG_ATTN.update({
         "model_name": "attention_swinunetr",
@@ -246,7 +242,7 @@ def main():
         "batch_size": 2, "min_epochs_before_save": 3, "ema_alpha": 0.3,
     })
     run_model_multirun("AG-MSF", attn_swin.build_model, CONFIG_ATTN)
-    import final.train_mae_tinytransformer as mae_tiny
+    import transformermodels.final.train_mae_tinytransformer as mae_tiny
     CONFIG_MAE = dict(SHARED_CONFIG)
     CONFIG_MAE.update({
         "model_name": "mae_tinytransformer", "embed_dim": 192,
@@ -258,7 +254,7 @@ def main():
     })
     run_model_multirun("MAE-Tiny3D", mae_tiny.build_model, CONFIG_MAE,
                        pretrain_fn=mae_tiny.run_mae_pretraining)
-    import final.train_segformer3d as segformer3d
+    import transformermodels.final.train_segformer3d as segformer3d
     CONFIG_SEG = dict(SHARED_CONFIG)
     CONFIG_SEG.update({
         "model_name": "segformer3d",

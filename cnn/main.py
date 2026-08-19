@@ -1,7 +1,7 @@
 """
 main.py — Multi-Run 3D CT Classification Pipeline
 ===================================================
-Orchestrates the complete Q1 medical imaging multi-run validation protocol:
+Orchestrates the complete  medical imaging multi-run validation protocol:
 - N_RUNS = 3 independent runs with fixed seeds [42, 123, 456]
 - Fixed 5-Fold Stratified Cross-Validation (CSV-defined)
 - Gradient Accumulation (accum_steps=8 with batch_size=2 -> effective batch=16)
@@ -9,30 +9,25 @@ Orchestrates the complete Q1 medical imaging multi-run validation protocol:
 - Out-of-Fold (OOF) aggregation and metric computation
 - External Test set evaluation via 5-fold model ensembling
 - Multi-Run statistical reporting with mean ± std across all runs
-
 Complies with MULTI_RUN_PROTOCOL.md.
 """
-
 from __future__ import annotations
-
 import argparse
 import math
 import os
 import sys
 from pathlib import Path
-
 import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
 from torch.optim.lr_scheduler import LambdaLR
 from torch.utils.data import DataLoader
-
 from config import PipelineConfig
 from data.patient_dataset import PatientCTDataset
 from engine.evaluator import evaluate
 from engine.trainer import train_one_epoch
-from losses import build_loss_fn
+from losses import build_loss_fn, pos_weight_from_labels
 from models import build_model
 from utils.checkpoint import CheckpointManager
 from utils.metrics import MetricResult, compute_metrics
@@ -42,8 +37,6 @@ from utils.visualization import (
     plot_pr_curve,
     plot_roc_curve,
 )
-
-
 def get_warmup_cosine_scheduler(
     optimizer: torch.optim.Optimizer,
     warmup_epochs: int,
@@ -58,10 +51,7 @@ def get_warmup_cosine_scheduler(
             max(1, total_epochs - warmup_epochs)
         )
         return min_lr_ratio + 0.5 * (1.0 - min_lr_ratio) * (1.0 + math.cos(math.pi * progress))
-
     return LambdaLR(optimizer, lr_lambda)
-
-
 def parse_args() -> PipelineConfig:
     """Parse command line arguments and return PipelineConfig."""
     parser = argparse.ArgumentParser(
@@ -89,12 +79,9 @@ def parse_args() -> PipelineConfig:
         default=None,
         help="List of seeds for independent runs (e.g. 42 123 456)",
     )
-
     args = parser.parse_args()
     config = PipelineConfig()
-
     config.apply_model_profile(args.model)
-
     if args.epochs is not None:
         config.epochs = args.epochs
     if args.batch_size is not None:
@@ -114,10 +101,7 @@ def parse_args() -> PipelineConfig:
     if args.seeds is not None:
         config.run_seeds = list(args.seeds)
         config.n_runs = len(args.seeds)
-
     return config
-
-
 def verify_data_files(config: PipelineConfig) -> None:
     """Verifies that all required fixed fold and external test CSV files exist."""
     print("=" * 75)
@@ -131,21 +115,16 @@ def verify_data_files(config: PipelineConfig) -> None:
             missing.append(tr_csv)
         if not os.path.isfile(val_csv):
             missing.append(val_csv)
-
     ext_csv = os.path.join(config.data_dir, "external_test_set.csv")
     if not os.path.isfile(ext_csv):
         missing.append(ext_csv)
-
     if missing:
         print("  ❌ Missing required dataset files:")
         for m in missing:
             print(f"     - {m}")
         sys.exit(1)
-
     print("  ✓ All 5-Fold CSVs and External Test Set CSV verified successfully.")
     print("=" * 75 + "\n")
-
-
 def train_single_fold(
     fold: int,
     run_idx: int,
@@ -158,34 +137,19 @@ def train_single_fold(
     print("\n" + "-" * 75)
     print(f"  RUN {run_idx:02d}/{config.n_runs:02d} (Seed {seed})  |  FOLD {fold:02d}/{config.n_folds:02d}")
     print("-" * 75)
-
     tr_csv = os.path.join(config.data_dir, f"fold_{fold}_train.csv")
     val_csv = os.path.join(config.data_dir, f"fold_{fold}_val.csv")
-
     train_df = pd.read_csv(tr_csv)
     val_df = pd.read_csv(val_csv)
-
-    # Class balance weights
+    pos_weight = pos_weight_from_labels(train_df["label"].values)
     n_neg = (train_df["label"] == 0).sum()
     n_pos = (train_df["label"] == 1).sum()
-    class_weights = None
-    if n_pos > 0 and n_neg > 0:
-        total_samples = len(train_df)
-        w0 = total_samples / (2.0 * n_neg)
-        w1 = total_samples / (2.0 * n_pos)
-        class_weights = torch.tensor([w0, w1], dtype=torch.float32, device=device)
-        print(f"  Class balance: Apandisit={n_neg}, Musinoz={n_pos} (Weights: [{w0:.2f}, {w1:.2f}])")
-
+    print(f"  Class balance: Apandisit={n_neg}, Musinoz={n_pos} (pos_weight={pos_weight:.2f})")
     train_dataset = PatientCTDataset(train_df, augment_train=config.augment_train, config=config)
     val_dataset = PatientCTDataset(val_df, augment_train=False, config=config)
-
-    # Deterministic loader generator
     g = torch.Generator()
     g.manual_seed(seed + fold)
-
-    # Drop single remainder sample in training to protect BatchNorm layers (e.g. batch_size=1)
     drop_last_train = (len(train_dataset) % config.batch_size == 1) if config.batch_size > 1 else False
-
     train_loader = DataLoader(
         train_dataset,
         batch_size=config.batch_size,
@@ -202,10 +166,8 @@ def train_single_fold(
         num_workers=config.num_workers,
         pin_memory=config.pin_memory if device.type == "cuda" else False,
     )
-
-    # Build components
     model = build_model(config).to(device)
-    criterion = build_loss_fn(config, class_weights=class_weights)
+    criterion = build_loss_fn(config, pos_weight=pos_weight).to(device)
     optimizer = torch.optim.AdamW(
         model.parameters(),
         lr=config.learning_rate,
@@ -217,7 +179,6 @@ def train_single_fold(
         warmup_epochs=config.warmup_epochs,
         total_epochs=config.epochs,
     )
-
     ckpt_manager = CheckpointManager(
         save_dir=fold_dir,
         config=config,
@@ -225,10 +186,8 @@ def train_single_fold(
         min_epochs_save=config.min_epochs_save,
         filename="best_model.pth",
     )
-
     history_records = []
     patience_counter = 0
-
     for epoch in range(1, config.epochs + 1):
         train_loss = train_one_epoch(
             model=model,
@@ -239,7 +198,6 @@ def train_single_fold(
             epoch=epoch,
             config=config,
         )
-
         val_loss, val_metrics, y_true, y_prob, y_pred, pids = evaluate(
             model=model,
             dataloader=val_loader,
@@ -248,10 +206,8 @@ def train_single_fold(
             epoch=epoch,
             verbose_metrics=False,
         )
-
         current_lr = optimizer.param_groups[0]["lr"]
         scheduler.step()
-
         history_records.append({
             "epoch": epoch,
             "train_loss": train_loss,
@@ -264,24 +220,17 @@ def train_single_fold(
             "val_brier": val_metrics.brier_score,
             "learning_rate": current_lr,
         })
-
         improved = ckpt_manager.step(model, val_metrics, epoch)
         if improved:
             patience_counter = 0
         else:
             patience_counter += 1
-
         if patience_counter >= config.early_stopping_patience and epoch >= config.min_epochs_save:
             print(f"  🛑 Early stopping triggered at epoch {epoch} (patience={config.early_stopping_patience})")
             break
-
-    # Save training history CSV
     history_df = pd.DataFrame(history_records)
     history_df.to_csv(os.path.join(fold_dir, "training_history.csv"), index=False)
-
-    # Load best model for final evaluation
     model = ckpt_manager.load_best(model)
-
     print(f"\n  Final Best Checkpoint Evaluation for Fold {fold}:")
     val_loss, best_metrics, y_true, y_prob, y_pred, pids = evaluate(
         model=model,
@@ -291,23 +240,22 @@ def train_single_fold(
         epoch=ckpt_manager.best_epoch,
         verbose_metrics=True,
     )
-
-    # Save best validation predictions
+    opt_thr = best_metrics.optimal_threshold
+    y_pred_opt = (y_prob >= opt_thr).astype(int)
     val_pred_df = pd.DataFrame({
         "patient_id": pids,
         "true_label": y_true,
         "pred_prob": y_prob,
-        "pred_label": y_pred,
+        "pred_label": y_pred_opt,   
+        "optimal_threshold": opt_thr,
         "fold": fold,
     })
     val_pred_df.to_csv(os.path.join(fold_dir, "best_val_predictions.csv"), index=False)
-
-    # Save fold performance plots
     plot_confusion_matrix(
         y_true,
-        y_pred,
+        y_pred_opt,
         save_path=os.path.join(fold_dir, "confusion_matrix.png"),
-        title=f"Run {run_idx} Fold {fold} Confusion Matrix",
+        title=f"Run {run_idx} Fold {fold} CM (Youden J={opt_thr:.3f})",
     )
     plot_roc_curve(
         y_true,
@@ -322,10 +270,7 @@ def train_single_fold(
         save_path=os.path.join(fold_dir, "pr_curve.png"),
         title=f"Run {run_idx} Fold {fold} PR Curve",
     )
-
     return best_metrics, val_pred_df
-
-
 def evaluate_external_test_ensemble(
     run_idx: int,
     run_dir: str,
@@ -335,7 +280,6 @@ def evaluate_external_test_ensemble(
     """Loads all 5 fold models for this run, computes ensemble predictions on external test set."""
     ext_csv = os.path.join(config.data_dir, "external_test_set.csv")
     ext_df = pd.read_csv(ext_csv)
-
     ext_dataset = PatientCTDataset(ext_df, augment_train=False, config=config)
     ext_loader = DataLoader(
         ext_dataset,
@@ -343,19 +287,15 @@ def evaluate_external_test_ensemble(
         shuffle=False,
         num_workers=config.num_workers,
     )
-
     criterion = build_loss_fn(config)
     fold_probs = []
-
     for fold in range(1, config.n_folds + 1):
         fold_dir = os.path.join(run_dir, f"fold_{fold:02d}")
         ckpt_path = os.path.join(fold_dir, "best_model.pth")
-
         model = build_model(config).to(device)
         checkpoint = torch.load(ckpt_path, map_location=device, weights_only=False)
         state_dict = checkpoint["model_state_dict"] if "model_state_dict" in checkpoint else checkpoint
         model.load_state_dict(state_dict)
-
         _, _, y_true, y_prob, _, pids = evaluate(
             model=model,
             dataloader=ext_loader,
@@ -364,17 +304,13 @@ def evaluate_external_test_ensemble(
             verbose_metrics=False,
         )
         fold_probs.append(y_prob)
-
-    all_fold_probs = np.array(fold_probs)  # [5, N]
-    ensemble_prob = np.mean(all_fold_probs, axis=0)  # [N]
-    ensemble_pred = (ensemble_prob >= 0.5).astype(int)
-
-    test_metrics = compute_metrics(y_true, ensemble_prob, y_pred=ensemble_pred)
-
+    all_fold_probs = np.array(fold_probs)  
+    ensemble_prob = np.mean(all_fold_probs, axis=0)  
+    test_metrics = compute_metrics(y_true, ensemble_prob)
+    opt_thr = test_metrics.optimal_threshold
+    ensemble_pred = (ensemble_prob >= opt_thr).astype(int)  
     ext_dir = os.path.join(run_dir, "external_test")
     os.makedirs(ext_dir, exist_ok=True)
-
-    # Save predictions
     pred_dict = {
         "patient_id": pids,
         "true_label": y_true,
@@ -383,20 +319,16 @@ def evaluate_external_test_ensemble(
         pred_dict[f"fold_{f_idx + 1:02d}_prob"] = all_fold_probs[f_idx]
     pred_dict["ensemble_prob"] = ensemble_prob
     pred_dict["ensemble_pred"] = ensemble_pred
-
+    pred_dict["optimal_threshold"] = opt_thr
     pred_df = pd.DataFrame(pred_dict)
     pred_df.to_csv(os.path.join(ext_dir, "external_test_predictions.csv"), index=False)
-
-    # Save metrics
     metrics_df = pd.DataFrame([test_metrics.to_dict()])
     metrics_df.to_csv(os.path.join(ext_dir, "external_test_metrics.csv"), index=False)
-
-    # Save plots
     plot_confusion_matrix(
         y_true,
         ensemble_pred,
         save_path=os.path.join(ext_dir, "confusion_matrix.png"),
-        title=f"Run {run_idx} External Test Confusion Matrix (5-Fold Ensemble)",
+        title=f"Run {run_idx} External Test CM @Youden J={opt_thr:.3f}",
     )
     plot_roc_curve(
         y_true,
@@ -411,19 +343,14 @@ def evaluate_external_test_ensemble(
         save_path=os.path.join(ext_dir, "pr_curve.png"),
         title=f"Run {run_idx} External Test PR (5-Fold Ensemble)",
     )
-
     return test_metrics, pred_df
-
-
 def main() -> None:
     """Main Multi-Run execution entrypoint."""
     config = parse_args()
     device_str = config.resolve_device()
     device = torch.device(device_str)
-
     model_exp_dir = config.get_model_experiment_dir()
     os.makedirs(model_exp_dir, exist_ok=True)
-
     print("\n" + "=" * 75)
     print("  3D CT CLASSIFICATION — MULTI-RUN PROTOCOL (MULTI_RUN_PROTOCOL.md)")
     print("=" * 75)
@@ -436,20 +363,15 @@ def main() -> None:
     print(f"  Compute Device          : {device_str.upper()}")
     print(f"  Experiment Directory    : {model_exp_dir}")
     print("=" * 75 + "\n")
-
     verify_data_files(config)
-
     run_records = []
-
     for run_idx, seed in enumerate(config.run_seeds, start=1):
         print("\n" + "#" * 75)
         print(f"  STARTING RUN {run_idx:02d} / {config.n_runs:02d}  |  SEED = {seed}")
         print("#" * 75)
-
         seed_everything(seed)
         run_dir = config.get_run_dir(run_idx)
         os.makedirs(run_dir, exist_ok=True)
-
         fold_preds = []
         for fold in range(1, config.n_folds + 1):
             fold_dir = os.path.join(run_dir, f"fold_{fold:02d}")
@@ -462,30 +384,23 @@ def main() -> None:
                 fold_dir=fold_dir,
             )
             fold_preds.append(val_pred_df)
-
-        # ---------------------------------------------------------------------
-        # 1. Out-of-Fold (OOF) Aggregation
-        # ---------------------------------------------------------------------
         oof_dir = os.path.join(run_dir, "aggregate_oof")
         os.makedirs(oof_dir, exist_ok=True)
-
         oof_df = pd.concat(fold_preds, ignore_index=True)
         oof_df.to_csv(os.path.join(oof_dir, "oof_predictions.csv"), index=False)
-
         oof_metrics = compute_metrics(
             oof_df["true_label"].values,
             oof_df["pred_prob"].values,
-            y_pred=oof_df["pred_label"].values,
         )
-
+        oof_opt_thr = oof_metrics.optimal_threshold
+        oof_pred_opt = (oof_df["pred_prob"].values >= oof_opt_thr).astype(int)
         oof_metrics_df = pd.DataFrame([oof_metrics.to_dict()])
         oof_metrics_df.to_csv(os.path.join(oof_dir, "oof_metrics.csv"), index=False)
-
         plot_confusion_matrix(
             oof_df["true_label"].values,
-            oof_df["pred_label"].values,
+            oof_pred_opt,
             save_path=os.path.join(oof_dir, "confusion_matrix.png"),
-            title=f"Run {run_idx} Out-Of-Fold Confusion Matrix",
+            title=f"Run {run_idx} OOF CM @Youden J={oof_opt_thr:.3f}",
         )
         plot_roc_curve(
             oof_df["true_label"].values,
@@ -500,82 +415,65 @@ def main() -> None:
             save_path=os.path.join(oof_dir, "pr_curve.png"),
             title=f"Run {run_idx} Out-Of-Fold PR Curve",
         )
-
         print("\n" + "=" * 70)
         print(f"  RUN {run_idx:02d} (Seed {seed}) -- OOF Validation Summary")
         print("=" * 70)
         oof_metrics.pretty_print()
-
-        # ---------------------------------------------------------------------
-        # 2. External Test Evaluation (5-Fold Ensemble)
-        # ---------------------------------------------------------------------
         ext_metrics, _ = evaluate_external_test_ensemble(
             run_idx=run_idx,
             run_dir=run_dir,
             config=config,
             device=device,
         )
-
         print("\n" + "=" * 70)
         print(f"  RUN {run_idx:02d} (Seed {seed}) -- External Test 5-Fold Ensemble Summary")
         print("=" * 70)
         ext_metrics.pretty_print()
-
-        # Record run row
         run_records.append({
             "run_idx": run_idx,
             "seed": seed,
-            # OOF Metrics
             "oof_auc": oof_metrics.auc_roc,
-            "oof_sensitivity": oof_metrics.sensitivity,
-            "oof_specificity": oof_metrics.specificity,
-            "oof_f1": oof_metrics.f1,
-            "oof_accuracy": oof_metrics.accuracy,
+            "oof_sensitivity": oof_metrics.opt_sensitivity,
+            "oof_specificity": oof_metrics.opt_specificity,
+            "oof_f1": oof_metrics.opt_f1,
+            "oof_accuracy": oof_metrics.opt_accuracy,
+            "oof_optimal_threshold": oof_metrics.optimal_threshold,
             "oof_brier": oof_metrics.brier_score,
-            # External Test Metrics
             "ext_auc": ext_metrics.auc_roc,
-            "ext_sensitivity": ext_metrics.sensitivity,
-            "ext_specificity": ext_metrics.specificity,
-            "ext_f1": ext_metrics.f1,
-            "ext_accuracy": ext_metrics.accuracy,
+            "ext_sensitivity": ext_metrics.opt_sensitivity,
+            "ext_specificity": ext_metrics.opt_specificity,
+            "ext_f1": ext_metrics.opt_f1,
+            "ext_accuracy": ext_metrics.opt_accuracy,
+            "ext_optimal_threshold": ext_metrics.optimal_threshold,
             "ext_brier": ext_metrics.brier_score,
         })
-
-    # =========================================================================
-    # MULTI-RUN STATISTICAL SUMMARY & REPORTING (mean ± std)
-    # =========================================================================
     summary_df = pd.DataFrame(run_records)
-
     oof_auc = summary_df["oof_auc"].values
     oof_sens = summary_df["oof_sensitivity"].values
     oof_spec = summary_df["oof_specificity"].values
     oof_f1 = summary_df["oof_f1"].values
     oof_acc = summary_df["oof_accuracy"].values
     oof_brier = summary_df["oof_brier"].values
-
     ext_auc = summary_df["ext_auc"].values
     ext_sens = summary_df["ext_sensitivity"].values
     ext_spec = summary_df["ext_specificity"].values
     ext_f1 = summary_df["ext_f1"].values
     ext_acc = summary_df["ext_accuracy"].values
     ext_brier = summary_df["ext_brier"].values
-
     summary_csv_path = os.path.join(model_exp_dir, "multi_run_summary.csv")
     summary_xlsx_path = os.path.join(model_exp_dir, "multi_run_summary.xlsx")
     log_txt_path = os.path.join(model_exp_dir, "train_log.txt")
-
     summary_df.to_csv(summary_csv_path, index=False)
     try:
         summary_df.to_excel(summary_xlsx_path, index=False)
     except Exception:
         pass
-
-    # Build final report string
     report_lines = [
         "",
         "=" * 75,
         f"  FINAL MULTI-RUN STATISTICAL REPORT — {config.model_name.upper()}",
-        f"  (n={config.n_runs} independent runs × {config.n_folds}-Fold Stratified CV, seeds={config.run_seeds})",
+        f"  (n={config.n_runs} runs × {config.n_folds}-Fold CV, seeds={config.run_seeds})",
+        f"  Threshold: Youden J Optimal (makale için)",
         "=" * 75,
         "  1. VALIDATION OUT-OF-FOLD (OOF) PERFORMANCE:",
         f"     AUC-ROC      = {oof_auc.mean():.4f} ± {oof_auc.std():.4f} (Individual: {[round(x, 4) for x in oof_auc]})",
@@ -597,13 +495,9 @@ def main() -> None:
         "=" * 75,
         "",
     ]
-
     report_str = "\n".join(report_lines)
     print(report_str)
-
     with open(log_txt_path, "w", encoding="utf-8") as f:
         f.write(report_str)
-
-
 if __name__ == "__main__":
     main()

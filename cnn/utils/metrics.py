@@ -3,7 +3,6 @@ utils/metrics.py — Medical Evaluation Metrics (Clinical-Grade)
 ===============================================================
 Computes the full clinical metric suite required for a **Red Flag**
 binary classifier using ``sklearn.metrics``.
-
 Reported metrics
 ----------------
 +-------------------+----------------------------------------------------------+
@@ -33,11 +32,8 @@ Reported metrics
 |                   | that balances both error types.                          |
 +-------------------+----------------------------------------------------------+
 """
-
 from __future__ import annotations
-
 from dataclasses import dataclass, field
-
 import numpy as np
 from sklearn.metrics import (
     accuracy_score,
@@ -49,7 +45,6 @@ from sklearn.metrics import (
     roc_auc_score,
     roc_curve,
 )
-
 def expected_calibration_error(y_true: np.ndarray, y_prob: np.ndarray, n_bins: int = 10) -> float:
     """Computes Expected Calibration Error (ECE) for binary classification."""
     bin_edges = np.linspace(0.0, 1.0, n_bins + 1)
@@ -57,24 +52,19 @@ def expected_calibration_error(y_true: np.ndarray, y_prob: np.ndarray, n_bins: i
     for i in range(n_bins):
         bin_lower = bin_edges[i]
         bin_upper = bin_edges[i + 1]
-        
         in_bin = (y_prob > bin_lower) & (y_prob <= bin_upper)
         if i == 0:
             in_bin = in_bin | (y_prob == bin_lower)
-            
         prob_in_bin = in_bin.mean()
         if prob_in_bin > 0:
             accuracy_in_bin = y_true[in_bin].mean()
             avg_confidence_in_bin = y_prob[in_bin].mean()
             ece += np.abs(avg_confidence_in_bin - accuracy_in_bin) * prob_in_bin
-            
     return float(ece)
-
 def permutation_test_auc(y_true: np.ndarray, y_prob: np.ndarray, n_permutations: int = 1000) -> float:
     """Computes P-value for AUC via permutation testing."""
     if len(np.unique(y_true)) < 2:
         return 1.0
-        
     try:
         actual_auc = roc_auc_score(y_true, y_prob)
         count = 0
@@ -83,33 +73,22 @@ def permutation_test_auc(y_true: np.ndarray, y_prob: np.ndarray, n_permutations:
             np.random.shuffle(y_true_shuffled)
             if roc_auc_score(y_true_shuffled, y_prob) >= actual_auc:
                 count += 1
-                
         p_value = (count + 1) / (n_permutations + 1)
         return float(p_value)
     except ValueError:
         return 1.0
-
-
-# ============================================================================ #
-#  OPTIMAL THRESHOLD FINDER                                                      #
-# ============================================================================ #
-
 def find_optimal_threshold(y_true: np.ndarray, y_prob: np.ndarray) -> float:
     """
     Find the optimal decision threshold using Youden's J Statistic.
-
     J = Sensitivity + Specificity - 1
-
     The threshold that maximises J provides the best trade-off between
     sensitivity and specificity on the ROC curve.
-
     Parameters
     ----------
     y_true : ndarray, shape (N,)
         Ground-truth binary labels in {0, 1}.
     y_prob : ndarray, shape (N,)
         Predicted probabilities in [0, 1].
-
     Returns
     -------
     float
@@ -118,27 +97,18 @@ def find_optimal_threshold(y_true: np.ndarray, y_prob: np.ndarray) -> float:
     """
     try:
         fpr, tpr, thresholds = roc_curve(y_true, y_prob)
-        # Youden's J = TPR - FPR  (equivalent to Sens + Spec - 1)
         j_scores = tpr - fpr
         best_idx = np.argmax(j_scores)
         return float(thresholds[best_idx])
     except (ValueError, IndexError):
         return 0.5
-
-
-# ============================================================================ #
-#  METRIC RESULT DATACLASS                                                       #
-# ============================================================================ #
-
 @dataclass
 class MetricResult:
     """Container for a single evaluation epoch's clinical metrics."""
-
-    # --- 8 core clinical metrics (computed at the given threshold) ---
     accuracy: float
     f1: float
     auc_roc: float
-    sensitivity: float  # recall
+    sensitivity: float  
     precision: float
     specificity: float
     npv: float
@@ -146,10 +116,7 @@ class MetricResult:
     brier_score: float = 0.0
     ece: float = 0.0
     p_value_auc: float = 1.0
-
-    # --- Optimal threshold info (Youden's J) ---
     optimal_threshold: float = 0.5
-    # Metrics at optimal threshold (populated when dual-threshold is computed)
     opt_sensitivity: float = 0.0
     opt_specificity: float = 0.0
     opt_precision: float = 0.0
@@ -157,7 +124,6 @@ class MetricResult:
     opt_npv: float = 0.0
     opt_accuracy: float = 0.0
     opt_balanced_accuracy: float = 0.0
-
     def to_dict(self) -> dict[str, float]:
         """Serialise to a plain dict (useful for logging / JSON export)."""
         return {
@@ -181,7 +147,6 @@ class MetricResult:
             "ece": self.ece,
             "p_value_auc": self.p_value_auc,
         }
-
     def pretty_print(self, epoch: int | None = None) -> None:
         """Print a formatted dual-threshold metrics table to stdout."""
         header = f"  Epoch {epoch} " if epoch is not None else "  "
@@ -204,15 +169,7 @@ class MetricResult:
         print(f"  {'ECE':<22s} {self.ece:.4f}")
         print(f"  {'AUC P-Value':<22s} {self.p_value_auc:.4e}")
         print("=" * 70 + "\n")
-
-
-# ============================================================================ #
-#  METRIC COMPUTATION                                                            #
-# ============================================================================ #
-
-_EPS = 1e-7  # Safe division guard
-
-
+_EPS = 1e-7  
 def _compute_at_threshold(
     y_true: np.ndarray,
     y_prob: np.ndarray,
@@ -220,27 +177,20 @@ def _compute_at_threshold(
 ) -> dict[str, float]:
     """
     Compute all 7 threshold-dependent clinical metrics at a given threshold.
-
     Returns a dict with keys: accuracy, balanced_accuracy, sensitivity,
     specificity, precision, npv, f1.
     """
     y_pred = (y_prob >= threshold).astype(int)
-
-    # --- Core sklearn metrics ------------------------------------------------
     accuracy = accuracy_score(y_true, y_pred)
     f1 = f1_score(y_true, y_pred, zero_division=0.0)
     precision = precision_score(y_true, y_pred, zero_division=0.0)
     sensitivity = recall_score(y_true, y_pred, zero_division=0.0)
-
-    # --- Confusion matrix derived metrics ------------------------------------
     cm = confusion_matrix(y_true, y_pred, labels=[0, 1])
     tn, fp = cm[0, 0], cm[0, 1]
     fn, tp = cm[1, 0], cm[1, 1]
-
     specificity = float(tn) / (float(tn + fp) + _EPS)
     npv = float(tn) / (float(tn + fn) + _EPS)
     balanced_accuracy = (sensitivity + specificity) / 2.0
-
     return {
         "accuracy": accuracy,
         "balanced_accuracy": balanced_accuracy,
@@ -250,8 +200,6 @@ def _compute_at_threshold(
         "npv": npv,
         "f1": f1,
     }
-
-
 def compute_metrics(
     y_true: np.ndarray,
     y_prob: np.ndarray,
@@ -261,7 +209,6 @@ def compute_metrics(
     """
     Compute the full clinical metric suite at both the default threshold
     and the Youden's J optimal threshold.
-
     Parameters
     ----------
     y_true : ndarray, shape (N,)
@@ -273,23 +220,17 @@ def compute_metrics(
     y_pred : ndarray | None
         If provided, used for the default-threshold metrics instead of
         thresholding y_prob.  Ignored for optimal-threshold computation.
-
     Returns
     -------
     MetricResult
         Dataclass holding all computed metrics at both thresholds.
     """
-    # --- AUC-ROC (threshold-independent) -------------------------------------
     try:
         auc_roc = roc_auc_score(y_true, y_prob)
     except ValueError:
         auc_roc = 0.0
-
-    # --- Metrics at default threshold (0.50) ---------------------------------
     if y_pred is not None:
-        # Use externally supplied predictions
         default_metrics = _compute_at_threshold(y_true, y_prob, threshold)
-        # But re-compute using the actual y_pred to stay consistent
         default_metrics_from_pred = {}
         cm = confusion_matrix(y_true, y_pred, labels=[0, 1])
         tn, fp = cm[0, 0], cm[0, 1]
@@ -305,13 +246,9 @@ def compute_metrics(
         ) / 2.0
     else:
         default_metrics = _compute_at_threshold(y_true, y_prob, threshold)
-
-    # --- Optimal threshold (Youden's J) --------------------------------------
     optimal_threshold = find_optimal_threshold(y_true, y_prob)
     opt_metrics = _compute_at_threshold(y_true, y_prob, optimal_threshold)
-
     return MetricResult(
-        # Default threshold metrics
         accuracy=default_metrics["accuracy"],
         f1=default_metrics["f1"],
         auc_roc=auc_roc,
@@ -320,7 +257,6 @@ def compute_metrics(
         specificity=default_metrics["specificity"],
         npv=default_metrics["npv"],
         balanced_accuracy=default_metrics["balanced_accuracy"],
-        # Optimal threshold metrics
         optimal_threshold=optimal_threshold,
         opt_sensitivity=opt_metrics["sensitivity"],
         opt_specificity=opt_metrics["specificity"],
