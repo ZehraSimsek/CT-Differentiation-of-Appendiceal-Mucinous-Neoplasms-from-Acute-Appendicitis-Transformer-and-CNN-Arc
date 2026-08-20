@@ -431,7 +431,7 @@ def main():
     parser = argparse.ArgumentParser(description="Multi-Model 3D Grad-CAM & ROI Comparison Generator (Publication Standard)")
     parser.add_argument("--patient", type=str, default=None, help="Patient ID or H5 filename to process")
     parser.add_argument("--all", action="store_true", help="Process all patients in external test set")
-    parser.add_argument("--test_csv", type=str, default="datas/external_test_set.csv", help="Path to external test CSV")
+    parser.add_argument("--test_csv", type=str, default="datas_2d/external_test_set.csv", help="Path to external test CSV")
     parser.add_argument("--output_dir", type=str, default="visualizations/xai_comparisons", help="Output directory for PNGs")
     parser.add_argument("--device", type=str, default="cpu", help="Device (cpu, mps, cuda)")
     parser.add_argument("--colormap", type=str, default="jet", help="Heatmap colormap (jet, turbo, inferno, viridis)")

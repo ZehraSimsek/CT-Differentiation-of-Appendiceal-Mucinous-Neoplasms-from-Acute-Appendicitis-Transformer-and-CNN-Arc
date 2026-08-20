@@ -168,11 +168,6 @@ def main():
     }
 
     df = pd.read_csv(TEST_CSV)
-    
-    # Sadece belli hastaları filtrele
-    priority = ["zeynep_aksoy", "aydemir_meryem", "cinar_beyza", "cınar_beyza", "kaleli_ozan"]
-    df = df[df["patient_id"].isin(priority)].copy()
-    
     sample_cases = df.reset_index(drop=True)
     ds = AppendixH5Dataset(sample_cases, augment=False, config=SHARED_CONFIG)
 
